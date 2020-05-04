@@ -1,0 +1,45 @@
+.header {
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 10px 0 rgba(242, 242, 248, 1);
+  background-color: #fff;
+
+  .logo {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    font-family: 'lato bold';
+    font-size: 1.6rem;
+    color: $text;
+    text-decoration: none;
+  }
+}
+
+.user-menu {
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.user-menu__button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  color: $text;
+  transition: color ease-in-out .15s;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: dotted 1px $primary;
+  }
+}

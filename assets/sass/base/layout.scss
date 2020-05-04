@@ -1,0 +1,19 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'lato regular';
+  font-size: 1.6rem;
+  background-color: #fafaff;
+}
+
+a {
+  border: dotted 1px transparent;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: dotted 1px #4050f5 !important;
+  }
+}
