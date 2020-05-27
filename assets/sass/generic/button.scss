@@ -1,11 +1,5 @@
 button {
-  border: dotted 1px transparent;
   background: transparent;
+  border: none;
   cursor: pointer;
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
-    border: dotted 1px $primary !important;
-  }
 }

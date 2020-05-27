@@ -3,36 +3,172 @@
 <html>
   <head>
     <title>Elao Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./build/app.css">
   </head>
   <body>
+    <!--
+        Todo : open / close mobile menu
+            - add .menu--show to .menu on click on the hamburger button (to open mobile menu)
+            - remove .menu--show on click on the close button (to close mobile menu)
+    -->
     <header class="header">
-        <!-- <a href="" class="logo">Admin élao</a> -->
-        <a href="" class="logo">
-            <img src="https://pbs.twimg.com/profile_images/540073037442207744/x4szhVNg_400x400.jpeg" alt="">
-        </a>
-        <nav class="main-nav">
+        <a href="" class="logo">Admin élao</a>
+        <div class="menu">
+            <nav class="primary-nav">
+                <ul>
+                    <li class="primary-nav__item primary-nav__item--active">
+                        <a href="">Primary nav</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Esse accusamus</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Dignissimos eligendi</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Minima</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">Amélie D.</button>
+                <ul class="user-menu__content"></ul>
+            </div>
+            <button class="menu__button menu__button--close">
+                <i class="icon-cancel"></i>
+            </button>
+        </div>
+        <button class="menu__button menu__button--open">
+            <i class="icon-menu"></i>
+        </button>
+    </header>
+    <main>
+        <nav class="secondary-nav">
             <ul>
-                <li class="main-nav__item">
-                    <a href="">Explicabo</a>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-megaphone"></i>
+                        Secondary nav
+                    </a>
                 </li>
-                <li class="main-nav__item main-nav__item--active">
-                    <a href="">Esse accusamus</a>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-map-signs"></i>
+                        Propositions en cours de traitement
+                    </a>
                 </li>
-                <li class="main-nav__item">
-                    <a href="">Dignissimos eligendi</a>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-box"></i>
+                        Propositions archivées
+                    </a>
                 </li>
-                <li class="main-nav__item">
-                    <a href="">Minima</a>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-doc-inv"></i>
+                        Contrats
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-credit-card"></i>
+                        Paiements
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon-tasks"></i>
+                        Stocks
+                    </a>
                 </li>
             </ul>
         </nav>
-        <div class="user-menu">
-            <button class="user-menu__button">Amélie D.</button>
-            <ul class="user-menu__content"></ul>
+        <div class="content">
+            <nav class="tertiary-nav">
+                <div class="tertiary-nav__roll">
+                    <ul>
+                        <li class="tertiary-nav__item  tertiary-nav__item--active">
+                            <a href="">Tertiary nav</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Conditionnement</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Stockage</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Transport</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Réception</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Suivi</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Conditionnement</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Stockage</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Transport</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Réception</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Suivi</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Conditionnement</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Stockage</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Transport</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Réception</a>
+                        </li>
+                        <li class="tertiary-nav__item">
+                            <a href="">Suivi</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                Praesentium quae a molestias cupiditate, fugiat assumenda laboriosam sed omnis officia consequatur illo rem voluptate beatae nam quis repellendus, harum delectus eligendi. Maiores, porro numquam illo molestias totam veniam ipsum saepe minima. Temporibus ipsam modi, rerum quibusdam cum illo minus fugit inventore provident at? Debitis similique, eaque officiis quia quod corporis laboriosam recusandae ex qui earum eveniet veritatis, asperiores consequatur. Dolorem vitae fugit nostrum, assumenda tempora! Facilis ea dicta hic, iste odio nostrum rerum saepe ipsam ratione dolores? Voluptas, asperiores totam nam molestias eos fugiat, necessitatibus consequatur tenetur? Atque tenetur alias animi beatae dolorem ducimus. Ipsum blanditiis quidem velit quis ratione! Repellat nostrum iure nisi commodi velit, minus nemo veniam. Quam, quod quo molestias temporibus voluptas nostrum! Odit, aspernatur quam excepturi architecto iusto dicta accusantium accusamus ex, laborum eveniet corporis sequi, alias!
+                Praesentium quae a molestias cupiditate, fugiat assumenda laboriosam sed omnis officia consequatur illo rem voluptate beatae nam quis repellendus, harum delectus eligendi. Maiores, porro numquam illo molestias totam veniam ipsum saepe minima. Temporibus ipsam modi, rerum quibusdam cum illo minus fugit inventore provident at? Debitis similique, eaque officiis quia quod corporis laboriosam recusandae ex qui earum eveniet veritatis, asperiores consequatur. Dolorem vitae fugit nostrum, assumenda tempora! Facilis ea dicta hic, iste odio nostrum rerum saepe ipsam ratione dolores? Voluptas, asperiores totam nam molestias eos fugiat, necessitatibus consequatur tenetur? Atque tenetur alias animi beatae dolorem ducimus. Ipsum blanditiis quidem velit quis ratione! Repellat nostrum iure nisi commodi velit, minus nemo veniam. Quam, quod quo molestias temporibus voluptas nostrum! Odit, aspernatur quam excepturi architecto iusto dicta accusantium accusamus ex, laborum eveniet corporis sequi, alias!
+                <br>
+                <br>
+                <br>
+                <br>
+                <!-- <table>
+                    <thead>
+                        <th>vero id possimus</th>
+                        <th>vero id possimus</th>
+                        <th>vero id possimus</th>
+                        <th>vero id possimus</th>
+                        <th>vero id possimus</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Repellendus at provident</td>
+                            <td>178.000</td>
+                            <td>Repellendus at provident</td>
+                            <td>Repellendus at provident</td>
+                            <td>Repellendus at provident</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
         </div>
-    </header>
-    <main></main>
+
+
+    </main>
 
     <script type="text/javascript" src="./build/app.js"></script>
     <script type="text/javascript" src="./build/runtime.js"></script>

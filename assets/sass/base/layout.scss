@@ -3,17 +3,44 @@ html {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'lato regular';
-  font-size: 1.6rem;
-  background-color: #fafaff;
+  font-size: 1.5rem;
+  color: $text;
+  background-color: $background;
 }
 
-a {
-  border: dotted 1px transparent;
+main {
+  margin: 0 auto;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 1900px;
+  display: flex;
+  flex: 1;
+}
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-    border: dotted 1px #4050f5 !important;
+.content {
+  padding: 0 60px;
+  max-width: calc(100% - 200px);
+  flex: 1;
+}
+
+
+
+@media(max-width: $screen-xs) {
+  main {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 0;
+    max-width: unset;
+  }
+
+  .container {
+    padding: 0 20px;
   }
 }

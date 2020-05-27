@@ -1,12 +1,12 @@
 Font license info
 
 
-## Fontelico
+## Font Awesome
 
-   Copyright (C) 2012 by Fontello project
+   Copyright (C) 2016 by Dave Gandy
 
-   Author:    Crowdsourced, for Fontello project
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://fontello.com
+   Author:    Dave Gandy
+   License:   SIL ()
+   Homepage:  http://fortawesome.github.com/Font-Awesome/
 
 
