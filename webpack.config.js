@@ -1,14 +1,12 @@
 var Encore = require('@symfony/webpack-encore');
 
-
-
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('public/build/')
+    .setOutputPath(Encore.isProduction() ? 'docs/build/' : 'public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath(__dirname + '/public/build')
+    .setPublicPath(Encore.isProduction() ? '/elao-admin/build' : (__dirname + '/public/build'))
     // only needed for CDN's or sub-directory deploy
-    //.setManifestKeyPrefix('build/')
+    .setManifestKeyPrefix('build/')
 
     /*
      * ENTRY CONFIG
@@ -41,7 +39,7 @@ Encore
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+    .enableVersioning(false)
 
     // enables Sass/SCSS support
     .enableSassLoader()

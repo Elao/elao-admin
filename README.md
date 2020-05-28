@@ -1,5 +1,7 @@
 # Elao admin
 
+[Demo](https://elao.github.io/elao-admin/index.html)
+
 ## Requirements
 
 * `node`

@@ -1,0 +1,10 @@
+{
+  "build/app.css": "/elao-admin/build/app.css",
+  "build/app.js": "/elao-admin/build/app.js",
+  "build/runtime.js": "/elao-admin/build/runtime.js",
+  "build/fonts/fontello.eot": "/elao-admin/build/fonts/fontello.135083f6.eot",
+  "build/fonts/fontello.woff2": "/elao-admin/build/fonts/fontello.1873d8af.woff2",
+  "build/fonts/fontello.ttf": "/elao-admin/build/fonts/fontello.9a1ffe40.ttf",
+  "build/fonts/fontello.woff": "/elao-admin/build/fonts/fontello.b2fe6705.woff",
+  "build/images/fontello.svg": "/elao-admin/build/images/fontello.378c25da.svg"
+}

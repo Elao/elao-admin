@@ -15,9 +15,19 @@ install:
 build:
 	yarn encore dev
 
+## Build production assets
+build@production:
+	yarn encore production
+
 ## Build assets and watch
 watch:
 	yarn encore dev --watch --watch-poll
+
+dist:
+	rm -Rf ./docs/*
+	cp -R ./public/* ./docs/
+	rm -Rf ./docs/build/
+	make build@production
 
 #########
 # Fonts #
