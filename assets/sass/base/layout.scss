@@ -6,15 +6,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'lato regular';
-  font-size: 1.5rem;
+  font-family: $primary-font;
+  font-size: 1.6rem;
   color: $text;
   background-color: $background;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
   margin: 0 auto;
-  padding: 40px 30px;
+  padding: 40px 25px;
   width: 100%;
   max-width: 1900px;
   display: flex;
@@ -26,8 +27,6 @@ main {
   max-width: calc(100% - 200px);
   flex: 1;
 }
-
-
 
 @media(max-width: $screen-xs) {
   main {

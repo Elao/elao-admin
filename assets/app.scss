@@ -7,12 +7,16 @@
 @import './sass/base/layout';
 
 @import './sass/components/header';
-@import './sass/components/menu';
 @import './sass/components/user-menu';
 
 @import './sass/components/primary-nav';
 @import './sass/components/secondary-nav';
 @import './sass/components/tertiary-nav';
+@import './sass/components/mobile-nav';
+@import './sass/components/menu-button';
 
-@import './sass/generic/button';
 @import './sass/generic/a';
+@import './sass/generic/button';
+@import './sass/generic/table';
+
+@import './sass/animations/collapse';

@@ -1,10 +1,9 @@
 .header {
-  padding: 0 30px;
+  padding: 0 25px;
   height: 60px;
   display: flex;
   align-items: center;
   border-bottom: solid 1px $border;
-  box-shadow: 0 5px 10px 0 rgba(242, 242, 248, 1);
   background-color: #fff;
   z-index: 100;
 
@@ -12,11 +11,9 @@
     height: 50%;
     display: flex;
     align-items: center;
-    font-family: 'lato bold';
-    font-size: 1.4rem;
-    color: $text;
+    font-family: $primary-font--bold;
+    color: $secondary;
     text-transform: uppercase;
-    letter-spacing: .4px;
     text-decoration: none;
     white-space: nowrap;
   }
@@ -24,7 +21,7 @@
 
 @media(max-width: $screen-xs) {
   .header {
-    padding: 0 20px;
+    padding: 0 30px;
     justify-content: space-between;
   }
 }

@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   color: $text;
+  font-size: 14px;
+  letter-spacing: .8px;
   transition: color ease-in-out .15s;
 
   &:hover,
@@ -19,6 +21,6 @@
 
 @media (max-width: $screen-xs) {
   .user-menu {
-    flex: 0;
+    display: none;
   }
 }

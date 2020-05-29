@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="./build/app.css">
   </head>
   <body>
+
     <!--
-        Todo : open / close mobile menu
-            - add .menu--show to .menu on click on the hamburger button (to open mobile menu)
-            - remove .menu--show on click on the close button (to close mobile menu)
+        Navigation
+
+        Todo : show / hide mobile nav
+            - .menu-button becomes .menu-button.menu-button--close when menu is shown
+            - .mobile-nav becomes .mobile-nav--show to display menu
+            - .collapse.collapse--show to display nav sub levels
     -->
     <header class="header">
-        <a href="" class="logo">Admin élao</a>
-        <div class="menu">
+        <a href="" class="logo">ADMIN ELAO</a>
             <nav class="primary-nav">
                 <ul>
                     <li class="primary-nav__item primary-nav__item--active">
@@ -35,20 +38,61 @@
                 <button class="user-menu__button">Amélie D.</button>
                 <ul class="user-menu__content"></ul>
             </div>
-            <button class="menu__button menu__button--close">
-                <i class="icon-cancel"></i>
-            </button>
-        </div>
-        <button class="menu__button menu__button--open">
-            <i class="icon-menu"></i>
-        </button>
+        <button class="menu-button"></button> <!-- .menu-button--close -->
     </header>
+    <div class="mobile-nav">  <!-- .mobile-nav--show -->
+        <ul>
+            <li class="mobile-nav__item mobile-nav__item--primary mobile-nav__item--active collapse"> <!-- .collapse--show -->
+                <a href="">Primary nav (active)</a>
+                <ul class="collapse__menu">
+                    <li class="mobile-nav__item mobile-nav__item--secondary mobile-nav__item--active">
+                        <a href="">
+                            <i class="icon-map-signs"></i>
+                            Secondary nav (active)
+                        </a>
+                        <ul>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
+                                <a href="">Tertiary nav (active)</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--secondary">
+                        <a href="">
+                            <i class="icon-doc-inv"></i>
+                            Secondary nav
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--secondary">
+                        <a href="">
+                            <i class="icon-doc-inv"></i>
+                            Secondary nav
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+        </ul>
+    </div>
     <main>
         <nav class="secondary-nav">
             <ul>
-                <li class="secondary-nav__item">
+                <li class="secondary-nav__item secondary-nav__item--active">
                     <a href="">
-                        <i class="icon-megaphone"></i>
+                        <i class="icon-doc-inv"></i>
                         Secondary nav
                     </a>
                 </li>
@@ -86,88 +130,30 @@
         </nav>
         <div class="content">
             <nav class="tertiary-nav">
-                <div class="tertiary-nav__roll">
-                    <ul>
-                        <li class="tertiary-nav__item  tertiary-nav__item--active">
-                            <a href="">Tertiary nav</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Conditionnement</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Stockage</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Transport</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Réception</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Suivi</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Conditionnement</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Stockage</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Transport</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Réception</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Suivi</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Conditionnement</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Stockage</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Transport</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Réception</a>
-                        </li>
-                        <li class="tertiary-nav__item">
-                            <a href="">Suivi</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul>
+                    <li class="tertiary-nav__item tertiary-nav__item--active">
+                        <a href="">Tertiary nav</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Conditionnement</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Stockage</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Transport</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Réception</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Suivi</a>
+                </ul>
             </nav>
             <div class="container">
-                Praesentium quae a molestias cupiditate, fugiat assumenda laboriosam sed omnis officia consequatur illo rem voluptate beatae nam quis repellendus, harum delectus eligendi. Maiores, porro numquam illo molestias totam veniam ipsum saepe minima. Temporibus ipsam modi, rerum quibusdam cum illo minus fugit inventore provident at? Debitis similique, eaque officiis quia quod corporis laboriosam recusandae ex qui earum eveniet veritatis, asperiores consequatur. Dolorem vitae fugit nostrum, assumenda tempora! Facilis ea dicta hic, iste odio nostrum rerum saepe ipsam ratione dolores? Voluptas, asperiores totam nam molestias eos fugiat, necessitatibus consequatur tenetur? Atque tenetur alias animi beatae dolorem ducimus. Ipsum blanditiis quidem velit quis ratione! Repellat nostrum iure nisi commodi velit, minus nemo veniam. Quam, quod quo molestias temporibus voluptas nostrum! Odit, aspernatur quam excepturi architecto iusto dicta accusantium accusamus ex, laborum eveniet corporis sequi, alias!
-                Praesentium quae a molestias cupiditate, fugiat assumenda laboriosam sed omnis officia consequatur illo rem voluptate beatae nam quis repellendus, harum delectus eligendi. Maiores, porro numquam illo molestias totam veniam ipsum saepe minima. Temporibus ipsam modi, rerum quibusdam cum illo minus fugit inventore provident at? Debitis similique, eaque officiis quia quod corporis laboriosam recusandae ex qui earum eveniet veritatis, asperiores consequatur. Dolorem vitae fugit nostrum, assumenda tempora! Facilis ea dicta hic, iste odio nostrum rerum saepe ipsam ratione dolores? Voluptas, asperiores totam nam molestias eos fugiat, necessitatibus consequatur tenetur? Atque tenetur alias animi beatae dolorem ducimus. Ipsum blanditiis quidem velit quis ratione! Repellat nostrum iure nisi commodi velit, minus nemo veniam. Quam, quod quo molestias temporibus voluptas nostrum! Odit, aspernatur quam excepturi architecto iusto dicta accusantium accusamus ex, laborum eveniet corporis sequi, alias!
-                <br>
-                <br>
-                <br>
-                <br>
-                <!-- <table>
-                    <thead>
-                        <th>vero id possimus</th>
-                        <th>vero id possimus</th>
-                        <th>vero id possimus</th>
-                        <th>vero id possimus</th>
-                        <th>vero id possimus</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Repellendus at provident</td>
-                            <td>178.000</td>
-                            <td>Repellendus at provident</td>
-                            <td>Repellendus at provident</td>
-                            <td>Repellendus at provident</td>
-                        </tr>
-                    </tbody>
-                </table> -->
+
             </div>
         </div>
-
-
     </main>
 
     <script type="text/javascript" src="./build/app.js"></script>
