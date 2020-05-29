@@ -11,6 +11,7 @@ body {
   color: $text;
   background-color: $background;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
