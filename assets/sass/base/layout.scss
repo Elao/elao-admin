@@ -1,0 +1,46 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font;
+  font-size: 1.6rem;
+  color: $text;
+  background-color: $background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin: 0 auto;
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 1900px;
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  padding: 0 60px;
+  max-width: calc(100% - 200px);
+  flex: 1;
+}
+
+@media(max-width: $screen-xs) {
+  main {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 0;
+    max-width: unset;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}

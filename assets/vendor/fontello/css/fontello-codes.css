@@ -1,2 +1,9 @@
 
-.icon-emo-happy:before { content: '\e800'; } /* '' */
+.icon-cancel:before { content: '\e800'; } /* '' */
+.icon-megaphone:before { content: '\e802'; } /* '' */
+.icon-credit-card:before { content: '\e804'; } /* '' */
+.icon-tasks:before { content: '\f0ae'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-doc-inv:before { content: '\f15b'; } /* '' */
+.icon-box:before { content: '\f187'; } /* '' */
+.icon-map-signs:before { content: '\f277'; } /* '' */

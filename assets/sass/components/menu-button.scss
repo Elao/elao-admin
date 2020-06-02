@@ -1,0 +1,36 @@
+.menu-button {
+  display: none;
+}
+
+@media (max-width: $screen-xs) {
+  .menu-button {
+    position: relative;
+    display: flex;
+
+    &:before {
+      content: '\f0c9';
+      font-family: "fontello";
+    }
+  }
+
+  .menu-button--close {
+    &:before,
+    &:after {
+      height: 18px;
+      width: 2px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: '';
+      background-color: $secondary;
+    }
+
+    &:before {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}

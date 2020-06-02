@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+
+  }
+
+  th,
+  td {
+    text-align: left;
+    border: 1px solid $border;
+  }
+
+  th {
+    padding: 16px;
+  }
+
+  td {
+    padding: 10px 16px;
+  }
+}

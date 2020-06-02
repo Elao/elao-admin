@@ -1,0 +1,27 @@
+.user-menu {
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.user-menu__button {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  color: $text;
+  font-size: 14px;
+  letter-spacing: .8px;
+  transition: color ease-in-out .15s;
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .user-menu {
+    display: none;
+  }
+}
