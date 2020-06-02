@@ -1,12 +1,161 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" dir="ltr">
+<html>
   <head>
     <title>Elao Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./build/app.css">
   </head>
   <body>
-    <h1>Elao Admin <i class="icon-emo-happy"></i></h1>
+
+    <!--
+        Navigation
+
+        Todo : show / hide mobile nav
+            - .menu-button becomes .menu-button.menu-button--close when menu is shown
+            - .mobile-nav becomes .mobile-nav--show to display menu
+            - .collapse.collapse--show to display nav sub levels
+    -->
+    <header class="header">
+        <a href="" class="logo">ADMIN ELAO</a>
+            <nav class="primary-nav">
+                <ul>
+                    <li class="primary-nav__item primary-nav__item--active">
+                        <a href="">Primary nav</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Esse accusamus</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Dignissimos eligendi</a>
+                    </li>
+                    <li class="primary-nav__item">
+                        <a href="">Minima</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button class="user-menu__button">Amélie D.</button>
+                <ul class="user-menu__content"></ul>
+            </div>
+        <button class="menu-button"></button> <!-- .menu-button--close -->
+    </header>
+    <div class="mobile-nav">  <!-- .mobile-nav--show -->
+        <ul>
+            <li class="mobile-nav__item mobile-nav__item--primary mobile-nav__item--active collapse"> <!-- .collapse--show -->
+                <a href="">Primary nav (active)</a>
+                <ul class="collapse__menu">
+                    <li class="mobile-nav__item mobile-nav__item--secondary mobile-nav__item--active">
+                        <a href="">
+                            <i class="icon icon--direction"></i>
+                            Secondary nav (active)
+                        </a>
+                        <ul>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
+                                <a href="">Tertiary nav (active)</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--secondary">
+                        <a href="">
+                            <i class="icon icon--doc"></i>
+                            Secondary nav
+                        </a>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--secondary">
+                        <a href="">
+                            <i class="icon icon--doc"></i>
+                            Secondary nav
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="">Primary nav</a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <nav class="secondary-nav">
+            <ul>
+                <li class="secondary-nav__item secondary-nav__item--active">
+                    <a href="">
+                        <i class="icon icon--doc"></i>
+                        Secondary nav
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon icon--direction"></i>
+                        Propositions en cours de traitement
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon icon--box"></i>
+                        Propositions archivées
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon icon--doc"></i>
+                        Contrats
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon icon--credit-card"></i>
+                        Paiements
+                    </a>
+                </li>
+                <li class="secondary-nav__item">
+                    <a href="">
+                        <i class="icon icon--tasks"></i>
+                        Stocks
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <nav class="tertiary-nav">
+                <ul>
+                    <li class="tertiary-nav__item tertiary-nav__item--active">
+                        <a href="">Tertiary nav</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Conditionnement</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Stockage</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Transport</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Réception</a>
+                    </li>
+                    <li class="tertiary-nav__item">
+                        <a href="">Suivi</a>
+                </ul>
+            </nav>
+            <div class="container">
+
+            </div>
+        </div>
+    </main>
+
     <script type="text/javascript" src="./build/app.js"></script>
     <script type="text/javascript" src="./build/runtime.js"></script>
   </body>

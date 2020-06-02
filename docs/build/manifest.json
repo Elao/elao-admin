@@ -2,9 +2,15 @@
   "build/app.css": "/elao-admin/build/app.css",
   "build/app.js": "/elao-admin/build/app.js",
   "build/runtime.js": "/elao-admin/build/runtime.js",
-  "build/fonts/fontello.eot": "/elao-admin/build/fonts/fontello.135083f6.eot",
-  "build/fonts/fontello.woff2": "/elao-admin/build/fonts/fontello.1873d8af.woff2",
-  "build/fonts/fontello.ttf": "/elao-admin/build/fonts/fontello.9a1ffe40.ttf",
-  "build/fonts/fontello.woff": "/elao-admin/build/fonts/fontello.b2fe6705.woff",
-  "build/images/fontello.svg": "/elao-admin/build/images/fontello.378c25da.svg"
+  "build/fonts/fontello.woff": "/elao-admin/build/fonts/fontello.04a814f5.woff",
+  "build/fonts/fontello.eot": "/elao-admin/build/fonts/fontello.45381a17.eot",
+  "build/fonts/fontello.ttf": "/elao-admin/build/fonts/fontello.515dbd10.ttf",
+  "build/fonts/fontello.woff2": "/elao-admin/build/fonts/fontello.8496edc9.woff2",
+  "build/fonts/worksans-light.woff": "/elao-admin/build/fonts/worksans-light.0de05faf.woff",
+  "build/fonts/worksans-light.woff2": "/elao-admin/build/fonts/worksans-light.e478e75f.woff2",
+  "build/fonts/worksans-regular.woff2": "/elao-admin/build/fonts/worksans-regular.10bffe45.woff2",
+  "build/fonts/worksans-regular.woff": "/elao-admin/build/fonts/worksans-regular.a47ff6e1.woff",
+  "build/fonts/worksans-semibold.woff2": "/elao-admin/build/fonts/worksans-semibold.0433496b.woff2",
+  "build/fonts/worksans-semibold.woff": "/elao-admin/build/fonts/worksans-semibold.c0e51327.woff",
+  "build/images/fontello.svg": "/elao-admin/build/images/fontello.58248d5e.svg"
 }
