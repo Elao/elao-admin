@@ -1,0 +1,58 @@
+.drop {
+  position: relative;
+}
+
+.drop__button {
+  width: 100%;
+  display: inline-block;
+}
+
+.drop__menu {
+  margin: 0;
+  padding: 0;
+  min-width: 190px;
+  position: absolute;
+  display: none;
+  list-style: none;
+  border: solid 1px $border;
+  border-radius: 6px;
+  background: #fff;
+
+  li {
+    padding: 5px 25px;
+
+    &:first-of-type { padding-top: 12px; }
+    &:last-of-type { padding-bottom: 15px; }
+
+    a {
+      font-family: 'work sans regular';
+      color: $text;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.drop--down {
+  .drop__menu {
+    margin-top: 7px;
+    top: 100%;
+    right: 0;
+  }
+}
+
+.drop--left {
+  .drop__menu {
+    margin-right: 7px;
+    top: 0;
+    right: 100%;
+  }
+}
+
+.drop--show {
+  .drop__menu {
+    display: block;
+  }
+}

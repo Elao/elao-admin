@@ -1,5 +1,6 @@
 
 .icon-cancel:before { content: '\e800'; } /* '' */
+.icon-dot-3:before { content: '\e801'; } /* '' */
 .icon-megaphone:before { content: '\e802'; } /* '' */
 .icon-credit-card:before { content: '\e804'; } /* '' */
 .icon-tasks:before { content: '\f0ae'; } /* '' */

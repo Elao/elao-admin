@@ -53,6 +53,12 @@
       "css": "cancel",
       "code": 59392,
       "src": "fontawesome"
+    },
+    {
+      "uid": "d10920db2e79c997c5e783279291970c",
+      "css": "dot-3",
+      "code": 59393,
+      "src": "entypo"
     }
   ]
 }
