@@ -1,0 +1,28 @@
+.button {
+  padding: 0 29px;
+  height: 48px;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary--dark;
+  background-color: #fff;
+  border: solid 1px #dfdfe7;
+  border-radius: 4px;
+
+  .icon {
+    margin-right: 12px;
+    font-size: 21px;
+    color: $text--lighter;
+  }
+}
+
+.button--primary {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.button + .button {
+  margin-left: 20px;
+}

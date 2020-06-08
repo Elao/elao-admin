@@ -1,0 +1,27 @@
+.data-table {}
+
+.data-table__header {
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .infos {
+    display: flex;
+    align-items: center;
+
+    .link {
+      margin-left: 20px;
+    }
+  }
+
+  .actions {
+    display: flex;
+  }
+}
+
+.data-table__content {
+  overflow-x: auto;
+
+  &.no-scroll { overflow: unset; }
+}
