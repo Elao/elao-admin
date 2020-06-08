@@ -26,3 +26,11 @@
 .button + .button {
   margin-left: 20px;
 }
+
+@media (max-width: $screen-sm) {
+  .button {
+    padding: 0 20px;
+    height: 45px;
+    min-width: 135px;
+  }
+}

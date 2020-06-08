@@ -1,7 +1,7 @@
 .data-table {}
 
 .data-table__header {
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,4 +24,26 @@
   overflow-x: auto;
 
   &.no-scroll { overflow: unset; }
+}
+
+@media (max-width: $screen-sm) {
+  .data-table__header {
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .infos,
+    .actions {
+      width: 100%;
+    }
+
+    .infos {
+      margin: 0 0 30px;
+      justify-content: space-between;
+    }
+
+    .actions {
+      justify-content: flex-end;
+    }
+  }
 }
