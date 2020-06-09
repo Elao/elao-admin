@@ -1,6 +1,6 @@
 .mobile-nav { display: none }
 
-@media(max-width: $screen-xs) {
+@media(max-width: $screen-md) {
   .mobile-nav {
     padding: 30px 25px;
     height: 100%;
@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: $secondary;
+    background: var(--primary--dark);
     transition: right linear .2s;
     overflow-y: auto;
 

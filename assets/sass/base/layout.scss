@@ -8,8 +8,8 @@ body {
   flex-direction: column;
   font-family: $primary-font;
   font-size: 1.6rem;
-  color: $text;
-  background-color: $background;
+  color: var(--text);
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,7 +29,11 @@ main {
   flex: 1;
 }
 
-@media(max-width: $screen-xs) {
+.theme-blue {
+  --primary: #blue;
+}
+
+@media(max-width: $screen-md) {
   main {
     padding: 0;
     flex-direction: column;

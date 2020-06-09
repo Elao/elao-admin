@@ -1,0 +1,36 @@
+.button {
+  padding: 0 30px;
+  height: 48px;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary--dark);
+  background-color: #fff;
+  border: solid 1px #dfdfe7;
+  border-radius: 4px;
+
+  .icon {
+    margin-right: 12px;
+    font-size: 21px;
+    color: var(--text--lighter);
+  }
+}
+
+.button--primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.button + .button {
+  margin-left: 20px;
+}
+
+@media (max-width: $screen-sm) {
+  .button {
+    padding: 0 20px;
+    height: 45px;
+    min-width: 135px;
+  }
+}

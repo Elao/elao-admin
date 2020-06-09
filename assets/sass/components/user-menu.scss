@@ -1,6 +1,5 @@
 .user-menu {
   margin-left: auto;
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -9,18 +8,18 @@
   height: 50%;
   display: flex;
   align-items: center;
-  color: $text;
+  color: var(--text);
   font-size: 14px;
   letter-spacing: .8px;
   transition: color ease-in-out .15s;
 
   &:hover,
   &:focus {
-    color: $primary;
+    color: var(--primary);
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-md) {
   .user-menu {
     display: none;
   }

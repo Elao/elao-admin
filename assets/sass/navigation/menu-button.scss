@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-md) {
   .menu-button {
     position: relative;
     display: flex;
@@ -22,7 +22,7 @@
       top: 50%;
       left: 0;
       content: '';
-      background-color: $secondary;
+      background-color: var(--primary--dark);
     }
 
     &:before {

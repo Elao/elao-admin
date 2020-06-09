@@ -1,0 +1,65 @@
+.drop {
+  position: relative;
+}
+
+.drop__button {
+  width: 100%;
+  display: inline-block;
+
+  .icon {
+    color: var(--text--lighter);
+    font-size: 18px;
+  }
+}
+
+.drop__menu {
+  margin: 0;
+  padding: 0;
+  min-width: 190px;
+  position: absolute;
+  display: none;
+  list-style: none;
+  border: solid 1px var(--border);
+  border-radius: 6px;
+  background: #fff;
+
+  li {
+    padding: 5px 25px;
+    line-height: 1;
+
+    &:first-of-type { padding-top: 12px; }
+    &:last-of-type { padding-bottom: 15px; }
+
+    a {
+      font-family: 'work sans regular';
+      color: var(--text);
+      font-size: 14px;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}
+
+.drop--down {
+  .drop__menu {
+    margin-top: 7px;
+    top: 100%;
+    right: 0;
+  }
+}
+
+.drop--left {
+  .drop__menu {
+    top: 0;
+    right: 100%;
+  }
+}
+
+.drop--show {
+  .drop__menu {
+    display: block;
+  }
+}
