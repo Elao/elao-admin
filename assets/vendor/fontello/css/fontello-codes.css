@@ -4,6 +4,8 @@
 .icon-megaphone:before { content: '\e802'; } /* '' */
 .icon-download:before { content: '\e803'; } /* '' */
 .icon-credit-card:before { content: '\e804'; } /* '' */
+.icon-left-open:before { content: '\e805'; } /* '' */
+.icon-right-open:before { content: '\e806'; } /* '' */
 .icon-tasks:before { content: '\f0ae'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-doc-inv:before { content: '\f15b'; } /* '' */

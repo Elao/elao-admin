@@ -17,7 +17,6 @@
   speak: never;
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
   margin-right: .2em;
   text-align: center;
   font-variant: normal;
@@ -32,6 +31,8 @@ $icons: (
   box: '\f187',
   cancel: '\e800',
   credit-card: '\e804',
+  chevron-before: '\e805',
+  chevron-next: '\e806',
   doc: '\f15b',
   dots: '\e801',
   direction: '\f277',

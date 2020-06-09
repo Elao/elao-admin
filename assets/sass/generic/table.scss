@@ -10,6 +10,8 @@ table {
 }
 
 tr {
+  vertical-align: top;
+
   &:nth-of-type(even) {
     background-color: #fff;
   }

@@ -12,3 +12,9 @@
   white-space: nowrap;
   border: 0;
 }
+
+@media (max-width: $screen-sm) {
+  .sm-hidden {
+    display: none;
+  }
+}

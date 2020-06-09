@@ -1,4 +1,6 @@
-.data-table {}
+.data-table {
+  margin: 0 0 50px;
+}
 
 .data-table__header {
   margin-bottom: 30px;
@@ -21,6 +23,8 @@
 }
 
 .data-table__content {
+  border: solid 1px $border;
+  border-radius: 10px;
   overflow-x: auto;
 
   &.no-scroll { overflow: unset; }
