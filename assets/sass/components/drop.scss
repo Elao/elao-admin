@@ -7,7 +7,7 @@
   display: inline-block;
 
   .icon {
-    color: $text--lighter;
+    color: var(--text--lighter);
     font-size: 18px;
   }
 }
@@ -19,7 +19,7 @@
   position: absolute;
   display: none;
   list-style: none;
-  border: solid 1px $border;
+  border: solid 1px var(--border);
   border-radius: 6px;
   background: #fff;
 
@@ -32,12 +32,12 @@
 
     a {
       font-family: 'work sans regular';
-      color: $text;
+      color: var(--text);
       font-size: 14px;
       text-decoration: none;
 
       &:hover {
-        color: $primary;
+        color: var(--primary);
       }
     }
   }

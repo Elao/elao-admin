@@ -15,10 +15,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $primary--dark;
+    color: var(--primary--dark);
     font-size: 14px;
     background-color: #fff;
-    border: solid 1px $border;
+    border: solid 1px var(--border);
     border-radius: 4px;
   }
 }
@@ -26,8 +26,8 @@
 .pagination__item--active {
   a {
     color: #fff;
-    background-color: $primary;
-    border-color: $primary;
+    background-color: var(--primary);
+    border-color: var(--primary);
   }
 }
 

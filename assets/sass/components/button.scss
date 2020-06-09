@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $primary--dark;
+  color: var(--primary--dark);
   background-color: #fff;
   border: solid 1px #dfdfe7;
   border-radius: 4px;
@@ -13,14 +13,14 @@
   .icon {
     margin-right: 12px;
     font-size: 21px;
-    color: $text--lighter;
+    color: var(--text--lighter);
   }
 }
 
 .button--primary {
   color: #fff;
-  background-color: $primary;
-  border-color: $primary;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .button + .button {

@@ -3,7 +3,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  border-bottom: solid 1px $border;
+  border-bottom: solid 1px var(--border);
   background-color: #fff;
   z-index: 100;
 
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     font-family: $primary-font--bold;
-    color: $primary--dark;
+    color: var(--primary--dark);
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;

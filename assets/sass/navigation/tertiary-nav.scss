@@ -23,13 +23,13 @@
     height: 100%;
     display: flex;
     align-items: flex-start;
-    color: $text--light;
+    color: var(--text--light);
     text-decoration: none;
     line-height: 1;
 
     &:hover,
     &:focus {
-      color: $primary;
+      color: var(--primary);
     }
   }
 
@@ -41,13 +41,13 @@
   a {
     position: relative;
     font-family: $primary-font--bold;
-    color: $primary;
+    color: var(--primary);
 
     &:after {
       content: '';
       height: 3px;
       width: 40px;
-      background-color: $primary;
+      background-color: var(--primary);
       position: absolute;
       bottom: 0;
       left: 0;

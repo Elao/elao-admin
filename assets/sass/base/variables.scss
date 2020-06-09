@@ -1,14 +1,35 @@
-$primary: #4053ec;
-$primary--dark: #353c79;
+.theme-demo {
+  --primary: #4053ec;
+  --primary--dark: #353c79;
+  --text: #73748F;
+  --text--light: #9a9a9e;
+  --text--lighter: #b7b7bc;
+  --border: #edeefa;
+  --background: #fafaff;
+}
+
+.theme-bis {
+  --primary: #109ada;
+  --primary--dark: darken(#109ada, 20%);
+  --text: #2a6d73;
+  --text--light: #83a0b3;
+  --text--lighter: #83a0b3;
+  --border: #e9e9e9;
+  --background: #f8fafb;
+}
+
+.theme-ter {
+  --primary: #ea4e89;
+  --primary--dark: darken(#e95c30, 15%);
+  --text: #6b6b6b;
+  --text--light: #909494;
+  --text--lighter: #909494;
+  --border: #e9e9e9;
+  --background: #f8fafb;
+}
+
 $danger: #e02020;
 $success: #00cc99;
-
-$text: #73748F;
-$text--light: #9a9a9e;
-$text--lighter: #b7b7bc;
-
-$border: #edeefa;
-$background: #fafaff;
 
 $screen-sm: 750px;
 $screen-md: 1000px;
