@@ -29,6 +29,14 @@ Watch
 make watch
 ```
 
+Dev server
+
+```
+make start
+```
+
+Then go to [http://localhost:8080](http://localhost:8080)
+
 ## Fontello
 
 `make fontello-push` will open your fontello project on http://fontello.com/.
