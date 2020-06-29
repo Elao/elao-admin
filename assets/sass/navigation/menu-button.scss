@@ -4,8 +4,11 @@
 
 @media (max-width: $screen-md) {
   .menu-button {
+    padding: 0 30px;
+    height: 100%;
     position: relative;
     display: flex;
+    align-items: center;
 
     &:before {
       content: '\f0c9';

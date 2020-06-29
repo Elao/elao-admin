@@ -29,10 +29,6 @@ main {
   flex: 1;
 }
 
-.theme-blue {
-  --primary: #blue;
-}
-
 @media(max-width: $screen-md) {
   main {
     padding: 0;
