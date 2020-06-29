@@ -54,16 +54,16 @@
         <button class="menu-button"></button> <!-- .menu-button--close -->
     </header>
     <div class="mobile-nav">  <!-- .mobile-nav--show -->
-        <ul>
-            <li class="mobile-nav__item mobile-nav__item--primary mobile-nav__item--active collapse"> <!-- .collapse--show -->
-                <a href="">Primary nav (active)</a>
-                <ul class="collapse__menu">
-                    <li class="mobile-nav__item mobile-nav__item--secondary mobile-nav__item--active">
-                        <a href="">
+        <ul class="tree">
+            <li class="mobile-nav__item tree__item mobile-nav__item--primary mobile-nav__item--active"> <!-- .collapse--show -->
+                <a class="tree__item__trigger" href="">Primary nav (active)</a>
+                <ul class="tree__item__content tree">
+                    <li class="mobile-nav__item tree__item mobile-nav__item--secondary mobile-nav__item--active">
+                        <a href="" class="tree__item__trigger">
                             <i class="icon icon--direction" aria-hidden="true"></i>
                             Secondary nav (active)
                         </a>
-                        <ul>
+                        <ul class="tree__item__content">
                             <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
                                 <a href="">Tertiary nav (active)</a>
                             </li>
@@ -75,6 +75,37 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="mobile-nav__item tree__item mobile-nav__item--secondary">
+                        <a href="" class="tree__item__trigger">
+                            <i class="icon icon--doc" aria-hidden="true"></i>
+                            Secondary nav
+                        </a>
+                        <ul class="tree__item__content">
+                            <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
+                                <a href="">Tertiary nav (active)</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                <a href="">Tertiary nav</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item tree__item mobile-nav__item--secondary">
+                        <a href="">
+                            <i class="icon icon--doc" aria-hidden="true"></i>
+                            Secondary nav
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--primary tree__item">
+                <a href="">Primary nav</a>
+            </li>
+            <li class="mobile-nav__item mobile-nav__item--primary tree__item">
+                <a href="" class="tree__item__trigger">Primary nav</a>
+                <ul class="tree__item__content">
                     <li class="mobile-nav__item mobile-nav__item--secondary">
                         <a href="">
                             <i class="icon icon--doc" aria-hidden="true"></i>
@@ -89,13 +120,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="mobile-nav__item">
-                <a href="">Primary nav</a>
-            </li>
-            <li class="mobile-nav__item">
-                <a href="">Primary nav</a>
-            </li>
-            <li class="mobile-nav__item">
+            <li class="mobile-nav__item mobile-nav__item--primary tree__item">
                 <a href="">Primary nav</a>
             </li>
         </ul>
@@ -174,7 +199,7 @@
                         <div class="data-table__header">
                             <div class="infos">
                                 50 000 au total
-                                <button class="link link--primary">
+                                <button class="link link--primary collapse__trigger">
                                     <i class="icon icon--filter"></i>
                                     Filtrer
                                 </button>
