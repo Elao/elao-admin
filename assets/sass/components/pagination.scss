@@ -20,6 +20,11 @@
     background-color: #fff;
     border: solid 1px var(--border);
     border-radius: 4px;
+    transition: color ease-in-out .2s, border-color ease-in-out .2s;
+
+    &:hover {
+      border-color: var(--primary);
+    }
   }
 }
 
@@ -28,6 +33,12 @@
     color: #fff;
     background-color: var(--primary);
     border-color: var(--primary);
+
+    &:hover {
+      color: #fff;
+      background-color: var(--primary--dark);
+      border-color: var(--primary--dark);
+    }
   }
 }
 

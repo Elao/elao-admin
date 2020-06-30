@@ -9,6 +9,13 @@
   .icon {
     color: var(--text--lighter);
     font-size: 18px;
+    transition: color ease-in-out .2s;
+  }
+
+  &:hover {
+    .icon {
+      color: var(--text--dark);
+    }
   }
 }
 
@@ -24,7 +31,7 @@
   background: #fff;
 
   li {
-    padding: 5px 25px;
+    padding: 7px 25px;
     line-height: 1;
 
     &:first-of-type { padding-top: 12px; }

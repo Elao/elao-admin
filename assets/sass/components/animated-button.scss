@@ -1,0 +1,28 @@
+.animated-button {
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  transition: color ease-in-out .2s;
+
+  .icon {
+    margin-right: 12px;
+    font-size: 21px;
+  }
+}
+
+.animated-button--primary {
+  color: var(--primary);
+
+  &:hover { color: var(--primary--dark); }
+}
+
+.animated-button--equalizer {
+  &:hover {
+    .icon--equalizer__bar {
+      &:nth-of-type(1):before { left: 50%; }
+      &:nth-of-type(2):before { left: 30%; }
+      &:nth-of-type(3):before { left: 70%; }
+    }
+  }
+}
