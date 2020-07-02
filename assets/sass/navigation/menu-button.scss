@@ -4,11 +4,11 @@
 
 @media (max-width: $screen-md) {
   .menu-button {
-    padding: 0 30px;
     height: 100%;
     width: 70px;
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     &:before {
