@@ -6,6 +6,7 @@
   .menu-button {
     padding: 0 30px;
     height: 100%;
+    width: 70px;
     position: relative;
     display: flex;
     align-items: center;
@@ -13,6 +14,7 @@
     &:before {
       content: '\f0c9';
       font-family: "fontello";
+      color: #000;
     }
   }
 
@@ -23,17 +25,17 @@
       width: 2px;
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 50%;
       content: '';
-      background-color: var(--primary--dark);
+      background-color: #000;
     }
 
     &:before {
-      transform: translateY(-50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
 
     &:after {
-      transform: translateY(-50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }
