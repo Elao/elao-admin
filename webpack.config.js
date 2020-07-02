@@ -1,10 +1,11 @@
 var Encore = require('@symfony/webpack-encore');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 Encore
     // directory where compiled assets will be stored
     .setOutputPath(Encore.isProduction() ? 'docs/build/' : 'public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath(Encore.isProduction() ? '/elao-admin/build' : (__dirname + '/public/build'))
+    .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     .setManifestKeyPrefix('build/')
 
@@ -18,8 +19,7 @@ Encore
      * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    //.addEntry('page1', './assets/js/page1.js')
-    //.addEntry('page2', './assets/js/page2.js')
+    //.addStyleEntry('style', './assets/app.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -52,12 +52,22 @@ Encore
       to: 'images/[path][name].[ext]',
     })
 
+    .configureDevServerOptions(options => {
+        options.liveReload = true;
+        options.writeToDisk = true;
+    })
+
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
+
+    .addPlugin(new HtmlWebpackPlugin({
+        template: `${__dirname}/assets/index.html`,
+        filename: '../index.html',
+    }))
 ;
 
 module.exports = Encore.getWebpackConfig();

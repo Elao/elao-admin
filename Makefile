@@ -23,6 +23,10 @@ build@production:
 watch:
 	yarn encore dev --watch --watch-poll
 
+## Watch assets and run server
+start:
+	yarn encore dev-server
+
 dist:
 	rm -Rf ./docs/*
 	cp -R ./public/* ./docs/
