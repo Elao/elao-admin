@@ -1,7 +1,10 @@
+/**
+ * Tree item
+ */
 export default class TreeItem {
-    static get triggerClass() { return 'tree__item__trigger'; }
-    static get contentClass() { return 'tree__item__content'; }
-    static get itemActiveClass() { return 'tree__item--active'; }
+    static get triggerClass() { return 'tree-item__trigger'; }
+    static get contentClass() { return 'tree-item__content'; }
+    static get itemActiveClass() { return 'tree-item--active'; }
 
     static init(tree, element) {
         const { triggerClass, contentClass } = this;

@@ -1,8 +1,11 @@
 import TreeItem from './TreeItem';
 
+/**
+ * Tree
+ */
 export default class Tree {
     static get containerClass() { return 'tree'; }
-    static get itemClass() { return 'tree__item'; }
+    static get itemClass() { return 'tree-item'; }
 
     static init() {
         const { containerClass, itemClass, targetSelector } = this;

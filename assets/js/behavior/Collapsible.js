@@ -1,16 +1,18 @@
-
+/**
+ * Collapsible
+ */
 export default class Collapsible {
     static get containerClass() { return 'collapse'; }
-    static get triggerSelector() { return '.collapse__trigger'; }
-    static get targetSelector() { return '.collapse__menu'; }
     static get containerActiveClass() { return 'collapse--show'; }
+    static get targetClass() { return 'collapse__menu'; }
+    static get triggerClass() { return 'collapse__trigger'; }
 
     static init() {
-        const { containerClass, triggerSelector, targetSelector } = this;
+        const { containerClass, triggerClass, targetClass } = this;
         const elements = Array.from(document.getElementsByClassName(containerClass));
 
         return elements.map(element => {
-            return new this(element, element.querySelector(triggerSelector), element.querySelector(targetSelector));
+            return new this(element, element.querySelector(`.${triggerClass}`), element.querySelector(`.${targetClass}`));
         });
     }
 
