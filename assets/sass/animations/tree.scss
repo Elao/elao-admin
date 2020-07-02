@@ -1,0 +1,11 @@
+.tree {}
+
+.tree-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease .4s;
+}
+
+.tree-item--active > .tree-item__content {
+    max-height: inherit;
+}

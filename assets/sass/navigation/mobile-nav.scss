@@ -50,7 +50,8 @@
     }
   }
 
-  .mobile-nav__item--active {
+  //.mobile-nav__item--active {
+  .tree-item--active {
     &.mobile-nav__item--primary,
     &.mobile-nav__item--tertiary {
       > a {
