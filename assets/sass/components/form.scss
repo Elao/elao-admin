@@ -1,0 +1,23 @@
+.form {
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form--error {
+  input,
+  .select,
+  textarea {
+    border-color: $danger;
+
+    &:hover {
+      border-color: $danger;
+    }
+  }
+
+  .error {
+    margin: 5px 0 10px;
+    color: $danger;
+    font-size: 13px;
+  }
+}

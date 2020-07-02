@@ -6,8 +6,9 @@
 .icon-credit-card:before { content: '\e804'; } /* '' */
 .icon-left-open:before { content: '\e805'; } /* '' */
 .icon-right-open:before { content: '\e806'; } /* '' */
-.icon-down-open:before { content: '\e807'; } /* '' */
-.icon-up-open:before { content: '\e808'; } /* '' */
+.icon-up-open:before { content: '\e807'; } /* '' */
+.icon-down-open:before { content: '\e808'; } /* '' */
+.icon-ok:before { content: '\e809'; } /* '' */
 .icon-tasks:before { content: '\f0ae'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-doc-inv:before { content: '\f15b'; } /* '' */
