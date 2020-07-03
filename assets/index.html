@@ -194,45 +194,6 @@
                         Visiteurs
                     </div>
                 </div>
-                <div class="form form--error">
-                    <label for="input">Prénom</label>
-                    <input type="text" placeholder="Jane">
-                    <span class="error">Vous avez déclenché une catastophe</span>
-                </div>
-                <div class="form">
-                    <label for="input">Nom</label>
-                    <input type="text">
-                </div>
-                <div class="form">
-                    <label for="select">Pays</label>
-                    <div class="select">
-                        <select id="select">
-                            <option>France</option>
-                            <option>Egypte</option>
-                            <option>Pérou</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form">
-                    <label for="message">Message</label>
-                    <textarea id="message"></textarea>
-                </div>
-                <div class="form checkbox" disabled>
-                    <input type="checkbox" id="feta" disabled>
-                    <label for="feta">Feta</label>
-                </div>
-                <div class="form checkbox">
-                    <input type="checkbox" id="cucumber">
-                    <label for="cucumber">Concombre</label>
-                </div>
-                <div class="form radio" disabled>
-                    <input type="radio" id="oil" name="sauce" disabled>
-                    <label for="oil">Huile</label>
-                </div>
-                <div class="form radio">
-                    <input type="radio" id="vinegar" name="sauce">
-                    <label for="vinegar">Vinaigre</label>
-                </div>
                 <div class="data-table">
                     <div class="collapse">
                         <div class="data-table__header">
@@ -258,7 +219,7 @@
                             </div>
                         </div>
                         <div class="data-table__filters collapse__menu">
-                            <div>filters Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis officia praesentium labore libero autem, cum distinctio aperiam vel velit earum atque dolorem dolor sit iure quae consequatur hic, nostrum doloremque.</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, vero necessitatibus, dolores eius explicabo, sit ratione qui quidem sint ipsum optio ex a id voluptatum! Id veniam pariatur obcaecati omnis.</div>
                         </div>
                     </div>
                     <div class="data-table__content">
@@ -456,6 +417,57 @@
                         </a>
                     </li>
                 </ul>
+                <!-- Basic form groups -->
+                <div class="form">
+                    <label for="input">Prénom</label>
+                    <input type="text" placeholder="Jane">
+                </div>
+                <div class="form">
+                    <label for="select">Pays</label>
+                    <div class="select">
+                        <select id="select">
+                            <option>France</option>
+                            <option>Egypte</option>
+                            <option>Pérou</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form">
+                    <label for="message">Message</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <!-- Error on input -->
+                <div class="form form--error">
+                    <label for="input">Adresse</label>
+                    <input type="text">
+                    <span class="error">Vous avez déclenché une catastophe</span>
+                </div>
+                <!-- Checkbox & disabled -->
+                <div class="form checkbox">
+                    <input type="checkbox" id="cucumber">
+                    <label for="cucumber">Concombre</label>
+                </div>
+                <div class="form checkbox disabled">
+                    <input type="checkbox" id="feta" disabled>
+                    <label for="feta">Feta</label>
+                </div>
+                <!-- Radio & disabled -->
+                <div class="form radio disabled">
+                    <input type="radio" id="oil" name="sauce" disabled>
+                    <label for="oil">Huile</label>
+                </div>
+                <div class="form radio">
+                    <input type="radio" id="vinegar" name="sauce">
+                    <label for="vinegar">Vinaigre</label>
+                </div>
+                <!-- Switch -->
+                <div class="form switch">
+                    <input type="checkbox" id="switch">
+                    <label for="switch">
+                        <span class="switch__slider"></span>
+                        Sur place
+                    </label>
+                </div>
             </div>
         </div>
     </main>
