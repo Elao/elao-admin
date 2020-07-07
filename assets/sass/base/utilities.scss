@@ -1,5 +1,5 @@
-.text-danger { color: $danger !important; }
-.text-success { color: $success !important; }
+.text-danger { color: var(--danger) !important; }
+.text-success { color: var(--success) !important; }
 
 .sr-only {
   position: absolute;
