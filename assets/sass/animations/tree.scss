@@ -1,11 +1,34 @@
 .tree {}
 
+.tree-item__trigger {
+  padding-right: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    position: absolute;
+    right: 0;
+    font-family: fontello;
+    font-size: 13px;
+    content: '\e807';
+  }
+}
+
 .tree-item__content {
   max-height: 0;
   overflow: hidden;
   transition: max-height ease .4s;
 }
 
-.tree-item--active > .tree-item__content {
+.tree-item--active {
+  > .tree-item__trigger {
+    &:before {
+      content: '\e808';
+    }
+  }
+
+  > .tree-item__content {
     max-height: inherit;
+  }
 }

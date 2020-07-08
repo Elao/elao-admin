@@ -1,5 +1,13 @@
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: color ease-in-out .2s;
+  transition: color ease-in-out .1s;
+
+  &:hover {
+    color: var(--primary--dark);
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
