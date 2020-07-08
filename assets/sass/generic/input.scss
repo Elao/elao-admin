@@ -1,0 +1,32 @@
+input {
+  height: 40px;
+  border: solid 1px var(--border);
+  background: #fff;
+  border-radius: 4px;
+  transition: border-color ease-in .15s;
+  padding: 0 15px;
+  font-size: 15px;
+  color: var(--text--dark);
+  font-family: 'work sans regular';
+
+  &:hover {
+    border-color: var(--border--dark);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--border--dark);
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus {
+      border-color: var(--border);
+    }
+  }
+}

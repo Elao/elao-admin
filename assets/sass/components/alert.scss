@@ -1,0 +1,12 @@
+.alert {
+  margin: 10px 0 30px;
+  padding: 10px 30px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.alert--success { background: var(--success); }
+.alert--danger { background: var(--danger); }

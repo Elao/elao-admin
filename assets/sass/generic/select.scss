@@ -1,0 +1,81 @@
+.select {
+  position: relative;
+  display: flex;
+  min-height: 40px;
+  overflow: hidden;
+  flex: 1;
+  border: solid 1px var(--border);
+  border-radius: 4px;
+
+  &:hover {
+    border: solid 1px var(--border--dark);
+  }
+
+  &:before {
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'fontello';
+    font-size: 8px;
+    color: var(--text--dark);
+    content: '\e808';
+    cursor: pointer;
+    pointer-events: none;
+    background: #fff;
+    box-shadow: 0 0 14px 7px #fff;
+  }
+
+  &:after {
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  [disabled],
+  &.disabled {
+    opacity: .6;
+    cursor: not-allowed;
+
+    &:hover {
+      border: solid 1px var(--border);
+    }
+
+    select {
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  select {
+    padding: 0 10px;
+    font-size: 15px;
+    flex: 1;
+    cursor: pointer;
+    appearance: none;
+    font-family: 'work sans regular';
+    color: var(--text--dark);
+    outline: 0;
+    background: #fff;
+    border: transparent !important;
+    outline: none !important;
+    box-shadow: none;
+
+    &:active,
+    &:focus {
+      border: transparent !important;
+      outline: none !important;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
