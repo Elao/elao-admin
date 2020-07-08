@@ -11,7 +11,7 @@
     right: 0;
     font-family: fontello;
     font-size: 13px;
-    content: '\e807';
+    content: '\e808';
   }
 }
 
@@ -24,7 +24,7 @@
 .tree-item--active {
   > .tree-item__trigger {
     &:before {
-      content: '\e808';
+      content: '\e807';
     }
   }
 
