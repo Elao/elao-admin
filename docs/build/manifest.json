@@ -2,7 +2,6 @@
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
   "build/runtime.js": "/build/runtime.js",
-  "build/../index.html": "/build/../index.html",
   "build/fonts/fontello.ttf": "/build/fonts/fontello.4fa932f1.ttf",
   "build/fonts/fontello.woff2": "/build/fonts/fontello.93e0b48c.woff2",
   "build/fonts/fontello.woff": "/build/fonts/fontello.970ca1c0.woff",
