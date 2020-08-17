@@ -2,11 +2,11 @@
   "entrypoints": {
     "app": {
       "js": [
-        "build/runtime.js",
-        "build/app.js"
+        "https://elao.github.io/elao-admin/build/runtime.js",
+        "https://elao.github.io/elao-admin/build/app.js"
       ],
       "css": [
-        "build/app.css"
+        "https://elao.github.io/elao-admin/build/app.css"
       ]
     }
   }
