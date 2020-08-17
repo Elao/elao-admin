@@ -29,8 +29,6 @@ start:
 
 dist:
 	rm -Rf ./docs/*
-	cp -R ./public/* ./docs/
-	rm -Rf ./docs/build/
 	make build@production
 
 #########
