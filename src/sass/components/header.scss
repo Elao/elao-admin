@@ -1,0 +1,29 @@
+.header {
+  padding: 0 25px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px var(--border);
+  background-color: #fff;
+  z-index: 100;
+
+  .logo {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    font-family: $primary-font;
+    font-weight: bold;
+    color: var(--primary--dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+@media(max-width: $screen-md) {
+  .header {
+    margin-bottom: 30px;
+    padding: 0 0 0 30px;
+    justify-content: space-between;
+  }
+}

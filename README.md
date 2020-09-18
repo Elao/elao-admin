@@ -2,42 +2,33 @@
 
 [Demo](https://elao.github.io/elao-admin/index.html)
 
-## Requirements
-
-* `node`
-* `yarn`
-
-## Setup
+## Installation
 
 ```
-make setup
+npm install @elao/admin
 ```
-
-Open `public/index.html` in browser.
 
 ## Usage
 
-Build assets
+
+
+## Contributing
+
+Install dependencies:
 
 ```
-make build
+make install
 ```
 
-Watch
-
-```
-make watch
-```
-
-Dev server
+Start the dev server:
 
 ```
 make start
 ```
 
-Then go to [http://localhost:8080](http://localhost:8080)
+Then go to [http://localhost:8093](http://localhost:8093)
 
-## Fontello
+### Fontello
 
 `make fontello-push` will open your fontello project on http://fontello.com/.
 
