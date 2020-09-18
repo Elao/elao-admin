@@ -25,9 +25,12 @@
 .data-table__content {
   border: solid 1px var(--border);
   border-radius: 10px;
-  overflow-x: auto;
+}
 
-  &.no-scroll { overflow: unset; }
+@media (max-width: $screen-md) {
+  .data-table__content {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: $screen-sm) {

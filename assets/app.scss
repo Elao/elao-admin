@@ -11,28 +11,28 @@
 @import './sass/navigation/mobile-nav';
 @import './sass/navigation/menu-button';
 
-@import './sass/components/header';
-@import './sass/components/user-menu';
-@import './sass/components/button';
+@import './sass/components/alert';
 @import './sass/components/animated-button';
+@import './sass/components/button';
 @import './sass/components/card';
-@import './sass/components/drop';
 @import './sass/components/checkbox';
+@import './sass/components/data-cards';
+@import './sass/components/data-table';
+@import './sass/components/drop';
+@import './sass/components/form';
+@import './sass/components/header';
+@import './sass/components/pagination';
 @import './sass/components/radio';
 @import './sass/components/switch';
-@import './sass/components/alert';
-
-@import './sass/components/data-cards';
-@import './sass/components/form';
-@import './sass/components/data-table';
-@import './sass/components/pagination';
+@import './sass/components/tooltip';
+@import './sass/components/user-menu';
 
 @import './sass/generic/a';
 @import './sass/generic/button';
-@import './sass/generic/table';
-@import './sass/generic/label';
 @import './sass/generic/input';
+@import './sass/generic/label';
 @import './sass/generic/select';
+@import './sass/generic/table';
 @import './sass/generic/textarea';
 
 @import './sass/animations/collapse';

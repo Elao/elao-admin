@@ -1,0 +1,129 @@
+.tooltip {
+  cursor: pointer;
+  position: relative;
+  justify-content: center;
+  text-decoration: none;
+
+  &:before,
+  &:after {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity ease-in .15s;
+  }
+
+  &:before {
+    min-width: 100px;
+    padding: 7px 10px;
+    color: var(--primary);
+    font-size: 13px;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    background: var(--background--dark);
+    border-radius: 4px;
+    content: attr(data-tooltip);
+  }
+
+  &:after {
+    width: 0;
+    height: 0;
+    content: '';
+  }
+
+  &:hover {
+    color: var(--primary);
+
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+
+    &:before {
+      justify-content: center;
+    }
+  }
+}
+
+.tooltip--top {
+  &:before,
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before { margin-bottom: 10px; }
+
+  &:after {
+    margin-bottom: 4px;
+    border: 6px solid transparent;
+    border-top-color: var(--background--dark);
+    border-bottom: none;
+  }
+}
+
+.tooltip--bottom {
+  &:before,
+  &:after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before { margin-top: 10px; }
+
+  &:after {
+    margin-top: 4px;
+    top: 100%;
+    border: 6px solid transparent;
+    border-bottom-color: var(--background--dark);
+    border-top: none;
+  }
+}
+
+.tooltip--left {
+  &:before,
+  &:after {
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before { margin-right: 10px; }
+
+  &:after {
+    margin-right: 4px;
+    border: 6px solid transparent;
+    border-left-color: var(--background--dark);
+    border-right: none;
+  }
+}
+
+.tooltip--right {
+  &:before,
+  &:after {
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:before { margin-left: 10px; }
+
+  &:after {
+    margin-left: 4px;
+    border: 6px solid transparent;
+    border-right-color: var(--background--dark);
+    border-left: none;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .tooltip {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
