@@ -1,6 +1,6 @@
 # Elao admin
 
-[Demo](https://elao.github.io/elao-admin/index.html)
+[Demo](https://elao.github.io/elao-admin/)
 
 ## Installation
 
@@ -11,8 +11,6 @@ npm install @elao/admin
 ## Usage
 
 ### In HTML page
-
-With HTML:
 
 ```html
 <!DOCTYPE html>
@@ -92,13 +90,13 @@ $primary-font: 'Work Sans';
 
 Install dependencies:
 
-```
+```bash
 make install
 ```
 
 Start the dev server:
 
-```
+```bash
 make start
 ```
 
@@ -106,10 +104,7 @@ Then go to [http://localhost:8093](http://localhost:8093)
 
 ### Fontello
 
-`make fontello-push` will open your fontello project on http://fontello.com/.
-
-Modify your font on http://fontello.com/ then click on "Save session".
-
-`make fontello-pull` will download your modifications and update project files.
-
-Commit the modifications.
+- `make fontello-push` will open your fontello project on http://fontello.com/.
+- Modify your font on http://fontello.com/ then click on "Save session".
+- `make fontello-pull` will download your modifications and update project files.
+- Commit the modifications.

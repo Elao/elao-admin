@@ -10,7 +10,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      ## https://github.com/actions/checkout
+      # https://github.com/actions/checkout
       - name: Checkout master
         uses: actions/checkout@v2
         with:
