@@ -1,1 +1,1 @@
-import '@elao/admin/demo.scss';
+import '@elao/admin/style/demo.scss';

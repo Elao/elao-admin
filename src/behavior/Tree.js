@@ -8,7 +8,7 @@ export default class Tree {
     static get itemClass() { return 'tree-item'; }
 
     static init() {
-        const { containerClass, itemClass, targetSelector } = this;
+        const { containerClass, itemClass } = this;
         const elements = Array.from(document.getElementsByClassName(containerClass));
 
         return elements.map(element => {

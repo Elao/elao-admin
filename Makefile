@@ -23,13 +23,16 @@ watch:
 
 # Lint and code style fix
 lint:
+	npm run fix
+
+lint@integration:
 	npm run lint
 
 #########
 # Fonts #
 #########
 
-FONTELLO_DIR   ?= ./assets/vendor/fontello
+FONTELLO_DIR   ?= ./vendor/fontello
 FONTELLO_HOST  ?= http://fontello.com
 
 fontello-pull:

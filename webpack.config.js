@@ -28,7 +28,7 @@ const rules = [
 ];
 
 const alias =  {
-  '@elao/admin': `${__dirname}/src/`,
+  '@elao/admin': `${__dirname}/`,
 };
 
 const plugins = filename => [
