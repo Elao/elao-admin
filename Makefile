@@ -2,40 +2,37 @@
 # Setup #
 #########
 
-setup: install build
-
 install:
-	yarn install
+	npm install
 
-##########
+#########
 # Build #
-##########
+#########
 
 ## Build assets
 build:
-	yarn encore dev
-
-## Build production assets
-build@production:
-	yarn encore production
-
-## Build assets and watch
-watch:
-	yarn encore dev --watch --watch-poll
+	npm run build
 
 ## Watch assets and run server
 start:
-	yarn encore dev-server
+	npm run start
 
-dist:
-	rm -Rf ./docs/*
-	make build@production
+## Build assets and watch
+watch:
+	npm run watch
+
+# Lint and code style fix
+lint:
+	npm run fix
+
+lint@integration:
+	npm run lint
 
 #########
 # Fonts #
 #########
 
-FONTELLO_DIR   ?= ./assets/vendor/fontello
+FONTELLO_DIR   ?= ./vendor/fontello
 FONTELLO_HOST  ?= http://fontello.com
 
 fontello-pull:

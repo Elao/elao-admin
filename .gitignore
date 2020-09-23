@@ -1,4 +1,4 @@
-/public/build/
-/public/index.html
+/dist/
+/demo/
 /node_modules/
 /.fontello

@@ -1,9 +1,46 @@
 {
+  "name": "@elao/admin",
+  "version": "0.1.0",
+  "description": "Administration theme",
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --open",
+    "lint": "eslint src --ext .js",
+    "fix": "eslint src --ext .js --fix"
+  },
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "main": "dist/elao-admin.js",
+  "style": "dist/elao-admin.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elao/elao-admin.git"
+  },
+  "author": "elao <contact@elao.com> (https://elao.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elao/elao-admin/issues"
+  },
+  "homepage": "https://github.com/Elao/elao-admin#readme",
   "devDependencies": {
-    "@symfony/webpack-encore": "^0.29.1",
-    "html-webpack-plugin": "^4.3.0",
-    "node-sass": "^4.14.0",
-    "sass-loader": "^7.0.1",
-    "webpack-notifier": "^1.6.0"
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.9.0",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.11",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
