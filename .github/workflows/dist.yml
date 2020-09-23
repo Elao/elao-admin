@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v1
 
       - name: Generate dist
-        run: make install dist
+        run: make install build
 
       - name: Git status
         run: git status
@@ -31,7 +31,7 @@ jobs:
           author_name: GitHub Actions Bot
           author_email: actions@github.com
           message: '[AUTO] By Github Actions: generate dist files'
-          add: "docs/"
+          add: ["dist/", "demo/"]
           ref: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
