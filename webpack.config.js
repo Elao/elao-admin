@@ -60,7 +60,7 @@ const demoConfig = {
   target: 'web',
   entry: './src/demo.js',
   output: {
-    path: `${__dirname}/demo`,
+    path: `${__dirname}/demo/build`,
     filename: 'demo.js',
   },
   module: { rules, },

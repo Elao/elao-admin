@@ -39,8 +39,8 @@ npm install @elao/admin
 ```javascript
 /* assets/js/app.js */
 import { Collapsible, Drop, Tree, MobileSidebar } from '@elao/admin';
-// Or with ADM Modiules:
-const { Collapsible, Drop, Tree, MobileSidebar } require '@elao/admin';
+// Or with ADM Modules:
+const { Collapsible, Drop, Tree, MobileSidebar } = require('@elao/admin');
 
 Collapsible.init();
 Drop.init();

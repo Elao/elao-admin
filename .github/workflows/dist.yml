@@ -14,35 +14,20 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v2
         with:
+          submodules: true
+          fetch-depth: 0
           ref: master
 
       # https://github.com/actions/setup-node
       - name: Setup node
         uses: actions/setup-node@v1
 
-      - name: Generate dist
+      - name: Generate demo
         run: make install build
 
-      - name: Git status
-        run: git status
-
-      # https://github.com/EndBug/add-and-commit
-      - name: Commit & push dist changes
-        uses: EndBug/add-and-commit@v4
+      - name: Deploy demo
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          author_name: GitHub Actions Bot
-          author_email: actions@github.com
-          message: '[AUTO] By Github Actions: generate dist files'
-          add: "dist/"
-          ref: master
-
-      - name: Commit & push demo changes
-        uses: EndBug/add-and-commit@v4
-        with:
-          author_name: GitHub Actions Bot
-          author_email: actions@github.com
-          message: '[AUTO] By Github Actions: generate demo files'
-          add: "demo/"
-          ref: master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./demo
+          publish_branch: demo
