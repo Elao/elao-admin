@@ -12,13 +12,18 @@ install:
 ## Build assets
 build:
 	npm run build
-	cp dist/** demo/build
+
+## Build assets
+build@demo:
+	npm run build@demo
 
 ## Watch assets and run server
+start:
 start:
 	npm run start
 
 ## Build assets and watch
+watch:
 watch:
 	npm run watch
 
@@ -28,6 +33,10 @@ lint:
 
 lint@integration:
 	npm run lint
+
+# Publish package
+publish: build
+	npm publish . --access public
 
 #########
 # Fonts #

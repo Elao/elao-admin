@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-node@v1
 
       - name: Generate demo
-        run: make install build
+        run: make install build@demo
 
       - name: Deploy demo
         uses: peaceiris/actions-gh-pages@v3

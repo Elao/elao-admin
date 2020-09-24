@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "description": "Administration theme",
   "scripts": {
-    "watch": "webpack --watch --mode=development",
+    "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --mode=development --open",
+    "build@demo": "webpack --mode=development",
     "lint": "eslint src --ext .js",
     "fix": "eslint src --ext .js --fix"
   },
