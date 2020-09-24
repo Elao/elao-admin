@@ -1,4 +1,4 @@
-name: Generate dist files
+name: Generate and publish demo
 
 on:
   push:
@@ -30,4 +30,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./demo
-          publish_branch: demo
+          publish_branch: gh-pages

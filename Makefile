@@ -12,6 +12,7 @@ install:
 ## Build assets
 build:
 	npm run build
+	cp dist/** demo/build
 
 ## Watch assets and run server
 start:
