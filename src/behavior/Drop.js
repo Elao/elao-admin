@@ -22,8 +22,10 @@ export default class Drop extends Collapsible {
         super.setActive(active);
 
         if (active) {
+            this.container.addEventListener('click', this.stop);
             document.addEventListener('click', this.close);
         } else {
+            this.container.removeEventListener('click', this.stop);
             document.removeEventListener('click', this.close);
         }
     }
