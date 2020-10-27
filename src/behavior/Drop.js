@@ -1,5 +1,7 @@
 import Collapsible from './Collapsible';
 
+let instances = [];
+
 /**
  * Drop
  */
@@ -13,12 +15,18 @@ export default class Drop extends Collapsible {
         const { containerClass, triggerClass, targetClass } = this;
         const elements = Array.from(document.getElementsByClassName(containerClass));
 
-        return elements.map(element => {
+        instances = elements.map(element => {
             return new this(element, element.querySelector(`.${triggerClass}`), element.querySelector(`.${targetClass}`));
         });
+
+        return instances;
     }
 
     setActive(active) {
+        if (active) {
+            instances.forEach(instance => instance.setActive(false));
+        }
+
         super.setActive(active);
 
         if (active) {
