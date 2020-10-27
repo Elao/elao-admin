@@ -1,6 +1,6 @@
 {
   "name": "@elao/admin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Administration theme",
   "scripts": {
     "watch": "webpack --mode=development --watch",
