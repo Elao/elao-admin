@@ -61,4 +61,10 @@ export default class Collapsible {
             event.stopPropagation();
         }
     }
+
+    stop(event = null) {
+        if (event) {
+            event.stopPropagation();
+        }
+    }
 }
