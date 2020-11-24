@@ -71,7 +71,7 @@
   font-size: 10px;
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: var(--screen-sm)) {
   .pagination {
     width: 100%;
     justify-content: center;

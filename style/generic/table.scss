@@ -4,7 +4,8 @@ table {
   border-collapse: collapse;
 
   a {
-    font-family: 'work sans semibold';
+    font-family: var(--font--primary);
+    font-weight: 600;
     text-decoration: none;
   }
 }
