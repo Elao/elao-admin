@@ -12,6 +12,7 @@
   },
   "files": [
     "src/*",
+    "style/*",
     "dist/*"
   ],
   "main": "dist/elao-admin.js",
