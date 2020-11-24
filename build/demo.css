@@ -57,7 +57,10 @@ small {
   --disabled: #edeefa;
   --success: #00cc99;
   --warning: #ffca28;
-  --danger: #ef4055; }
+  --danger: #ef4055;
+  --primary-font: 'Work Sans';
+  --screen-sm: 750px;
+  --screen-md: 1000px; }
 
 html {
   font-size: 10px; }
@@ -66,7 +69,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: "Work Sans";
+  font-family: var(--primary-font);
   font-size: 1.6rem;
   color: var(--text);
   background-color: var(--background);
@@ -86,7 +89,7 @@ main {
   max-width: calc(100% - 200px);
   flex: 1; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   main {
     padding: 0;
     flex-direction: column; }
@@ -113,7 +116,7 @@ main {
   white-space: nowrap;
   border: 0; }
 
-@media (max-width: 750px) {
+@media (max-width: var(--screen-sm)) {
   .sm-hidden {
     display: none; } }
 
@@ -143,7 +146,7 @@ main {
 
 .primary-nav__item--active a {
   position: relative;
-  font-family: "Work Sans";
+  font-family: var(--primary-font);
   font-weight: bold;
   color: var(--primary); }
   .primary-nav__item--active a:after {
@@ -155,7 +158,7 @@ main {
     bottom: 0;
     left: 0; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .primary-nav {
     display: none; } }
 
@@ -185,12 +188,12 @@ main {
 
 .secondary-nav__item--active a {
   color: var(--primary);
-  font-family: "Work Sans";
+  font-family: var(--primary-font);
   font-weight: bold; }
   .secondary-nav__item--active a i {
     border-bottom: solid 3px; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .secondary-nav {
     display: none; } }
 
@@ -227,7 +230,7 @@ main {
 
 .tertiary-nav__item--active a {
   position: relative;
-  font-family: "Work Sans";
+  font-family: var(--primary-font);
   font-weight: bold;
   color: var(--primary); }
   .tertiary-nav__item--active a:after {
@@ -239,14 +242,14 @@ main {
     bottom: 0;
     left: 0; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .tertiary-nav {
     display: none; } }
 
 .mobile-nav {
   display: none; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .mobile-nav {
     padding: 30px 25px;
     height: 100%;
@@ -285,7 +288,7 @@ main {
   .mobile-nav__item--primary.tree-item--active > a {
     position: relative;
     display: flex;
-    font-family: "Work Sans";
+    font-family: var(--primary-font);
     font-weight: bold; }
     .mobile-nav__item--primary.tree-item--active > a:after {
       content: '';
@@ -301,7 +304,7 @@ main {
   .mobile-nav__item--secondary:first-of-type > a {
     margin-top: 15px; }
   .mobile-nav__item--secondary.tree-item--active > a {
-    font-family: "Work Sans";
+    font-family: var(--primary-font);
     font-weight: bold; }
     .mobile-nav__item--secondary.tree-item--active > a i {
       opacity: 1;
@@ -318,7 +321,7 @@ main {
 .menu-button {
   display: none; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .menu-button {
     height: 100%;
     width: 70px;
@@ -415,7 +418,7 @@ main {
 .button + .button {
   margin-left: 20px; }
 
-@media (max-width: 750px) {
+@media (max-width: var(--screen-sm)) {
   .button {
     padding: 0 20px;
     height: 45px;
@@ -496,7 +499,7 @@ main {
     margin-right: 30px;
     margin-bottom: 15px; }
 
-@media (max-width: 750px) {
+@media (max-width: var(--screen-sm)) {
   .data-cards {
     display: none; } }
 
@@ -520,11 +523,11 @@ main {
   border: solid 1px var(--border);
   border-radius: 10px; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .data-table__content {
     overflow-x: auto; } }
 
-@media (max-width: 750px) {
+@media (max-width: var(--screen-sm)) {
   .data-table__header {
     margin-bottom: 30px;
     flex-direction: column;
@@ -569,7 +572,7 @@ main {
     .drop__menu li:last-of-type {
       padding-bottom: 15px; }
     .drop__menu li a {
-      font-family: 'work sans regular';
+      font-family: var(--font--primary);
       color: var(--text);
       font-size: 14px;
       text-decoration: none; }
@@ -619,14 +622,14 @@ main {
     height: 50%;
     display: flex;
     align-items: center;
-    font-family: "Work Sans";
+    font-family: var(--primary-font);
     font-weight: bold;
     color: var(--primary--dark);
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .header {
     margin-bottom: 30px;
     padding: 0 0 0 30px;
@@ -687,7 +690,7 @@ main {
   align-items: center;
   font-size: 10px; }
 
-@media (max-width: 750px) {
+@media (max-width: var(--screen-sm)) {
   .pagination {
     width: 100%;
     justify-content: center; }
@@ -880,7 +883,7 @@ input:checked + label .switch__slider {
   border-right-color: var(--background--dark);
   border-left: none; }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .tooltip:before, .tooltip:after {
     display: none; } }
 
@@ -900,7 +903,7 @@ input:checked + label .switch__slider {
   .user-menu__button:hover, .user-menu__button:focus {
     color: var(--primary); }
 
-@media (max-width: 1000px) {
+@media (max-width: var(--screen-md)) {
   .user-menu {
     display: none; } }
 
@@ -929,7 +932,7 @@ input {
   padding: 0 15px;
   font-size: 15px;
   color: var(--text--dark);
-  font-family: 'work sans regular'; }
+  font-family: var(--font--primary); }
   input:hover {
     border-color: var(--border--dark); }
   input:focus {
@@ -994,7 +997,7 @@ label {
     flex: 1;
     cursor: pointer;
     appearance: none;
-    font-family: 'work sans regular';
+    font-family: var(--font--primary);
     color: var(--text--dark);
     outline: 0;
     background: #fff;
@@ -1012,7 +1015,8 @@ table {
   font-size: 14px;
   border-collapse: collapse; }
   table a {
-    font-family: 'work sans semibold';
+    font-family: var(--font--primary);
+    font-weight: 600;
     text-decoration: none; }
 
 tr {
@@ -1053,7 +1057,7 @@ textarea {
   padding: 15px;
   font-size: 15px;
   color: var(--text--dark);
-  font-family: 'work sans regular'; }
+  font-family: var(--font--primary); }
   textarea:hover {
     border-color: var(--border--dark); }
   textarea:focus {
