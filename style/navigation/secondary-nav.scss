@@ -36,7 +36,7 @@
 .secondary-nav__item--active {
   a {
     color: var(--primary);
-    font-family: $primary-font;
+    font-family: var(--primary-font);
     font-weight: bold;
 
     i {
@@ -45,7 +45,7 @@
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: var(--screen-md)) {
   .secondary-nav {
     display: none;
   }

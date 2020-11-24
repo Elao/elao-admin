@@ -38,7 +38,7 @@
     &:last-of-type { padding-bottom: 15px; }
 
     a {
-      font-family: 'work sans regular';
+      font-family: var(--font--primary);
       color: var(--text);
       font-size: 14px;
       text-decoration: none;

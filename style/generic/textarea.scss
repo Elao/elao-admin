@@ -7,7 +7,7 @@ textarea {
   padding: 15px;
   font-size: 15px;
   color: var(--text--dark);
-  font-family: 'work sans regular';
+  font-family: var(--font--primary);
 
   &:hover {
     border-color: var(--border--dark);

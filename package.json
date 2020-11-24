@@ -1,6 +1,6 @@
 {
   "name": "@elao/admin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Administration theme",
   "scripts": {
     "watch": "webpack --mode=development --watch",
@@ -12,6 +12,7 @@
   },
   "files": [
     "src/*",
+    "style/*",
     "dist/*"
   ],
   "main": "dist/elao-admin.js",

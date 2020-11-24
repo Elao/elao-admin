@@ -119,7 +119,7 @@
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: var(--screen-md)) {
   .tooltip {
     &:before,
     &:after {

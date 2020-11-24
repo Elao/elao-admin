@@ -78,12 +78,10 @@ MobileSidebar.init();
   --success: #00cc99;
   --warning: #ffca28;
   --danger: #ef4055;
+  --primary-font: 'Work Sans';
+  --screen-sm: 750px;
+  --screen-md: 1000px;
 }
-
-$screen-sm: 750px;
-$screen-md: 1000px;
-
-$primary-font: 'Work Sans';
 ```
 
 ## Contributing
