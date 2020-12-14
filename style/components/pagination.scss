@@ -54,6 +54,15 @@
   }
 }
 
+.pagination__item--disabled {
+  a, a:hover {
+    color: var(--border--dark);
+    background-color: transparent;
+    border-color: var(--border--dark);
+    cursor: initial;
+  }
+}
+
 .pagination__item--previous {
   margin-right: auto;
 }
