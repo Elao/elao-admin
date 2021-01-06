@@ -676,6 +676,12 @@ main {
   .pagination__item--next a i {
     display: none; }
 
+.pagination__item--disabled a, .pagination__item--disabled a:hover {
+  color: var(--border--dark);
+  background-color: transparent;
+  border-color: var(--border--dark);
+  cursor: initial; }
+
 .pagination__item--previous {
   margin-right: auto; }
 
