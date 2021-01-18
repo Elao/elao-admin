@@ -20,6 +20,11 @@ td {
   text-align: left;
 }
 
+.number,
+.action {
+  text-align: right;
+}
+
 thead {
   tr {
     border-bottom: solid 1px var(--border);
