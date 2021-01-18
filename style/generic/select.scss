@@ -60,6 +60,7 @@
     flex: 1;
     cursor: pointer;
     appearance: none;
+    -webkit-appearance:none;
     font-family: var(--font--primary);
     color: var(--text--dark);
     outline: 0;
@@ -76,6 +77,33 @@
 
     &::-ms-expand {
       display: none;
+    }
+  }
+}
+
+select[multiple] {
+  font-family: var(--font--primary);
+  font-size: 15px;
+  color: var(--text--dark);
+  border: solid 1px var(--border);
+  border-radius: 4px;
+
+  &:hover {
+    border: solid 1px var(--border--dark);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--border--dark);
+  }
+
+  option {
+    padding: 5px 10px;
+
+    &:checked {
+      background: var(--background--dark) linear-gradient(0deg, var(--background--dark) 0%, var(--background--dark) 100%);
+      outline: none;
     }
   }
 }
