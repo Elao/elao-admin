@@ -19,7 +19,7 @@
   }
 }
 
-@media (max-width: var(--screen-md)) {
+@media (max-width: $screen-md) {
   .user-menu {
     display: none;
   }

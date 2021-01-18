@@ -36,13 +36,13 @@
   border-radius: 10px;
 }
 
-@media (max-width: var(--screen-md)) {
+@media (max-width: $screen-md) {
   .data-table__content {
     overflow-x: auto;
   }
 }
 
-@media (max-width: var(--screen-sm)) {
+@media (max-width: $screen-sm) {
   .data-table__header {
     margin-bottom: 30px;
     flex-direction: column;

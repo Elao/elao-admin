@@ -9,9 +9,9 @@
   &:before {
     position: absolute;
     right: 0;
-    font-family: fontello;
+    font-family: base-icons;
     font-size: 13px;
-    content: '\e808';
+    content: '\e903';
   }
 }
 
@@ -24,7 +24,7 @@
 .tree-item--active {
   > .tree-item__trigger {
     &:before {
-      content: '\e807';
+      content: '\e902';
     }
   }
 

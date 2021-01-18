@@ -13,7 +13,7 @@
   border: 0;
 }
 
-@media (max-width: var(--screen-sm)) {
+@media (max-width: $screen-sm) {
   .sm-hidden {
     display: none;
   }

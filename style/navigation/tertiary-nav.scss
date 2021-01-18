@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: var(--screen-md)) {
+@media (max-width: $screen-md) {
   .tertiary-nav {
     display: none;
   }

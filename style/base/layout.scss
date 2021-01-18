@@ -29,7 +29,7 @@ main {
   flex: 1;
 }
 
-@media(max-width: var(--screen-md)) {
+@media(max-width: $screen-md) {
   main {
     padding: 0;
     flex-direction: column;
