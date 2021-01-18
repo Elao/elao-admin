@@ -100,6 +100,11 @@ make start
 
 Then go to [http://localhost:8093](http://localhost:8093)
 
+### Publish a new version
+
+1. Update the version in `package.json`
+2. [Create a new release and tag](https://github.com/Elao/elao-admin/releases/new) for this version with release `X.Y.Z` and tag `vX.Y.Z`.
+
 ### Fontello
 
 - `make fontello-push` will open your fontello project on http://fontello.com/.
