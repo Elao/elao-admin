@@ -33,7 +33,7 @@
 
   li {
     padding: 7px 25px;
-    line-height: 1;
+    line-height: 1.4;
 
     &:first-of-type { padding-top: 12px; }
     &:last-of-type { padding-bottom: 15px; }
@@ -42,6 +42,7 @@
       font-family: var(--font--primary);
       color: var(--text);
       font-size: 14px;
+      font-weight: normal;
       text-decoration: none;
 
       &:hover {

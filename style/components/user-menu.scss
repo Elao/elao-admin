@@ -5,6 +5,7 @@
 }
 
 .user-menu__button {
+  padding: 0 15px;
   height: 50%;
   display: flex;
   align-items: center;
@@ -16,6 +17,28 @@
   &:hover,
   &:focus {
     color: var(--primary);
+
+    .icon {
+      color: var(--primary);
+    }
+  }
+}
+
+.user-menu__button--notification {
+  .icon {
+    margin-right: 5px;
+    position: relative;
+
+    &:after {
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: '';
+      background: var(--danger);
+      border-radius: 50%;
+    }
   }
 }
 

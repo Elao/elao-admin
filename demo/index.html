@@ -42,16 +42,33 @@
                 Todo :
                     - .drop--show on the parent on click on .drop__button (opens menu)
             -->
-            <div class="user-menu drop drop--down">
-                <button class="user-menu__button drop__button">Amélie D.</button>
-                <ul class="user-menu__content drop__menu">
-                    <li>
-                        <a href="#">Profil</a>
-                    </li>
-                    <li>
-                        <a href="#">Déconnexion</a>
-                    </li>
-                </ul>
+            <div class="user-menu">
+                <div class="drop drop--down">
+                    <button class="user-menu__button user-menu__button--notification drop__button">
+                        <i class="icon icon--bell" aria-hidden="true"></i>
+                        <span class="sr-only">Notifications</span>
+                        34
+                    </button>
+                    <ul class="user-menu__content drop__menu">
+                        <li>
+                            <a href="#">Voluptatibus en attente</a>
+                        </li>
+                        <li>
+                            <a href="#">Voluptatibus validés</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="drop drop--down">
+                    <button class="user-menu__button drop__button">Amélie D.</button>
+                    <ul class="user-menu__content drop__menu">
+                        <li>
+                            <a href="#">Profil</a>
+                        </li>
+                        <li>
+                            <a href="#">Déconnexion</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         <button class="menu-button"></button> <!-- .menu-button--close -->
     </header>
