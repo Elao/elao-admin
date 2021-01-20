@@ -20,6 +20,10 @@
   background-color: #fff;
   border: solid 1px #dfdfe7;
 
+  .icon {
+    color: var(--primary);
+  }
+
   &:hover {
     border-color: var(--primary);
   }

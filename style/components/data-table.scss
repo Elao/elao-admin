@@ -14,17 +14,10 @@
   h4, .h4,
   h5, .h5,
   h6, .h6 {
-    margin: 0;
+    margin: 0 0 5px;
   }
 
-  .title {
-    display: flex;
-    align-items: center;
-
-    .link {
-      margin-left: 20px;
-    }
-  }
+  .title {}
 
   .actions {
     display: flex;
@@ -65,7 +58,13 @@
     }
 
     .actions {
-      justify-content: flex-end;
+      width: 100%;
+      flex-wrap: wrap;
+
+      .button {
+        margin: 5px;
+        flex: 1;
+      }
     }
   }
 }
