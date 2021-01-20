@@ -1,0 +1,19 @@
+.tag {
+  padding: 5px 10px;
+  height: 30px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+.tag--success {
+  background: var(--success);
+}
+
+.tag--error {
+  background: var(--danger);
+}

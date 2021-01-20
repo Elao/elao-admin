@@ -44,6 +44,9 @@
             -->
             <div class="user-menu">
                 <div class="drop drop--down">
+                    <!--
+                        add class .user-menu__button--notification to display notification bullet
+                    -->
                     <button class="user-menu__button user-menu__button--notification drop__button">
                         <i class="icon icon--bell" aria-hidden="true"></i>
                         <span class="sr-only">Notifications</span>
@@ -203,6 +206,7 @@
                 </ul>
             </nav>
             <div class="container">
+                <h2>Breadcrumbs</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb__item">
                         <a href="#">Retour à la liste</a>
@@ -219,6 +223,20 @@
                         <a href="#">Corporis esse</a>
                     </li>
                 </ul>
+
+                <h2>Messages d'alerte</h2>
+                <div class="alert alert--success">Tout va bien</div>
+                <div class="alert alert--danger">Rien ne va plus</div>
+
+                <h2>Titres</h2>
+                <h1>h1 magnam illum accusamus nemo</h1>
+                <h2>h2 magnam illum accusamus nemo</h2>
+                <h3>h3 magnam illum accusamus nemo</h3>
+                <h4>h4 magnam illum accusamus nemo</h4>
+                <h5>h5 magnam illum accusamus nemo</h5>
+                <h6>h6 magnam illum accusamus nemo</h6>
+
+                <h2>Cards</h2>
                 <div class="data-cards">
                     <div class="card">
                         <span>120</span>
@@ -229,6 +247,8 @@
                         Visiteurs
                     </div>
                 </div>
+
+                <h2>Tableaux</h2>
                 <div class="data-table">
                     <div class="collapse">
                         <div class="data-table__header">
@@ -254,7 +274,39 @@
                             </div>
                         </div>
                         <div class="data-table__filters collapse__menu">
-                            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, vero necessitatibus, dolores eius explicabo, sit ratione qui quidem sint ipsum optio ex a id voluptatum! Id veniam pariatur obcaecati omnis.</div>
+                            <div class="filters">
+                                <form>
+                                    <div class="form">
+                                        <label>Start date</label>
+                                        <input type="date" value="2020-12-01">
+                                    </div>
+                                    <div class="form">
+                                        <label>End date</label>
+                                        <input type="date" value="2020-12-01">
+                                    </div>
+                                    <div class="form">
+                                        <label for="select">Pays</label>
+                                        <div class="select">
+                                            <select id="select">
+                                                <option>France</option>
+                                                <option>Egypte</option>
+                                                <option>Pérou</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form">
+                                        <select id="" name="" multiple="multiple">
+                                            <option value="">Prévi</option>
+                                            <option value="">Ferme Directe</option>
+                                            <option value="">K2</option>
+                                            <option value="">MJC</option>
+                                            <option value="">Musique Music</option>
+                                            <option value="">Tribu</option>
+                                        </select>
+                                    </div>
+                                    <button class="button button--primary">Filtrer</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="data-table__content">
@@ -453,13 +505,8 @@
                     </li>
                 </ul>
 
-                <div class="alert alert--success">Tout va bien</div>
-                <div class="alert alert--danger">Rien ne va plus</div>
-
+                <h2>Icônes de base du thème admin</h2>
                 <div class="data-table">
-                    <div class="data-table__header">
-                        <h2>Icônes de base de thème</h2>
-                    </div>
                     <div class="data-table__content">
                         <table>
                             <thead>
@@ -671,13 +718,7 @@
                     </div>
                 </div>
 
-                <h1>h1 magnam illum accusamus nemo</h1>
-                <h2>h2 magnam illum accusamus nemo</h2>
-                <h3>h3 magnam illum accusamus nemo</h3>
-                <h4>h4 magnam illum accusamus nemo</h4>
-                <h5>h5 magnam illum accusamus nemo</h5>
-                <h6>h6 magnam illum accusamus nemo</h6>
-
+                <h2>Formulaires</h2>
                 <!-- Basic form groups -->
                 <div class="form">
                     <label for="input">Prénom</label>
@@ -740,6 +781,7 @@
                     </label>
                 </div>
 
+                <h2>Tooltips</h2>
                 <a href="#" class="button button--neutral tooltip tooltip--top" data-tooltip="Tooltip du haut">
                     Tooltip en 👆
                 </a>
@@ -752,6 +794,11 @@
                 <a href="#" class="button button--neutral tooltip tooltip--left" data-tooltip="Tooltip de gauche">
                     Tooltip à 👈
                 </a>
+
+                <h2>Tags</h2>
+                <span class="tag">Tag</span>
+                <span class="tag tag--success">Validé</span>
+                <span class="tag tag--error">Rejeté</span>
             </div>
         </div>
     </main>

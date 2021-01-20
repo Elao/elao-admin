@@ -31,6 +31,12 @@
   }
 }
 
+.data-table__filters {
+  > .filters {
+    margin: 0 0 50px;
+  }
+}
+
 .data-table__content {
   border: solid 1px var(--border);
   border-radius: 10px;
