@@ -2,6 +2,7 @@ const meta = require('./package.json');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const rules = [
   {
@@ -15,7 +16,10 @@ const rules = [
   {
     test: /\.scss$/i,
     use: [
-      MiniCssExtractPlugin.loader,
+      {
+        loader: MiniCssExtractPlugin.loader,
+        options: { publicPath: '' },
+      },
       'css-loader',
       'sass-loader',
     ],
@@ -32,22 +36,22 @@ const alias =  {
   '@elao/admin': `${__dirname}/`,
 };
 
-const plugins = filename => [
-  new CleanWebpackPlugin(),
-  new MiniCssExtractPlugin({ filename }),
-];
-
 module.exports = (env, argv) => {
   if (argv.mode === 'development') {
     return {
       target: 'web',
+      mode: 'development',
       entry: './src/demo.js',
       output: {
         path: `${__dirname}/demo/build`,
         filename: 'demo.js',
       },
       module: { rules, },
-      plugins: plugins('demo.css'),
+      plugins: [
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({ filename: 'demo.css' }),
+        new CopyPlugin({ patterns: [{ from: "assets/images/*", to: `${__dirname}/demo/build` }] }),
+      ],
       resolve: { alias },
       devServer: {
         contentBase: path.join(__dirname, 'demo'),
@@ -59,6 +63,7 @@ module.exports = (env, argv) => {
 
   return {
     target: 'web',
+    mode: 'production',
     entry: './src/index.js',
     output: {
       path: `${__dirname}/dist`,
@@ -68,7 +73,11 @@ module.exports = (env, argv) => {
       globalObject: 'this',
     },
     module: { rules },
-    plugins: plugins('elao-admin.css'),
+    plugins: [
+      new CleanWebpackPlugin(),
+      new MiniCssExtractPlugin({ filename: 'elao-admin.css' }),
+      new CopyPlugin({ patterns: [{ from: "assets/images/*", to: `${__dirname}/dist` }] }),
+    ],
     resolve: { alias },
   };
 };
