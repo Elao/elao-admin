@@ -20,6 +20,10 @@
   background-color: #fff;
   border: solid 1px #dfdfe7;
 
+  .icon {
+    color: var(--primary);
+  }
+
   &:hover {
     border-color: var(--primary);
   }
@@ -41,7 +45,7 @@
   margin-left: 20px;
 }
 
-@media (max-width: var(--screen-sm)) {
+@media (max-width: $screen-sm) {
   .button {
     padding: 0 20px;
     height: 45px;

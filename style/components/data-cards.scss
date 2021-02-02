@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: var(--screen-sm)) {
+@media (max-width: $screen-sm) {
   .data-cards {
     display: none;
   }

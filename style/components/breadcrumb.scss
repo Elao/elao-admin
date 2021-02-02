@@ -1,0 +1,40 @@
+.breadcrumb {
+  margin: 0 0 35px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  padding-left: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-family: 'base-icons';
+    font-size: 10px;
+    color: var(--primary);
+    content: '\e904';
+    transform: translateY(-50%);
+  }
+
+  a {
+    margin: 0 10px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+}
+
+.breadcrumb__item:last-of-type {
+  overflow: hidden;
+
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+

@@ -12,7 +12,7 @@
   font-style: normal;
 }
 
-.icon {
+.theme-icon {
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
@@ -29,28 +29,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-$icons: (
+$theme-icons: (
   box: '\f187',
-  cancel: '\e800',
   credit-card: '\e804',
-  check: '\e809',
-  chevron-before: '\e805',
-  chevron-next: '\e806',
-  chevron-up: '\e808',
-  chevron-down: '\e807',
   doc: '\f15b',
-  dots: '\e801',
   direction: '\f277',
-  export: '\e803',
-  filter: '\f1de',
-  menu: '\f0c9',
   megaphone: '\e802',
   tasks: '\f0ae'
 );
 
-@each $icon-name, $icon-character in $icons {
-  .icon--#{$icon-name}:before {
+@each $icon-name, $icon-character in $theme-icons {
+  .theme-icon--#{$icon-name}:before {
     content: $icon-character;
   }
 }
-

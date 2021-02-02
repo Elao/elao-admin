@@ -12,16 +12,17 @@ table {
 
 tr {
   vertical-align: top;
-
-  &:nth-of-type(even) {
-    background-color: #fff;
-  }
 }
 
 td {
   padding: 20px 16px;
   font-weight: normal;
   text-align: left;
+}
+
+.number,
+.action {
+  text-align: right;
 }
 
 thead {
@@ -43,5 +44,21 @@ thead {
     &:last-of-type { border-top-right-radius: 10px; }
 
     &.large { width: unset; }
+  }
+}
+
+tbody {
+  tr {
+    &:nth-of-type(even) {
+      background-color: #fff;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      td:first-of-type { border-bottom-left-radius: 10px; }
+      td:last-of-type { border-bottom-right-radius: 10px; }
+    }
   }
 }

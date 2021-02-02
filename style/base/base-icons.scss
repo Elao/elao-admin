@@ -1,0 +1,64 @@
+// Base admin icons
+// Manage icon by importing base-icons.json in https://icomoon.io/app/
+
+@font-face {
+  font-family: 'base-icons';
+  src:  url('../assets/fonts/base-icons.eot');
+  src:  url('../assets/fonts/base-icons.eot') format('embedded-opentype'),
+    url('../assets/fonts/base-icons.ttf') format('truetype'),
+    url('../assets/fonts/base-icons.woff') format('woff'),
+    url('../assets/fonts/base-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  font-family: 'base-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$base-icons: (
+  add: '\e90d',
+  arrow-up: '\e906',
+  arrow-down: '\e907',
+  arrow-left: '\e908',
+  arrow-right: '\e909',
+  bell: '\e91c',
+  bullets: '\e90c',
+  calendar: '\e913',
+  check: '\e90b',
+  chevron-up: '\e902',
+  chevron-down: '\e903',
+  chevron-left: '\e904',
+  chevron-right: '\e905',
+  cross: '\e901',
+  delete: '\e90f',
+  document: '\e917',
+  download: '\e91b',
+  duplicate: '\e914',
+  edit: '\e90e',
+  filter: '\e91a',
+  hide: '\e912',
+  link: '\e916',
+  menu: '\e900',
+  reload: '\e919',
+  search: '\e918',
+  send: '\e910',
+  share: '\e915',
+  show: '\e911',
+  user: '\e90a'
+);
+
+@each $icon-name, $icon-character in $base-icons {
+  .icon--#{$icon-name}:before {
+    content: $icon-character;
+  }
+}

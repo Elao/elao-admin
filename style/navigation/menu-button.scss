@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: var(--screen-md)) {
+@media (max-width: $screen-md) {
   .menu-button {
     height: 100%;
     width: 70px;

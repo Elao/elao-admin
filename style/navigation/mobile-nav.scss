@@ -1,6 +1,6 @@
 .mobile-nav { display: none }
 
-@media(max-width: var(--screen-md)) {
+@media(max-width: $screen-md) {
   .mobile-nav {
     padding: 30px 25px;
     height: 100%;

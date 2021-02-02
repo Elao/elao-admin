@@ -13,7 +13,11 @@
   border: 0;
 }
 
-@media (max-width: var(--screen-sm)) {
+.prevent-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: $screen-sm) {
   .sm-hidden {
     display: none;
   }
