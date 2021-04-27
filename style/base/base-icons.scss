@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: 'base-icons';
-  src:  url('../assets/fonts/base-icons.eot');
-  src:  url('../assets/fonts/base-icons.eot') format('embedded-opentype'),
-    url('../assets/fonts/base-icons.ttf') format('truetype'),
-    url('../assets/fonts/base-icons.woff') format('woff'),
-    url('../assets/fonts/base-icons.svg') format('svg');
+  src:  url('@elao/admin/assets/fonts/base-icons.eot');
+  src:  url('@elao/admin/assets/fonts/base-icons.eot') format('embedded-opentype'),
+    url('@elao/admin/assets/fonts/base-icons.ttf') format('truetype'),
+    url('@elao/admin/assets/fonts/base-icons.woff') format('woff'),
+    url('@elao/admin/assets/fonts/base-icons.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

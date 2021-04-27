@@ -13,10 +13,6 @@ install:
 build:
 	npm run build
 
-## Build assets
-build@demo:
-	npm run build@demo
-
 ## Watch assets and run server
 start:
 start:
