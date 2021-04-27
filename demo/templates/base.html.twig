@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Elao Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/build/assets/images/favicon.svg" />
+        <title>{% block title 'Elao Admin' %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('style') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="{% block body_class 'theme-demo' %}">
+        {% block header %}
+            <header class="header">
+                <a href="{{ path('home') }}" class="logo">ADMIN ELAO</a>
+                    <nav class="primary-nav">
+                        <ul>
+                            <li class="primary-nav__item primary-nav__item--active">
+                                <a href="#">Primary nav</a>
+                            </li>
+                            <li class="primary-nav__item">
+                                <a href="#">Esse accusamus</a>
+                            </li>
+                            <li class="primary-nav__item">
+                                <a href="#">Dignissimos eligendi</a>
+                            </li>
+                            <li class="primary-nav__item">
+                                <a href="#">Minima</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--
+                        Drop menus (dropdown, dropleft, etc.)
+
+                        Todo :
+                            - .drop--show on the parent on click on .drop__button (opens menu)
+                    -->
+                    <div class="user-menu">
+                        <div class="drop drop--down">
+                            <!--
+                                add class .user-menu__button--notification to display notification bullet
+                            -->
+                            <button class="user-menu__button user-menu__button--notification drop__button">
+                                <i class="icon icon--bell" aria-hidden="true"></i>
+                                <span class="sr-only">Notifications</span>
+                                34
+                            </button>
+                            <ul class="user-menu__content drop__menu">
+                                <li>
+                                    <a href="#">Voluptatibus en attente</a>
+                                </li>
+                                <li>
+                                    <a href="#">Voluptatibus validés</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="drop drop--down">
+                            <button class="user-menu__button drop__button">Amélie D.</button>
+                            <ul class="user-menu__content drop__menu">
+                                <li>
+                                    <a href="#">Profil</a>
+                                </li>
+                                <li>
+                                    <a href="#">Déconnexion</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                <button class="menu-button"></button> <!-- .menu-button--close -->
+            </header>
+            <div class="mobile-nav">  <!-- .mobile-nav--show -->
+                <ul class="tree">
+                    <li class="mobile-nav__item tree-item mobile-nav__item--primary mobile-nav__item--active"> <!-- .collapse--show -->
+                        <a class="tree-item__trigger" href="">Primary nav (active)</a>
+                        <ul class="tree-item__content tree">
+                            <li class="mobile-nav__item tree-item mobile-nav__item--secondary mobile-nav__item--active">
+                                <a href="" class="tree-item__trigger">
+                                    <i class="theme-icon theme-icon--direction" aria-hidden="true"></i>
+                                    Secondary nav (active)
+                                </a>
+                                <ul class="tree-item__content">
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
+                                        <a href="#">Tertiary nav (active)</a>
+                                    </li>
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                        <a href="#">Tertiary nav</a>
+                                    </li>
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                        <a href="#">Tertiary nav</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__item tree-item mobile-nav__item--secondary">
+                                <a href="" class="tree-item__trigger">
+                                    <i class="theme-icon theme-icon--doc" aria-hidden="true"></i>
+                                    Secondary nav
+                                </a>
+                                <ul class="tree-item__content">
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary mobile-nav__item--active">
+                                        <a href="">Tertiary nav (active)</a>
+                                    </li>
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                        <a href="">Tertiary nav</a>
+                                    </li>
+                                    <li class="mobile-nav__item mobile-nav__item--tertiary">
+                                        <a href="">Tertiary nav</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__item tree-item mobile-nav__item--secondary">
+                                <a href="">
+                                    <i class="theme-icon theme-icon--doc" aria-hidden="true"></i>
+                                    Secondary nav
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--primary tree-item">
+                        <a href="">Primary nav</a>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--primary tree-item">
+                        <a href="" class="tree-item__trigger">Primary nav</a>
+                        <ul class="tree-item__content">
+                            <li class="mobile-nav__item mobile-nav__item--secondary">
+                                <a href="">
+                                    <i class="theme-icon theme-icon--doc" aria-hidden="true"></i>
+                                    Secondary nav
+                                </a>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--secondary">
+                                <a href="">
+                                    <i class="theme-icon theme-icon--doc" aria-hidden="true"></i>
+                                    Secondary nav
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item mobile-nav__item--primary tree-item">
+                        <a href="">Primary nav</a>
+                    </li>
+                </ul>
+            </div>
+        {% endblock %}
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
