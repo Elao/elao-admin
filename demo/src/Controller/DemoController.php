@@ -13,6 +13,14 @@ class DemoController extends AbstractController
      */
     public function home(): Response
     {
-        return $this->render('demo/home.html.twig', []);
+        return $this->render('demo/home.html.twig');
+    }
+
+    /**
+     * @Route("/components", name="components")
+     */
+    public function components(): Response
+    {
+        return $this->render('demo/components.html.twig');
     }
 }

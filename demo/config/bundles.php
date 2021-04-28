@@ -11,4 +11,5 @@ return [
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Stenope\Bundle\StenopeBundle::class => ['all' => true],
+    Elao\Bundle\AdminThemeBundle\ElaoAdminThemeBundle::class => ['all' => true],
 ];

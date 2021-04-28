@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Liste des utilisateurs' %}
+
+{% block content %}
+<div class="data-table">
+    <div class="collapse">
+        <div class="data-table__header">
+            <div class="title">
+                <h1>Comptes utilisateur</h1>
+                <span class="h3">Sous-titre du tableau</span>
+            </div>
+            <div class="actions">
+                <button class="button button--neutral collapse__trigger animated-button animated-button--equalizer">
+                    <div class="icon icon--animated icon--equalizer">
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                    </div>
+                    Filtrer
+                </button>
+                <button class="button button--neutral">
+                    <i class="icon icon--share" aria-hidden="true"></i>
+                    Exporter
+                </button>
+                <button class="button button--primary">
+                    Ajouter
+                </button>
+            </div>
+        </div>
+        <div class="data-table__filters collapse__menu">
+            <div class="filters">
+                <form>
+                    <div class="form">
+                        <label>Start date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label>End date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label for="select">Pays</label>
+                        <div class="select">
+                            <select id="select">
+                                <option>France</option>
+                                <option>Egypte</option>
+                                <option>Pérou</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <select id="" name="" multiple="multiple">
+                            <option value="">Prévi</option>
+                            <option value="">Ferme Directe</option>
+                            <option value="">K2</option>
+                            <option value="">MJC</option>
+                            <option value="">Musique Music</option>
+                            <option value="">Tribu</option>
+                        </select>
+                    </div>
+                    <button class="button button--primary">Filtrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="data-table__content">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th class="large">Nom</th>
+                    <th class="large">E-mail</th>
+                    <th>Rôle</th>
+                    <th class="number">Premium jusqu'au</th>
+                    <th>Statut</th>
+                    <th class="action"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td><a href="{{ path('user_show', { id: user.id }) }}">{{ user.name }}</a></td>
+                        <td>{{ user.email }}</td>
+                        <td>Utilisateur</td>
+                        <td class="number">31/08/2020</td>
+                        <td class="text-success">Actif</td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a href="{{ path('user_show', { id: user.id }) }}">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Éditer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--
+    Pagination
+
+    Todo :
+        - .pagination__item--active on current element
+-->
+<ul class="pagination">
+    <li class="pagination__item pagination__item--previous pagination__item--disabled">
+        <a href="#">
+            <i class="icon icon--chevron-left" aria-hidden="true"></i>
+            <span>Précédent</span>
+        </a>
+    </li>
+    <li class="pagination__item pagination__item--active">
+        <a href="#">1</a>
+    </li>
+    <li class="pagination__item">
+        <a href="#">2</a>
+    </li>
+    <li class="pagination__item">
+        <a href="#">3</a>
+    </li>
+    <li class="pagination__ellipsis">
+        <i class="icon icon--bullets" aria-hiddent="true"></i>
+        <span class="sr-only">...</span>
+    </li>
+    <li class="pagination__item sm-hidden">
+        <a href="#">13</a>
+    </li>
+    <li class="pagination__item sm-hidden">
+        <a href="#">14</a>
+    </li>
+    <li class="pagination__item">
+        <a href="#">15</a>
+    </li>
+    <li class="pagination__item pagination__item--next">
+        <a href="#">
+            <i class="icon icon--chevron-right" aria-hidden="true"></i>
+            <span>Suivant</span>
+        </a>
+    </li>
+</ul>
+{% endblock %}
