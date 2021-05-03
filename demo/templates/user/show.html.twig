@@ -3,6 +3,11 @@
 {% block title user.name %}
 
 {% block content %}
+<ul class="breadcrumb">
+    <li class="breadcrumb__item">
+        <a href="{{ path('user_list') }}">Retour à la liste</a>
+    </li>
+</ul>
 <div>
     {{ user.id }}
     {{ user.name }}

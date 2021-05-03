@@ -16,9 +16,9 @@
     <body class="{% block body_class 'theme-demo' %}">
         {% block header %}
             <header class="header">
-                <a href="{{ path('home') }}" class="logo">ADMIN ELAO</a>
+                <a href="{{ path('dashboard') }}" class="logo">ADMIN ELAO</a>
                 {% include '@ElaoAdminTheme/layout/nav_primary.html.twig' with { menu: [
-                    { route: 'home', label: 'Dashboard' },
+                    { route: 'dashboard', label: 'Dashboard' },
                     { route: 'user_list', label: 'Utilisateurs', root: 'user' },
                     { route: 'components', label: 'Composants' },
                 ] } %}
@@ -29,7 +29,7 @@
                 <button class="menu-button"></button>
             </header>
         {% include '@ElaoAdminTheme/layout/nav_mobile.html.twig' with { menu: [
-            { route: 'home', label: 'Dashboard' },
+            { route: 'dashboard', label: 'Dashboard' },
             { route: 'user_list', label: 'Utilisateurs', root: 'user' },
             { route: 'components', label: 'Composants' },
             { url: '#profile', label: 'Profil' },

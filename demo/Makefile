@@ -30,7 +30,7 @@ watch:
 build: build-assets build-content
 
 build-assets:
-	npm run watch
+	npm run build
 
 ## Build static site
 build-content: export APP_ENV = prod

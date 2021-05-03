@@ -1,0 +1,4 @@
+role:
+  ROLE_USER: Utilisateur
+  ROLE_STAFF: Gestionaire
+  ROLE_ADMIN: Administrateur
