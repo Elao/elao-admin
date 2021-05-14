@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="/build/assets/images/favicon.svg" />
         <title>Liste des utilisateurs</title>
-                    <link rel="stylesheet" href="/elao-admin/pr/24/build/style.3a20bffe.css">
+                    <link rel="stylesheet" href="/elao-admin/pr/24/build/style.22d9f8c8.css">
                             <script src="/elao-admin/pr/24/build/runtime.44b84a05.js" defer></script><script src="/elao-admin/pr/24/build/187.f28168ab.js" defer></script><script src="/elao-admin/pr/24/build/app.f1d6aaa7.js" defer></script>
             </head>
     <body class="theme-demo">
@@ -17,13 +17,7 @@
         <ul>
                                                         <li class="primary-nav__item ">
                     <a href="/elao-admin/pr/24/" class="">
-                                Dashboard
-            </a>
-            </li>
-
-                                <li class="primary-nav__item primary-nav__item--active">
-                    <a href="/elao-admin/pr/24/users/" class="">
-                                Utilisateurs
+                                Accueil
             </a>
             </li>
 
@@ -60,12 +54,7 @@
         <ul class="tree">
                             <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
                     <a class="" href="/elao-admin/pr/24/">
-                                                Dashboard
-                    </a>
-                                    </li>
-                            <li class="mobile-nav__item mobile-nav__item--primary tree-item mobile-nav__item--active">
-                    <a class="" href="/elao-admin/pr/24/users/">
-                                                Utilisateurs
+                                                Accueil
                     </a>
                                     </li>
                             <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
@@ -73,12 +62,12 @@
                                                 Composants
                     </a>
                                     </li>
-                            <li class="mobile-nav__item mobile-nav__item--primary tree-item mobile-nav__item--active">
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
                     <a class="" href="#profile">
                                                 Profil
                     </a>
                                     </li>
-                            <li class="mobile-nav__item mobile-nav__item--primary tree-item mobile-nav__item--active">
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
                     <a class="" href="#logout">
                                                 Déconnexion
                     </a>
@@ -86,7 +75,24 @@
                     </ul>
     </div>
                 <main>
-                            <div class="content">
+                                                
+    <nav class="secondary-nav">
+        <ul>
+                                                        <li class="secondary-nav__item ">
+                    <a href="/elao-admin/pr/24/" class="">
+                                Dashboard
+            </a>
+            </li>
+
+                                <li class="secondary-nav__item secondary-nav__item--active">
+                    <a href="/elao-admin/pr/24/users/" class="">
+                                Utilisateurs
+            </a>
+            </li>
+
+                    </ul>
+    </nav>
+                                <div class="content">
                     <div class="data-table">
     <div class="collapse">
         <div class="data-table__header">
@@ -107,9 +113,9 @@
                     <i class="icon icon--share" aria-hidden="true"></i>
                     Exporter
                 </button>
-                <button class="button button--primary">
+                <a href="/elao-admin/pr/24/users/new" class="button button--primary">
                     Ajouter
-                </button>
+                </a>
             </div>
         </div>
         <div class="data-table__filters collapse__menu">
@@ -152,11 +158,11 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th class="large">Nom</th>
-                    <th class="large">E-mail</th>
+                    <th>#</th>
+                    <th class="large">Nom complet</th>
+                    <th class="large">Adresse email</th>
                     <th>Rôle</th>
-                    <th class="number">Premium jusqu'au</th>
+                    <th class="number">Premium jusqu&#039;au</th>
                     <th>Statut</th>
                     <th class="action"></th>
                 </tr>
@@ -164,11 +170,17 @@
             <tbody>
                                     <tr>
                         <td>1</td>
-                        <td><a href="/elao-admin/pr/24/users/1">Adélaïde Thibault</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/1">Adélaïde Thibault</a>
+                        </td>
                         <td>spotier@wanadoo.fr</td>
                         <td>Administrateur</td>
-                        <td class="number">22/04/2021</td>
-                        <td class="">Inactif</td>
+                        <td class="number">25/04/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -180,7 +192,7 @@
                                         <a href="/elao-admin/pr/24/users/1">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/1/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -191,11 +203,17 @@
                     </tr>
                                     <tr>
                         <td>2</td>
-                        <td><a href="/elao-admin/pr/24/users/2">Brigitte Leduc</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/2">Brigitte Leduc</a>
+                        </td>
                         <td>vincent.marchal@tele2.fr</td>
                         <td>Utilisateur</td>
-                        <td class="number">24/02/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">25/02/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -207,7 +225,7 @@
                                         <a href="/elao-admin/pr/24/users/2">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/2/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -218,11 +236,17 @@
                     </tr>
                                     <tr>
                         <td>3</td>
-                        <td><a href="/elao-admin/pr/24/users/3">Caroline Nguyen</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/3">Caroline Nguyen</a>
+                        </td>
                         <td>msamson@free.fr</td>
                         <td>Gestionnaire</td>
-                        <td class="number">30/04/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">02/05/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -234,7 +258,7 @@
                                         <a href="/elao-admin/pr/24/users/3">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/3/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -245,11 +269,17 @@
                     </tr>
                                     <tr>
                         <td>4</td>
-                        <td><a href="/elao-admin/pr/24/users/4">Louis-Thibaut Peron</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/4">Louis-Thibaut Peron</a>
+                        </td>
                         <td>brunet.victoire@yahoo.fr</td>
                         <td>Administrateur</td>
-                        <td class="number">31/03/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">01/04/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -261,7 +291,7 @@
                                         <a href="/elao-admin/pr/24/users/4">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/4/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -272,11 +302,17 @@
                     </tr>
                                     <tr>
                         <td>5</td>
-                        <td><a href="/elao-admin/pr/24/users/5">Simone Labbe</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/5">Simone Labbe</a>
+                        </td>
                         <td>ewagner@wanadoo.fr</td>
                         <td>Utilisateur</td>
-                        <td class="number">05/02/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">06/02/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -288,7 +324,7 @@
                                         <a href="/elao-admin/pr/24/users/5">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/5/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -299,11 +335,17 @@
                     </tr>
                                     <tr>
                         <td>6</td>
-                        <td><a href="/elao-admin/pr/24/users/6">Noël Neveu</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/6">Noël Neveu</a>
+                        </td>
                         <td>yves59@etienne.fr</td>
                         <td>Administrateur</td>
-                        <td class="number">10/02/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">11/02/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -315,7 +357,7 @@
                                         <a href="/elao-admin/pr/24/users/6">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/6/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -326,11 +368,17 @@
                     </tr>
                                     <tr>
                         <td>7</td>
-                        <td><a href="/elao-admin/pr/24/users/7">Frédéric Gaillard</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/7">Frédéric Gaillard</a>
+                        </td>
                         <td>agnes.aubert@coulon.fr</td>
                         <td>Administrateur</td>
-                        <td class="number">14/02/2021</td>
-                        <td class="">Inactif</td>
+                        <td class="number">15/02/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -342,7 +390,7 @@
                                         <a href="/elao-admin/pr/24/users/7">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/7/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -353,11 +401,17 @@
                     </tr>
                                     <tr>
                         <td>8</td>
-                        <td><a href="/elao-admin/pr/24/users/8">Hélène Chauvet</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/8">Hélène Chauvet</a>
+                        </td>
                         <td>oboyer@bouchet.com</td>
                         <td>Utilisateur</td>
-                        <td class="number">28/04/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">30/04/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -369,7 +423,7 @@
                                         <a href="/elao-admin/pr/24/users/8">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/8/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -380,11 +434,17 @@
                     </tr>
                                     <tr>
                         <td>9</td>
-                        <td><a href="/elao-admin/pr/24/users/9">Anne Henry</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/9">Anne Henry</a>
+                        </td>
                         <td>francois.tristan@yahoo.fr</td>
                         <td>Administrateur</td>
-                        <td class="number">29/04/2021</td>
-                        <td class="text-success">Actif</td>
+                        <td class="number">02/05/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -396,7 +456,7 @@
                                         <a href="/elao-admin/pr/24/users/9">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/9/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
@@ -407,11 +467,17 @@
                     </tr>
                                     <tr>
                         <td>10</td>
-                        <td><a href="/elao-admin/pr/24/users/10">Lucas-Alfred Pichon</a></td>
+                        <td>
+                            <a href="/elao-admin/pr/24/users/10">Lucas-Alfred Pichon</a>
+                        </td>
                         <td>veronique58@bruneau.com</td>
                         <td>Gestionnaire</td>
                         <td class="number">31/01/2021</td>
-                        <td class="">Inactif</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -423,7 +489,7 @@
                                         <a href="/elao-admin/pr/24/users/10">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="/elao-admin/pr/24/users/10/edit">Modifier</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>
