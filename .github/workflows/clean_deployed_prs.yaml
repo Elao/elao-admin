@@ -1,14 +1,13 @@
-name: Clean PRs deployments
+name: Clean PR preview
 
 on:
-  workflow_dispatch: ~
-  schedule:
-    - cron: '0 0 * * 1' # At 00:00 on Monday.
+  pull_request:
+    types: [ closed ]
 
 jobs:
 
-  clear-deployed-prs:
-    name: '🧹 Clear'
+  deploy-pr:
+    name: '🧹 Clean PR preview'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -18,8 +17,8 @@ jobs:
         with:
           ref: gh-pages
 
-      - name: 'Remove PRs folder'
-        run: rm -Rf pr
+      - name: 'Remove PR folder if it exists'
+        run: rm -Rf pr/${{ github.event.number }}
 
       - name: 'Git status'
         run: git status
@@ -30,8 +29,11 @@ jobs:
         with:
           author_name: GitHub Actions Bot
           author_email: actions@github.com
-          message: '[AUTO] Remove previous PRs deployments'
-          add: "./pr"
+          message: |
+            [AUTO] Removed deployment for PR #${{ github.event.number }}
+
+            for commit ${{ github.sha }}
+          add: "./pr/"
           ref: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
