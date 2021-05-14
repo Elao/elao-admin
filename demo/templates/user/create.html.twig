@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Nouvel utilisateur' %}
+
+{% block content %}
+<div>
+    {% include '@ElaoAdminTheme/components/breadcrumb.html.twig' with { breadcrumb: [
+        { route: 'user_list', label: 'Utilisateurs' },
+        { label: block('title') },
+    ] } %}
+</div>
+
+<div>
+    {{ form(form) }}
+</div>
+{% endblock %}

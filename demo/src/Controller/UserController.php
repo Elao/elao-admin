@@ -2,13 +2,14 @@
 
 namespace App\Controller;
 
+use App\Form\UserType;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/users", defaults={"_menu_root"="user"})
+ * @Route("/users", defaults={"_menu_root"="home", "_menu_branch"="user"})
  */
 class UserController extends AbstractController
 {
@@ -36,12 +37,38 @@ class UserController extends AbstractController
     }
 
     /**
+     * @Route("/new", name="user_create")
+     */
+    public function create(): Response
+    {
+        $form = $this->createForm(UserType::class);
+
+        return $this->render('user/create.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/{id}", name="user_show")
      */
     public function show(int $id): Response
     {
         return $this->render('user/show.html.twig', [
             'user' => $this->userRepository->findOneById($id)
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="user_edit")
+     */
+    public function edit(int $id): Response
+    {
+        $user = $this->userRepository->findOneById($id);
+        $form = $this->createForm(UserType::class, $user);
+
+        return $this->render('user/edit.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
         ]);
     }
 }

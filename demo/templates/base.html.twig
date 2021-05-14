@@ -18,8 +18,7 @@
             <header class="header">
                 <a href="{{ path('dashboard') }}" class="logo">ADMIN ELAO</a>
                 {% include '@ElaoAdminTheme/layout/nav_primary.html.twig' with { menu: [
-                    { route: 'dashboard', label: 'Dashboard' },
-                    { route: 'user_list', label: 'Utilisateurs', root: 'user' },
+                    { route: 'dashboard', label: 'Accueil', root: 'home' },
                     { route: 'components', label: 'Composants' },
                 ] } %}
                 {% include '@ElaoAdminTheme/layout/nav_user.html.twig' with { user: 'Amélie D.', menu: [
@@ -29,8 +28,7 @@
                 <button class="menu-button"></button>
             </header>
         {% include '@ElaoAdminTheme/layout/nav_mobile.html.twig' with { menu: [
-            { route: 'dashboard', label: 'Dashboard' },
-            { route: 'user_list', label: 'Utilisateurs', root: 'user' },
+            { route: 'dashboard', label: 'Accueil' },
             { route: 'components', label: 'Composants' },
             { url: '#profile', label: 'Profil' },
             { url: '#logout', label: 'Déconnexion' },
@@ -38,6 +36,12 @@
         {% endblock %}
         <main>
             {% block main %}
+                {% block nav_secondary %}
+                    {% include '@ElaoAdminTheme/layout/nav_secondary.html.twig' with { menu: [
+                        { route: 'dashboard', label: 'Dashboard' },
+                        { route: 'user_list', label: 'Utilisateurs', root: 'user' },
+                    ] } %}
+                {% endblock %}
                 <div class="content">
                     {% block content '' %}
                 </div>

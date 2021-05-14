@@ -23,9 +23,9 @@
                     <i class="icon icon--share" aria-hidden="true"></i>
                     Exporter
                 </button>
-                <button class="button button--primary">
+                <a href="{{ path('user_create') }}" class="button button--primary">
                     Ajouter
-                </button>
+                </a>
             </div>
         </div>
         <div class="data-table__filters collapse__menu">
@@ -68,12 +68,12 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th class="large">Nom</th>
-                    <th class="large">E-mail</th>
-                    <th>Rôle</th>
-                    <th class="number">Premium jusqu'au</th>
-                    <th>Statut</th>
+                    <th>#</th>
+                    <th class="large">{{ 'user.name'|trans }}</th>
+                    <th class="large">{{ 'user.email'|trans }}</th>
+                    <th>{{ 'user.role'|trans }}</th>
+                    <th class="number">{{ 'user.premiumUntil'|trans }}</th>
+                    <th>{{ 'user.status'|trans }}</th>
                     <th class="action"></th>
                 </tr>
             </thead>
@@ -81,11 +81,17 @@
                 {% for user in users %}
                     <tr>
                         <td>{{ user.id }}</td>
-                        <td><a href="{{ path('user_show', { id: user.id }) }}">{{ user.name }}</a></td>
+                        <td>
+                            <a href="{{ path('user_show', { id: user.id }) }}">{{ user.name }}</a>
+                        </td>
                         <td>{{ user.email }}</td>
                         <td>{{ ('role.' ~ user.role)|trans }}</td>
                         <td class="number">{{ user.premiumUntil|date('d/m/Y') }}</td>
-                        <td class="{{ user.enabled ? 'text-success' : '' }}">{{ user.enabled ? 'Actif' : 'Inactif' }}</td>
+                        <td>
+                            <span class="tag  {{ user.enabled ? 'tag--success' : 'tag--error' }}">
+                                {{ (user.enabled ? 'user.enabled' : 'user.disabled')|trans }}
+                            </span>
+                        </td>
                         <td class="action">
                             <div class="drop drop--left">
                                 <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
@@ -97,7 +103,7 @@
                                         <a href="{{ path('user_show', { id: user.id }) }}">Consulter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Éditer</a>
+                                        <a href="{{ path('user_edit', { id: user.id }) }}">{{ 'form.edit'|trans }}</a>
                                     </li>
                                     <li>
                                         <a href="#">Supprimer</a>

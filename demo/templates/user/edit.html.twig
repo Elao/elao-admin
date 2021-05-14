@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Modifier l\'utilisateur' %}
+
+{% block content %}
+<div>
+    {% include '@ElaoAdminTheme/components/breadcrumb.html.twig' with { breadcrumb: [
+        { route: 'user_list', label: 'Utilisateurs' },
+        { route: 'user_show', parameters: { id: user.id }, label: user.name },
+        { label: block('title') },
+    ] } %}
+</div>
+
+<div>
+    {{ form(form) }}
+</div>
+{% endblock %}
