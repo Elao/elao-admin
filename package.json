@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server --mode=development --open",
+    "start": "webpack serve --mode=development",
     "build@demo": "webpack --mode=development",
     "lint": "eslint src --ext .js",
     "fix": "eslint src --ext .js --fix"
