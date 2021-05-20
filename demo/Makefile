@@ -22,6 +22,10 @@ start:
 watch:
 	npm run watch
 
+## Start webpack dev server
+dev:
+	npm run dev-server
+
 #########
 # Build #
 #########

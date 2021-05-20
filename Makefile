@@ -15,11 +15,6 @@ install:
 build:
 	npm run build
 
-## Watch assets and run server
-start:
-start:
-	npm run start
-
 ## Build assets and watch
 watch:
 watch:

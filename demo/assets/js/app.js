@@ -1,3 +1,5 @@
+import '../styles/app.scss';
+
 import { Collapsible, Drop, Tree, MobileSidebar } from '@elao/admin';
 
 window.addEventListener('load', function onLoad() {
