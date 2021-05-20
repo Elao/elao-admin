@@ -41,11 +41,17 @@ jobs:
           path: ${{ steps.composer-cache.outputs.directory }}
           key: composer-${{ hashFiles('demo/composer.lock') }}
 
-      - name: 'Cache NPM dependencies'
+      - name: 'Cache parent NPM dependencies'
         uses: actions/cache@v2
         with:
           path: ~/.npm
           key: node-${{ hashFiles('package-lock.json') }}
+
+      - name: 'Cache NPM dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('demo/package-lock.json') }}
 
       - name: 'Build parent package'
         run: |
@@ -58,13 +64,14 @@ jobs:
           echo "::endgroup::"
 
       - name: 'Install dependencies'
+        working-directory: demo
         run: |
           echo "::group::composer install"
-            composer --working-dir=./demo install --no-progress --ansi
+            composer install --no-progress --ansi
           echo "::endgroup::"
 
           echo "::group::npm install"
-            cd demo && npm install --color=always --no-progress
+            npm install --color=always --no-progress
           echo "::endgroup::"
 
       - name: 'Warmup'
