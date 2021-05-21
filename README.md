@@ -87,19 +87,55 @@ $screen-md: 1000px;
 
 ## Contributing
 
+### To the library
+
 Install dependencies:
 
 ```bash
 make install
 ```
 
-Start the dev server:
+Build with:
 
 ```bash
-make start
+make build
 ```
 
-Then go to [http://localhost:8093](http://localhost:8093)
+### To the demo
+
+The demo application lives inside the `demo` folder: 
+
+```bash
+cd demo
+```
+
+It's a Symfony application used to dynamically generate a static site with [Stenope](https://github.com/StenopePHP/Stenope) with random but realistic data.
+
+**It requires PHP 7.4+ and a local [Symfony CLI install](https://symfony.com/download).**
+
+In order to boot the application for development purposes, you need to:
+
+- build the library if not already done:
+
+  ```bash
+  cd ../
+  make build
+  cd demo
+  ```
+
+- start a Webpack dev-server, to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled:
+
+  ```bash
+  make dev
+  ```
+  
+- start a Symfony server, to server the application:
+
+  ```bash
+  make start
+  ```
+
+  The command outputs the URL at which will be available the application (usually http://127.0.0.1:8000)
 
 ### Publish a new version
 
