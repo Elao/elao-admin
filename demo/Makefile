@@ -14,8 +14,13 @@ install:
 # Development #
 ###############
 
-## Start dev server
+## Start both Symfony Web server & Webpack dev-server at once
 start:
+	# https://www.npmjs.com/package/concurrently
+	npx concurrently "make serve" "make dev" --names="Symfony,Webpack" --prefix=name --kill-others --kill-others-on-fail
+
+## Start dev server
+serve:
 	symfony server:start --no-tls
 
 ## Watch assets

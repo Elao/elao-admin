@@ -113,29 +113,24 @@ It's a Symfony application used to dynamically generate a static site with [Sten
 
 **It requires PHP 7.4+ and a local [Symfony CLI install](https://symfony.com/download).**
 
-In order to boot the application for development purposes, you need to:
+In order to boot the application for development purposes, 
+you need to build the library if not already done:
 
-- build the library if not already done:
+```bash
+cd ../
+make build
+cd demo
+```
 
-  ```bash
-  cd ../
-  make build
-  cd demo
-  ```
+Then, you need to start a Symfony web server to expose the application, 
+as well as a Webpack dev-server to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled.
 
-- start a Webpack dev-server, to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled:
-
-  ```bash
-  make dev
-  ```
+```bash
+make start
+```
   
-- start a Symfony server, to server the application:
-
-  ```bash
-  make start
-  ```
-
-  The command outputs the URL at which will be available the application (usually http://127.0.0.1:8000)
+Will start both.  
+The Symfony server command outputs the URL (in the big green rectangle) at which will be available the application (usually http://127.0.0.1:8000)
 
 ### Publish a new version
 
