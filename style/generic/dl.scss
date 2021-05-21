@@ -1,0 +1,15 @@
+dl {
+  display: grid;
+  grid: auto-flow / 200px 1fr;
+}
+
+dt,
+dd {
+  margin: 0 0 7px;
+}
+
+dt {
+  font-weight: 900;
+}
+
+dd {}
