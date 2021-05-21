@@ -18,8 +18,35 @@
     font-family: 'base-icons';
     font-size: 10px;
     color: var(--primary);
-    content: '\e904';
+    content: '\e905';
     transform: translateY(-50%);
+  }
+
+  &:first-of-type {
+    padding-left: 0;
+
+    &:before { display: none; }
+    a { margin-left: 0; }
+  }
+
+  &:last-of-type {
+    overflow: hidden;
+
+    a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:only-of-type {
+    padding-left: 10px;
+
+    &:before {
+      display: flex;
+      content: '\e904';
+    }
+
+    a { margin-left: 10px; }
   }
 
   a {
@@ -28,13 +55,3 @@
     text-decoration: none;
   }
 }
-
-.breadcrumb__item:last-of-type {
-  overflow: hidden;
-
-  a {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
