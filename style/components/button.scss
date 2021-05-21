@@ -5,6 +5,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  vertical-align: top;
   border-radius: 4px;
   transition: color ease-in-out .2s, border-color ease-in-out .2s;
 
@@ -33,6 +34,10 @@
   color: #fff;
   background-color: var(--primary);
   border-color: var(--primary);
+
+  .icon {
+    color: #fff;
+  }
 
   &:hover {
     color: #fff;
