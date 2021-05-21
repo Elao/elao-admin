@@ -511,18 +511,30 @@ main {
     font-family: 'base-icons';
     font-size: 10px;
     color: var(--primary);
-    content: '\e904';
+    content: '\e905';
     transform: translateY(-50%); }
+  .breadcrumb__item:first-of-type {
+    padding-left: 0; }
+    .breadcrumb__item:first-of-type:before {
+      display: none; }
+    .breadcrumb__item:first-of-type a {
+      margin-left: 0; }
+  .breadcrumb__item:last-of-type {
+    overflow: hidden; }
+    .breadcrumb__item:last-of-type a {
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .breadcrumb__item:only-of-type {
+    padding-left: 10px; }
+    .breadcrumb__item:only-of-type:before {
+      display: flex;
+      content: '\e904'; }
+    .breadcrumb__item:only-of-type a {
+      margin-left: 10px; }
   .breadcrumb__item a {
     margin: 0 10px;
     white-space: nowrap;
     text-decoration: none; }
-
-.breadcrumb__item:last-of-type {
-  overflow: hidden; }
-  .breadcrumb__item:last-of-type a {
-    overflow: hidden;
-    text-overflow: ellipsis; }
 
 .button {
   padding: 0 30px;
