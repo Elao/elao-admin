@@ -113,7 +113,7 @@ jobs:
             for commit ${{ github.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          FOLDER: demo/build # The folder the action should deploy.
           TARGET_FOLDER: pr/${{ github.event.number }} # The folder where the action should deploy on the deployment branch.
           CLEAN: true # Automatically remove deleted files from the deploy branch
 
