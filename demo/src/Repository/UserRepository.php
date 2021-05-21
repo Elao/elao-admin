@@ -19,10 +19,10 @@ class UserRepository
         for ($id = 1; $id <= $length; $id++) {
             $this->users[$id] = new User(
                 $id,
-                $this->faker->name,
-                $this->faker->email,
-                $this->faker->dateTimeThisYear,
-                $this->faker->boolean,
+                $this->faker->name(),
+                $this->faker->email(),
+                $this->faker->dateTimeThisYear(),
+                $this->faker->boolean(),
                 $this->faker->randomElement(['ROLE_USER', 'ROLE_STAFF', 'ROLE_ADMIN'])
             );
         }
@@ -35,6 +35,6 @@ class UserRepository
 
     public function findOneById(int $id): ?User
     {
-        return isset($this->users[$id]) ? $this->users[$id] : null;
+        return $this->users[$id] ?? null;
     }
 }
