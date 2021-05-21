@@ -20,13 +20,31 @@
 
   a {
     display: flex;
+    position: relative;
     align-items: center;
     color: var(--text);
     text-decoration: none;
+    z-index: 0;
 
     &:hover,
     &:focus {
       color: var(--primary);
+    }
+
+    &:focus {
+      color: var(--primary);
+      background: var(--accessibility-highlight);
+
+      &:before    {
+        height: 100%;
+        width: calc(100% + 20px);
+        position: absolute;
+        top: 0;
+        left: -10px;
+        content: '';
+        background: var(--accessibility-highlight);
+        z-index: -1;
+      }
     }
   }
 }

@@ -1,0 +1,20 @@
+.tertiary-nav {}
+
+.tertiary-nav__item {
+  a {
+    position: relative;
+
+    &:focus {
+      &:before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+        height: 30px;
+        width: 100%;
+        background: var(--accessibility-highlight);
+        content: '';
+        z-index: -1;
+      }
+    }
+  }
+}

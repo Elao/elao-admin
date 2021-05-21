@@ -1,0 +1,9 @@
+.breadcrumb__item {
+  a {
+    padding: 1px 2px;
+
+    &:focus {
+      background: var(--accessibility-highlight);
+    }
+  }
+}
