@@ -3,7 +3,7 @@
 {% block title user.name %}
 
 {% block content %}
-<div>
+<div class="container">
     {% include '@ElaoAdminTheme/components/breadcrumb.html.twig' with { breadcrumb: [
         { route: 'user_list', label: 'Utilisateurs' },
         { label: block('title') },
@@ -22,9 +22,7 @@
             <a href="{{ path('user_edit', { id: user.id }) }}" class="button button--primary">{{ 'form.edit'|trans }}</a>
         </div>
     </div>
-</div>
 
-<div>
     <dl>
         <dt>{{ 'user.name'|trans }}</dt>
         <dd>{{ user.name }}</dd>

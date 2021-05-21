@@ -13,3 +13,13 @@ dt {
 }
 
 dd {}
+
+@media (max-width: 750px) {
+  dl {
+    grid: auto-flow / 1fr;
+  }
+
+  dd {
+    margin: 0 0 20px;
+  }
+}
