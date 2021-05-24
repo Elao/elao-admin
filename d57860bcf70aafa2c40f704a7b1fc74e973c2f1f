@@ -1,0 +1,59 @@
+---------------------------------------------------------------------------
+
+by cmozzati at 2021-05-04T14:36:26Z
+
+@Tom32i Est-ce qu'on peut facilement mettre une secondary nav sur toutes les pages ? (même l'accueil)
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-05-07T10:21:05Z
+
+@cmozzati Oui sans problème : on en met un faux qui envoi vers rien de special ?
+
+---------------------------------------------------------------------------
+
+by cmozzati at 2021-05-10T07:40:40Z
+
+@Tom32i
+Alors dans mon idée :
+La "primary nav", elle n'aurait qu'`Accueil` (= qui fera tomber sur le dashboard) et `Composants`
+
+La "secondary nav", elle aurait :
+- Dashboard
+- Utilisateurs
+- … et tout ce qu'on rajoutera en exemple
+
+L'idée c'est qu'on soit dans un environnement qui semble réel et que les trucs un peu secondaires (Composants) soient dans une autre entrée de menu
+
+---------------------------------------------------------------------------
+
+by ogizanagi at 2021-05-20T15:36:09Z
+
+Bon je ne sais pas encore bien comment m'y prendre, mes essais ont été infructueux, mais ça serait top de pouvoir bosser sur la démo tout en pouvant mettre à jour la librairie et voir ses changements se répercuter immédiatement (avec le hot reload ✨ ).
+
+On pourrait certainement arriver à ça en répliquant la config Webpack dans celle de la démo, pour que le webpack de démo build à la fois la lib et la démo. On n'aurait alors même plus besoin de `"@elao/admin": "file:../"`. Mais ça force la duplication et ne serait pas tout à fait représentatif d'une install en tant que lib.
+
+Au mieux actuellement, avec:
+- `make watch` dans le répertoire racine
+- `make dev` (hot reload) **dans le répertoire demo**
+
+un changement dans `demo/assets/styles.scss` (donc dans la démo) déclenche bien un hot reload 👌🏻 ,
+et un changement dans `style/base/layout.scss` (donc dans la lib) le déclenche aussi, mais provoque une erreur :
+
+```sh
+Failed to compile.
+
+Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
+ModuleBuildError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):
+Error: Can't resolve '../../../dist/assets/fonts/base-icons.eot' in '/Users/ogi/Workspace/Elao/elao-admin/demo/assets/styles'
+```
+
+car les 2 processes doivent se marcher dessus et ces fichiers de font disparaissent de `dist/assets/fonts`
+
+Bref, c'est hors-scope, mais ça pourrait faciliter grandement le travail d'Amélie.
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-05-24T06:58:41Z
+
+Y'a la #25 à rebase du coup 😅
