@@ -61,7 +61,7 @@ serve-static-demo:
 #########
 
 FONTELLO_DIR   ?= ./vendor/fontello
-FONTELLO_HOST  ?= http://fontello.com
+FONTELLO_HOST  ?= https://fontello.com
 
 fontello-pull:
 	rm -rf .fontello.src .fontello.zip
