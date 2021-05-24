@@ -34,6 +34,8 @@
     }
 
     &:focus {
+      background: transparent;
+
       &:before {
         position: absolute;
         top: -7px;
