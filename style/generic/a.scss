@@ -9,5 +9,6 @@ a {
 
   &:focus {
     outline: none;
+    background-color: var(--accessibility-highlight);
   }
 }

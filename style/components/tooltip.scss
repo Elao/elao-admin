@@ -32,7 +32,8 @@
     content: '';
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--primary);
 
     &:before,
