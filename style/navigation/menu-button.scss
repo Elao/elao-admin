@@ -12,30 +12,15 @@
     align-items: center;
 
     &:before {
-      content: '\f0c9';
-      font-family: "fontello";
+      content: '\e900';
+      font-family: 'base-icons';
       color: #000;
     }
   }
 
   .menu-button--close {
-    &:before,
-    &:after {
-      height: 18px;
-      width: 2px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      content: '';
-      background-color: #000;
-    }
-
     &:before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &:after {
-      transform: translate(-50%, -50%) rotate(-45deg);
+      content: '\e901';
     }
   }
 }
