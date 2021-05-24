@@ -1,0 +1,33 @@
+---------------------------------------------------------------------------
+
+by ogizanagi at 2021-05-14T13:57:47Z
+
+Petit soucis au hover sur https://elao.github.io/elao-admin/pr/25/users/ après changement de couleur principale:
+
+![May-14-2021 15-56-52](https://user-images.githubusercontent.com/2211145/118281068-1c3d3200-b4cd-11eb-8c4c-5cb1f548cadb.gif)
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-05-17T07:23:27Z
+
+@ogizanagi C'est résolu
+
+---------------------------------------------------------------------------
+
+by cmozzati at 2021-05-17T07:43:37Z
+
+IN-CRO-YA-BLE
+Vraiment nice-to-have : un color picker avec code hexa en plus de RGB ?
+
+---------------------------------------------------------------------------
+
+by ogizanagi at 2021-05-24T08:29:37Z
+
+@Tom32i : rebased
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-05-24T12:12:54Z
+
+@cmozzati J'utilise le color picker natif HTML5, donc ça dépends du navigateur et de l'os, mais par exemple sous chrome tu peux choisir l'hexadecimal :
+![Capture d’écran 2021-05-24 à 14 11 15](https://user-images.githubusercontent.com/1846873/119346132-1cda8300-bc9a-11eb-8e87-f4bebd0696e4.png)
