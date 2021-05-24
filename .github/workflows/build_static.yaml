@@ -100,6 +100,6 @@ jobs:
           COMMIT_MESSAGE: "[AUTO] Static site update for ${{ github.sha }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          FOLDER: demo/build # The folder the action should deploy.
           CLEAN: true # Automatically remove deleted files from the deploy branch
           CLEAN_EXCLUDE: '["pr/"]' # Don't clean the PR deployments
