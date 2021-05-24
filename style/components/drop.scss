@@ -32,13 +32,21 @@
   background: #fff;
 
   li {
-    padding: 7px 25px;
+    display: flex;
     line-height: 1.4;
 
-    &:first-of-type { padding-top: 12px; }
-    &:last-of-type { padding-bottom: 15px; }
+    &:first-of-type {
+      a { padding-top: 12px; }
+    }
+
+    &:last-of-type {
+      a { padding-bottom: 15px; }
+    }
+
 
     a {
+      padding: 7px 25px;
+      width: 100%;
       font-family: var(--font--primary);
       color: var(--text);
       font-size: 14px;

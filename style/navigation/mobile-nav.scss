@@ -37,6 +37,10 @@
         color: #fff;
       }
 
+      &:focus {
+        background: transparent;
+      }
+
       i {
         margin-right: 15px;
         padding-bottom: 7px;
