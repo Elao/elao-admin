@@ -22,8 +22,13 @@
     border-radius: 4px;
     transition: color ease-in-out .2s, border-color ease-in-out .2s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: var(--primary);
+    }
+
+    &:focus {
+      background-color: var(--accessibility-highlight);
     }
   }
 }
@@ -34,7 +39,8 @@
     background-color: var(--primary);
     border-color: var(--primary);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #fff;
       background-color: var(--primary--dark);
       border-color: var(--primary--dark);
@@ -55,11 +61,15 @@
 }
 
 .pagination__item--disabled {
-  a, a:hover {
-    color: var(--border--dark);
-    background-color: transparent;
-    border-color: var(--border--dark);
-    cursor: initial;
+  a {
+    &,
+    &:hover,
+    &:focus {
+      color: var(--border--dark);
+      background-color: transparent;
+      border-color: var(--border--dark);
+      cursor: pointer;
+    }
   }
 }
 
