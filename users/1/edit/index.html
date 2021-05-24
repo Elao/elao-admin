@@ -5,7 +5,7 @@
         <title>Elao Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="/build/assets/images/favicon.svg" />
-        <title>Dashboard</title>
+        <title>Modifier l'utilisateur</title>
                     <link rel="stylesheet" href="/elao-admin/build/app.b2b6e0be.css">
                             <script src="/elao-admin/build/runtime.44b84a05.js" defer></script><script src="/elao-admin/build/187.f28168ab.js" defer></script><script src="/elao-admin/build/app.f1d6aaa7.js" defer></script>
             </head>
@@ -52,7 +52,7 @@
             </header>
             <div class="mobile-nav">
         <ul class="tree">
-                            <li class="mobile-nav__item mobile-nav__item--primary tree-item mobile-nav__item--active">
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
                     <a class="" href="/elao-admin/">
                                                 Accueil
                     </a>
@@ -78,13 +78,13 @@
                                                 
     <nav class="secondary-nav">
         <ul>
-                                                        <li class="secondary-nav__item secondary-nav__item--active">
+                                                        <li class="secondary-nav__item ">
                     <a href="/elao-admin/" class="">
                                 Dashboard
             </a>
             </li>
 
-                                <li class="secondary-nav__item ">
+                                <li class="secondary-nav__item secondary-nav__item--active">
                     <a href="/elao-admin/users/" class="">
                                 Utilisateurs
             </a>
@@ -93,17 +93,26 @@
                     </ul>
     </nav>
                                 <div class="content">
-                    <h1>Dashboard</h1>
+                    <div>
+        <ul class="breadcrumb">
+                                    <li class="breadcrumb__item">
+                    <a href="/elao-admin/users/">
+                        Utilisateurs
+                    </a>
+                </li>
+                                                <li class="breadcrumb__item">
+                    <a href="/elao-admin/users/1">
+                        Adélaïde Thibault
+                    </a>
+                </li>
+                                                <li class="breadcrumb__item">
+                    <span>Modifier l&#039;utilisateur</span>
+                </li>
+                        </ul>
+</div>
 
-<div class="data-cards">
-    <div class="card">
-        <span>50</span>
-        Utilisateurs
-    </div>
-    <div class="card">
-        <span>25</span>
-        Utilisateurs actifs
-    </div>
+<div>
+    <form name="user" method="post"><div class="form"><label for="user_name" class="required">Nom complet</label><input type="text" id="user_name" name="user[name]" required="required" value="Adélaïde Thibault" /></div><div class="form"><label for="user_email" class="required">Adresse email</label><input type="email" id="user_email" name="user[email]" required="required" value="spotier@wanadoo.fr" /></div><div class="form"><label for="user_premiumUntil" class="required">Premium jusqu&#039;au</label><input type="date" id="user_premiumUntil" name="user[premiumUntil]" required="required" value="2021-05-03" /></div><div class="form checkbox"><input type="checkbox" id="user_enabled" name="user[enabled]" required="required" value="1" /><label for="user_enabled" class="required">Actif</label></div><div class="form"><label for="user_role" class="required">Rôle</label>    <div class="select"><select id="user_role" name="user[role]"><option value="ROLE_USER">Utilisateur</option><option value="ROLE_STAFF">Gestionnaire</option><option value="ROLE_ADMIN" selected="selected">Administrateur</option></select></div></div><button type="submit" id="user_save" name="user[save]" class=" button button--primary">Enregistrer</button></form>
 </div>
                 </div>
                     </main>
