@@ -1,13 +1,11 @@
 .collapse {}
 
 .collapse__menu {
-  max-height: 1px;
-  overflow: hidden;
-  transition: max-height ease .4s;
+  display: none;
 }
 
 .collapse--show {
   .collapse__menu {
-    max-height: 1000px;
+    display: block;
   }
 }
