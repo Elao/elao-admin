@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Liste des utilisateurs' %}
+
+{% block content %}
+<div class="data-table">
+    <div class="collapse">
+        <div class="data-table__header">
+            <div class="title">
+                <h1>Comptes utilisateur</h1>
+                <span class="h3">Sous-titre du tableau</span>
+            </div>
+            <div class="actions">
+                <button class="button button--neutral collapse__trigger animated-button animated-button--equalizer">
+                    <div class="icon icon--animated icon--equalizer">
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                    </div>
+                    Filtrer
+                </button>
+                <button class="button button--neutral">
+                    <i class="icon icon--share" aria-hidden="true"></i>
+                    Exporter
+                </button>
+                <a href="{{ path('user_create') }}" class="button button--primary">
+                    Ajouter
+                </a>
+            </div>
+        </div>
+        <div class="data-table__filters collapse__menu">
+            <div class="filters">
+                <form>
+                    <div class="form">
+                        <label>Start date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label>End date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label for="select">Pays</label>
+                        <div class="select">
+                            <select id="select">
+                                <option>France</option>
+                                <option>Egypte</option>
+                                <option>Pérou</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <select id="" name="" multiple="multiple">
+                            <option value="">Prévi</option>
+                            <option value="">Ferme Directe</option>
+                            <option value="">K2</option>
+                            <option value="">MJC</option>
+                            <option value="">Musique Music</option>
+                            <option value="">Tribu</option>
+                        </select>
+                    </div>
+                    <button class="button button--primary">Filtrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="data-table__content">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="large">{{ 'user.name'|trans }}</th>
+                    <th class="large">{{ 'user.email'|trans }}</th>
+                    <th>{{ 'user.role'|trans }}</th>
+                    <th class="number">{{ 'user.premiumUntil'|trans }}</th>
+                    <th>{{ 'user.status'|trans }}</th>
+                    <th class="action"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>
+                            <a href="{{ path('user_show', { id: user.id }) }}">{{ user.name }}</a>
+                        </td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ ('role.' ~ user.role)|trans }}</td>
+                        <td class="number">{{ user.premiumUntil|date('d/m/Y') }}</td>
+                        <td>
+                            <span class="tag  {{ user.enabled ? 'tag--success' : 'tag--error' }}">
+                                {{ (user.enabled ? 'user.enabled' : 'user.disabled')|trans }}
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a href="{{ path('user_show', { id: user.id }) }}">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('user_edit', { id: user.id }) }}">{{ 'form.edit'|trans }}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% include 'components/pagination.html.twig' with { route: 'user_list_page', minPageRoute: 'user_list' } %}
+{% endblock %}

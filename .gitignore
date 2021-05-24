@@ -1,4 +1,5 @@
 /dist/
+/build
 /demo/build
 /node_modules/
 /.fontello

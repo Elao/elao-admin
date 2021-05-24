@@ -1,0 +1,17 @@
+role:
+  ROLE_USER: Utilisateur
+  ROLE_STAFF: Gestionnaire
+  ROLE_ADMIN: Administrateur
+
+user:
+  name: Nom complet
+  email: Adresse email
+  role: Rôle
+  premiumUntil: Premium jusqu'au
+  status: Statut
+  enabled: Actif
+  disabled: Inactif
+
+form:
+  edit: Modifier
+  save: Enregistrer

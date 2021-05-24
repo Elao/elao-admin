@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title user.name %}
+
+{% block content %}
+<div>
+    {% include '@ElaoAdminTheme/components/breadcrumb.html.twig' with { breadcrumb: [
+        { route: 'user_list', label: 'Utilisateurs' },
+        { label: block('title') },
+    ] } %}
+    <a href="{{ path('user_edit', { id: user.id }) }}">{{ 'form.edit'|trans }}</a>
+</div>
+
+<div>
+    <dl>
+        <dt>#</dt>
+        <dd>{{ user.id }}</dd>
+
+        <dt>{{ 'user.name'|trans }}</dt>
+        <dd>{{ user.name }}</dd>
+
+        <dt>{{ 'user.email'|trans }}</dt>
+        <dd>{{ user.email }}</dd>
+
+        <dt>{{ 'user.role'|trans }}</dt>
+        <dd>{{ ('role.' ~ user.role)|trans }}</dd>
+
+        <dt>{{ 'user.premiumUntil'|trans }}</dt>
+        <dd>{{ user.premiumUntil|date('d/m/Y') }}</dd>
+
+        <dt>{{ 'user.status'|trans }}</dt>
+        <dd>
+            <span class="tag  {{ user.enabled ? 'tag--success' : 'tag--error' }}">
+                {{ (user.enabled ? 'user.enabled' : 'user.disabled')|trans }}
+            </span>
+        </dd>
+    </dl>
+</div>
+{% endblock %}

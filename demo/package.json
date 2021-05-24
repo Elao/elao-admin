@@ -1,0 +1,24 @@
+{
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@elao/admin": "file:../"
+    },
+    "devDependencies": {
+        "@symfony/webpack-encore": "^1.1.2",
+        "concurrently": "^6.1.0",
+        "core-js": "^3.8.3",
+        "postcss-loader": "^5.2.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^11.0.1",
+        "webpack-notifier": "^1.6.0"
+    },
+    "browserslist": [
+        "defaults"
+    ]
+}
