@@ -21,7 +21,6 @@
                     { route: 'dashboard', label: 'Accueil', root: 'home' },
                     { route: 'components', label: 'Composants' },
                 ] } %}
-                {{ include('components/color_picker.html.twig') }}
                 {% include '@ElaoAdminTheme/layout/nav_user.html.twig' with { user: 'Amélie D.', menu: [
                     { url: '#profile', label: 'Profil' },
                     { url: '#logout', label: 'Déconnexion' },
@@ -48,5 +47,11 @@
                 </div>
             {% endblock %}
         </main>
+        <footer class="footer">
+            {% block footer %}
+                <p>Admin de démonstration ©{{ "now"|date("Y") }} <a href="https://www.elao.com/">Elao</a> </p>
+                {{ include('components/color_picker.html.twig') }}
+            {% endblock %}
+        </footer>
     </body>
 </html>
