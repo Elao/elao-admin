@@ -60,3 +60,13 @@
     }
   }
 }
+
+@media (max-width: $screen-sm) {
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb__item {
+    margin-bottom: 5px;
+  }
+}
