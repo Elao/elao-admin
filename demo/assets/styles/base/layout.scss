@@ -4,6 +4,14 @@
   }
 }
 
+.card {
+  .loader {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: $screen-sm) {
   .button-list {
     display: flex;

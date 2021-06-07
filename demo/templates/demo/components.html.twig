@@ -561,6 +561,25 @@
             </div>
         </div>
         <div class="form">
+            <label for="select">Select disabled</label>
+            <div class="select select--disabled">
+                <select id="select" disabled>
+                    <option>France</option>
+                </select>
+            </div>
+        </div>
+        <div class="form">
+            <label for="select">Select loading</label>
+            <div class="select select--loading">
+                <div class="loader loader--ellipsis" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form">
             <select id="" name="" multiple="multiple">
                 <option value="">Prévi</option>
                 <option value="">Ferme Directe</option>
@@ -646,5 +665,36 @@
         <span class="tag">Tag</span>
         <span class="tag tag--success">Validé</span>
         <span class="tag tag--error">Rejeté</span>
+
+        <h2>Éléments en cours de chargement</h2>
+        <div class="data-cards">
+            <div class="card">
+                <span>
+                    <div class="loader loader--spin" role="alert">
+                        <span class="sr-only">En cours de chargement</span>
+                    </div>
+                </span>
+                Spinner
+            </div>
+            <div class="card">
+                <span>
+                    <div class="loader loader--multispin" role="alert">
+                        <span class="sr-only">En cours de chargement</span>
+                    </div>
+                </span>
+                Large spinner
+            </div>
+            <div class="card">
+                <span>
+                    <div class="loader loader--ellipsis" role="alert">
+                        <span class="sr-only">En cours de chargement</span>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                    </div>
+                </span>
+                Ellipsis
+            </div>
+        </div>
     </div>
 {% endblock %}
