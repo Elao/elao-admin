@@ -84,3 +84,18 @@
     }
   }
 }
+
+.loader--text {
+  width: 100%;
+  height: 18px;
+  display: inline-block;
+  background: linear-gradient(to right, #e5e5f8, #edeefa);
+  background-size: 400% 400%;
+  animation: loading-gradient 1s ease infinite;
+
+  @keyframes loading-gradient {
+    0%,
+    100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
