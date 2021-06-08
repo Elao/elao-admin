@@ -39,10 +39,6 @@
     &:nth-of-type(3) { animation-delay: .4s; }
   }
 
-  &.loader--neutral {
-    background-color: #edeefa;
-  }
-
   @keyframes ellipsis {
     0%,
     100% {
