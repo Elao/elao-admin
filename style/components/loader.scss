@@ -11,45 +11,13 @@
   border-radius: 100%;
   animation: spin 1s linear infinite;
 
+  &.loader--neutral {
+    border-top: solid 3px #edeefa;
+  }
+
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-}
-
-.loader--multispin {
-  height: 30px;
-  width: 30px;
-  position: relative;
-  border: solid 3px transparent;
-  border-right-color: var(--primary);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: multispin-outside 2s infinite linear;
-  z-index: 1;
-
-  &:before {
-    height: 18px;
-    width: 18px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    content: '';
-    border: solid 2px transparent;
-    border-right-color: var(--primary);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: multispin-inside 2.5s infinite linear;
-    opacity: .8;
-  }
-
-  @keyframes multispin-outside {
-    100% { transform: rotate(360deg); }
-  }
-
-  @keyframes multispin-inside {
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
   }
 }
 
@@ -69,6 +37,10 @@
     &:nth-of-type(1) { animation-delay: 0; }
     &:nth-of-type(2) { animation-delay: .2s; }
     &:nth-of-type(3) { animation-delay: .4s; }
+  }
+
+  &.loader--neutral {
+    background-color: #edeefa;
   }
 
   @keyframes ellipsis {

@@ -697,6 +697,35 @@
             </button>
             <button href="#" class="button button--primary">Primary</button>
         </div>
+        <div class="button-demo">
+            <button href="#" class="button button--neutral" disabled>Neutral disabled</button>
+            <button href="#" class="button button--neutral" disabled>
+                <i class="icon icon--filter" aria-hidden="true"></i>
+                Neutral disabled
+            </button>
+            <button href="#" class="button button--danger" disabled>
+                <i class="icon icon--delete" aria-hidden="true"></i>
+                Danger disabled
+            </button>
+            <button href="#" class="button button--danger" disabled>Danger</button>
+            <button href="#" class="button button--primary" disabled>Primary disabled</button>
+            <button href="#" class="button button--primary" disabled>
+                <i class="icon icon--download" aria-hidden="true"></i>
+                Primary disabled
+            </button>
+        </div>
+        <div class="button-demo">
+            <button href="#" class="button button--neutral" disabled>
+                <div class="loader loader--spin" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                </div>
+            </button>
+            <button href="#" class="button button--primary" disabled>
+                <div class="loader loader--spin loader--neutral" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                </div>
+            </button>
+        </div>
 
         <h2>Tooltips</h2>
         <div class="button-list">
@@ -728,14 +757,6 @@
                     </div>
                 </span>
                 Spinner
-            </div>
-            <div class="card">
-                <span>
-                    <div class="loader loader--multispin" role="alert">
-                        <span class="sr-only">En cours de chargement</span>
-                    </div>
-                </span>
-                Large spinner
             </div>
             <div class="card">
                 <span>
