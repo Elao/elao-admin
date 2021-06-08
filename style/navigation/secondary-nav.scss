@@ -5,6 +5,9 @@
   ul {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     list-style: none;
   }
 }
@@ -19,6 +22,11 @@
     text-decoration: none;
     line-height: 1.5;
 
+    // improve keyboard navigation
+    padding: 2px 5px;
+    position: relative;
+    left: -2px;
+
     &:hover,
     &:focus {
       color: var(--primary);
@@ -29,6 +37,10 @@
       padding-bottom: 7px;
       font-size: 18px;
       line-height: 1.5;
+    }
+
+    &:focus {
+      background: var(--accessibility-highlight);
     }
   }
 }

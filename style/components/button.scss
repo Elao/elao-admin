@@ -25,7 +25,8 @@
     color: var(--primary);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: var(--primary);
   }
 }
@@ -39,7 +40,8 @@
     color: #fff;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fff;
     background-color: var(--primary--dark);
     border-color: var(--primary--dark);
@@ -55,7 +57,8 @@
     color: var(--danger);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: var(--danger);
   }
 }

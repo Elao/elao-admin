@@ -11,6 +11,14 @@
 .data-table__content {
   border: solid 1px var(--border);
   border-radius: 10px;
+
+  .drop__button {
+    border-radius: 3px;
+
+    &:focus {
+      background-color: var(--accessibility-highlight);
+    }
+  }
 }
 
 @media (max-width: $screen-md) {

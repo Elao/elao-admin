@@ -21,6 +21,7 @@
 
   a {
     height: 100%;
+    position: relative;
     display: flex;
     align-items: flex-start;
     color: var(--text--light);
@@ -30,6 +31,21 @@
     &:hover,
     &:focus {
       color: var(--primary);
+    }
+
+    &:focus {
+      background: transparent;
+
+      &:before {
+        position: absolute;
+        top: -7px;
+        right: 0;
+        height: 30px;
+        width: 100%;
+        background: var(--accessibility-highlight);
+        content: '';
+        z-index: -1;
+      }
     }
   }
 
