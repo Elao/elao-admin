@@ -3,16 +3,18 @@
 {% block title 'Dashboard' %}
 
 {% block content %}
-<h1>Dashboard</h1>
+    <div class="container">
+        <h1>Dashboard</h1>
 
-<div class="data-cards">
-    <div class="card">
-        <span>{{ user_count }}</span>
-        Utilisateurs
+        <div class="data-cards">
+            <div class="card">
+                <span>{{ user_count }}</span>
+                Utilisateurs
+            </div>
+            <div class="card">
+                <span>{{ user_enabled_count }}</span>
+                Utilisateurs actifs
+            </div>
+        </div>
     </div>
-    <div class="card">
-        <span>{{ user_enabled_count }}</span>
-        Utilisateurs actifs
-    </div>
-</div>
 {% endblock %}

@@ -11,6 +11,9 @@
 
 @media (max-width: $screen-sm) {
   .data-cards {
-    display: none;
+    .card {
+      margin-right: 0;
+      width: 100%;
+    }
   }
 }

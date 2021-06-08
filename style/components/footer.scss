@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 40px;
+  padding: 15px 25px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-top: solid 1px var(--border);
+}
+
+@media (max-width: $screen-sm) {
+  .footer {
+    height: unset;
+    text-align: center;
+
+    > * {
+      margin: 0 auto 5px;
+    }
+  }
+}

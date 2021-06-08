@@ -3,8 +3,11 @@
 }
 
 .drop__button {
+  padding: 0;
   width: 100%;
   display: inline-block;
+  font-size: 1.6rem;
+  color: var(--text);
 
   .icon {
     color: var(--text--lighter);
@@ -68,10 +71,25 @@
   }
 }
 
+.drop--up {
+  .drop__menu {
+    margin-bottom: 7px;
+    bottom: 100%;
+    right: 0;
+  }
+}
+
 .drop--left {
   .drop__menu {
     top: 0;
     right: 100%;
+  }
+}
+
+.drop--right {
+  .drop__menu {
+    top: 0;
+    left: 100%;
   }
 }
 

@@ -2,4 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
 
-@import './color-picker';
+@import 'base/variables';
+@import 'base/layout';
+
+@import 'components/color-picker';
