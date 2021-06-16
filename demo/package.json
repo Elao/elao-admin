@@ -10,7 +10,7 @@
         "@elao/admin": "file:../"
     },
     "devDependencies": {
-        "@symfony/webpack-encore": "^1.1.2",
+        "@symfony/webpack-encore": "^1.4.0",
         "concurrently": "^6.1.0",
         "core-js": "^3.8.3",
         "postcss-loader": "^5.2.0",

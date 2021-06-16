@@ -1,6 +1,6 @@
 import '../styles/app.scss';
 
-import { Collapsible, Drop, Tree, MobileSidebar } from '@elao/admin';
+import { Collapsible, Drop, Tree, MobileSidebar, NavigableTable } from '@elao/admin';
 import ColorPicker from './ColorPicker';
 
 window.addEventListener('load', function onLoad() {
@@ -8,6 +8,7 @@ window.addEventListener('load', function onLoad() {
     Collapsible.init();
     Drop.init();
     Tree.init();
+    NavigableTable.init();
 
     // Mobile
     MobileSidebar.init();

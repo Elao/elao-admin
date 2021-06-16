@@ -1,0 +1,6 @@
+tr[data-default-action]{
+    cursor: pointer;
+    &:hover {
+        background-color: var(--border);
+    }
+}
