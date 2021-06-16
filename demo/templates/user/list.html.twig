@@ -79,7 +79,7 @@
             </thead>
             <tbody>
                 {% for user in users %}
-                    <tr>
+                    <tr data-default-action=".default-action">
                         <td>{{ user.id }}</td>
                         <td>
                             <a href="{{ path('user_show', { id: user.id }) }}">{{ user.name }}</a>
@@ -100,7 +100,7 @@
                                 </button>
                                 <ul class="drop__menu">
                                     <li>
-                                        <a href="{{ path('user_show', { id: user.id }) }}">Consulter</a>
+                                        <a class="default-action" href="{{ path('user_show', { id: user.id }) }}">Consulter</a>
                                     </li>
                                     <li>
                                         <a href="{{ path('user_edit', { id: user.id }) }}">{{ 'form.edit'|trans }}</a>
