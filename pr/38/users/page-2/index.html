@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Elao Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/build/assets/images/favicon.svg" />
+        <title>Liste des utilisateurs</title>
+                    <link rel="stylesheet" href="/elao-admin/pr/38/build/app.48334a3d.css">
+                            <script src="/elao-admin/pr/38/build/runtime.89ccd660.js" defer></script><script src="/elao-admin/pr/38/build/854.f4f8f2e9.js" defer></script><script src="/elao-admin/pr/38/build/app.756d68b0.js" defer></script>
+            </head>
+    <body class="theme-demo">
+                    <header class="header">
+                <a href="/elao-admin/pr/38/" class="logo">ADMIN ELAO</a>
+                
+    <nav class="primary-nav">
+        <ul>
+                                                        <li class="primary-nav__item primary-nav__item--active">
+                    <a href="/elao-admin/pr/38/" class="">
+                                Accueil
+            </a>
+            </li>
+
+                                <li class="primary-nav__item ">
+                    <a href="/elao-admin/pr/38/components" class="">
+                                Composants
+            </a>
+            </li>
+
+                    </ul>
+    </nav>
+                
+                        <div class="user-menu drop drop--down">
+                <button class="user-menu__button drop__button">
+                    Amélie D.                </button>
+                <ul class="user-menu__content drop__menu">
+                                                <li class=" ">
+                    <a href="#profile" class="">
+                                Profil
+            </a>
+            </li>
+
+                                                <li class=" ">
+                    <a href="#logout" class="">
+                                Déconnexion
+            </a>
+            </li>
+
+                                    </ul>
+            </div>
+                            <button class="menu-button"></button>
+            </header>
+            <div class="mobile-nav">
+        <ul class="tree">
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
+                    <a class="" href="/elao-admin/pr/38/">
+                                                Accueil
+                    </a>
+                                    </li>
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
+                    <a class="" href="/elao-admin/pr/38/components">
+                                                Composants
+                    </a>
+                                    </li>
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
+                    <a class="" href="#profile">
+                                                Profil
+                    </a>
+                                    </li>
+                            <li class="mobile-nav__item mobile-nav__item--primary tree-item ">
+                    <a class="" href="#logout">
+                                                Déconnexion
+                    </a>
+                                    </li>
+                    </ul>
+    </div>
+                <main>
+                                                
+    <nav class="secondary-nav">
+        <ul>
+                                                        <li class="secondary-nav__item ">
+                    <a href="/elao-admin/pr/38/" class="">
+                                Dashboard
+            </a>
+            </li>
+
+                                <li class="secondary-nav__item secondary-nav__item--active">
+                    <a href="/elao-admin/pr/38/users/" class="">
+                                Utilisateurs
+            </a>
+            </li>
+
+                    </ul>
+    </nav>
+                                <div class="content">
+                    <div class="data-table">
+    <div class="collapse">
+        <div class="content-header">
+            <div class="content-header__title">
+                <h1>Comptes utilisateur</h1>
+                <span class="h3">Sous-titre du tableau</span>
+            </div>
+            <div class="content-header__actions">
+                <button class="button button--neutral collapse__trigger animated-button animated-button--equalizer">
+                    <div class="icon icon--animated icon--equalizer">
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                        <div class="icon--equalizer__bar"></div>
+                    </div>
+                    Filtrer
+                </button>
+                <button class="button button--neutral">
+                    <i class="icon icon--share" aria-hidden="true"></i>
+                    Exporter
+                </button>
+                <a href="/elao-admin/pr/38/users/new" class="button button--primary">
+                    Ajouter
+                </a>
+            </div>
+        </div>
+        <div class="data-table__filters collapse__menu">
+            <div class="filters">
+                <form>
+                    <div class="form">
+                        <label>Start date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label>End date</label>
+                        <input type="date" value="2020-12-01">
+                    </div>
+                    <div class="form">
+                        <label for="select">Pays</label>
+                        <div class="select">
+                            <select id="select">
+                                <option>France</option>
+                                <option>Egypte</option>
+                                <option>Pérou</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <select id="" name="" multiple="multiple">
+                            <option value="">Prévi</option>
+                            <option value="">Ferme Directe</option>
+                            <option value="">K2</option>
+                            <option value="">MJC</option>
+                            <option value="">Musique Music</option>
+                            <option value="">Tribu</option>
+                        </select>
+                    </div>
+                    <button class="button button--primary">Filtrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="data-table__content">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="large">Nom complet</th>
+                    <th class="large">Adresse email</th>
+                    <th>Rôle</th>
+                    <th class="number">Premium jusqu&#039;au</th>
+                    <th>Statut</th>
+                    <th class="action"></th>
+                </tr>
+            </thead>
+            <tbody>
+                                    <tr data-default-action=".default-action">
+                        <td>11</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/11">Xavier Allard-Collin</a>
+                        </td>
+                        <td>rene53@wanadoo.fr</td>
+                        <td>Gestionnaire</td>
+                        <td class="number">21/04/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/11">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/11/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>12</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/12">Alix Samson</a>
+                        </td>
+                        <td>chevalier.thibaut@sfr.fr</td>
+                        <td>Utilisateur</td>
+                        <td class="number">24/01/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/12">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/12/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>13</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/13">Manon De Oliveira</a>
+                        </td>
+                        <td>margot.maillard@club-internet.fr</td>
+                        <td>Administrateur</td>
+                        <td class="number">10/02/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/13">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/13/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>14</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/14">Sophie de la Coulon</a>
+                        </td>
+                        <td>jcharrier@laposte.net</td>
+                        <td>Administrateur</td>
+                        <td class="number">14/02/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/14">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/14/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>15</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/15">Luce Gauthier</a>
+                        </td>
+                        <td>paul.gregoire@gmail.com</td>
+                        <td>Utilisateur</td>
+                        <td class="number">20/01/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/15">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/15/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>16</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/16">Hugues Lopes</a>
+                        </td>
+                        <td>julien.rene@godard.com</td>
+                        <td>Administrateur</td>
+                        <td class="number">08/02/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/16">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/16/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>17</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/17">Célina-Élodie Mathieu</a>
+                        </td>
+                        <td>adrien88@laposte.net</td>
+                        <td>Utilisateur</td>
+                        <td class="number">18/04/2021</td>
+                        <td>
+                            <span class="tag  tag--success">
+                                Actif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/17">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/17/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>18</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/18">Margaud Marchal</a>
+                        </td>
+                        <td>stephane30@club-internet.fr</td>
+                        <td>Administrateur</td>
+                        <td class="number">02/01/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/18">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/18/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>19</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/19">Antoinette Blin</a>
+                        </td>
+                        <td>ndevaux@petitjean.com</td>
+                        <td>Utilisateur</td>
+                        <td class="number">11/02/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/19">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/19/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                                    <tr data-default-action=".default-action">
+                        <td>20</td>
+                        <td>
+                            <a href="/elao-admin/pr/38/users/20">Suzanne Morel</a>
+                        </td>
+                        <td>charles.gosselin@club-internet.fr</td>
+                        <td>Administrateur</td>
+                        <td class="number">05/01/2021</td>
+                        <td>
+                            <span class="tag  tag--error">
+                                Inactif
+                            </span>
+                        </td>
+                        <td class="action">
+                            <div class="drop drop--left">
+                                <button class="drop__button tooltip tooltip--top" data-tooltip="Choisir une action">
+                                    <i class="icon icon--bullets" aria-hidden="true"></i>
+                                    <span class="sr-only">Choisir une action</span>
+                                </button>
+                                <ul class="drop__menu">
+                                    <li>
+                                        <a class="default-action" href="/elao-admin/pr/38/users/20">Consulter</a>
+                                    </li>
+                                    <li>
+                                        <a href="/elao-admin/pr/38/users/20/edit">Modifier</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Supprimer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    <ul class="pagination">
+        <li class="pagination__item pagination__item--previous ">
+            <a href="/elao-admin/pr/38/users/">
+                <i class="icon icon--chevron-left" aria-hidden="true"></i>
+                <span>Précédent</span>
+            </a>
+        </li>
+                <li class="pagination__item ">
+            <a href="/elao-admin/pr/38/users/">
+                1
+            </a>
+        </li>
+                <li class="pagination__item pagination__item--active">
+            <a href="/elao-admin/pr/38/users/page-2">
+                2
+            </a>
+        </li>
+                <li class="pagination__item ">
+            <a href="/elao-admin/pr/38/users/page-3">
+                3
+            </a>
+        </li>
+                <li class="pagination__item ">
+            <a href="/elao-admin/pr/38/users/page-4">
+                4
+            </a>
+        </li>
+                <li class="pagination__item ">
+            <a href="/elao-admin/pr/38/users/page-5">
+                5
+            </a>
+        </li>
+                <li class="pagination__item pagination__item--next ">
+            <a href="/elao-admin/pr/38/users/page-3">
+                <i class="icon icon--chevron-right" aria-hidden="true"></i>
+                <span class="screen-reader">Suivant</span>
+            </a>
+        </li>
+    </ul>
+                </div>
+                    </main>
+        <footer class="footer">
+                            <p>Admin de démonstration ©2021 <a href="https://www.elao.com/">Elao</a> </p>
+                <div id="color-picker" class="color-picker drop drop--up">
+    <button class="color-picker__button drop__button">Changer le thème 🎨</button>
+    <form name="color-picker" class="color-picker__content drop__menu">
+        <ul>
+            <li>
+                <label for="color-value">Couleur principale :</label>
+                <input type="color" id="color-value" name="primary-color" value="#4053ec">
+            </li>
+        </ul>
+    </form>
+</div>
+
+                    </footer>
+    </body>
+</html>
