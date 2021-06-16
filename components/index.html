@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="/build/assets/images/favicon.svg" />
         <title>Hello DefaultController!</title>
-                    <link rel="stylesheet" href="/elao-admin/build/app.7954e231.css">
+                    <link rel="stylesheet" href="/elao-admin/build/app.555c790d.css">
                             <script src="/elao-admin/build/runtime.89ccd660.js" defer></script><script src="/elao-admin/build/854.f4f8f2e9.js" defer></script><script src="/elao-admin/build/app.756d68b0.js" defer></script>
             </head>
     <body class="theme-demo">
@@ -233,6 +233,16 @@
                                     <option value="">Tribu</option>
                                 </select>
                             </div>
+                            <div class="form">
+                                <select id="" name="" multiple="multiple">
+                                    <option value="">Prévi</option>
+                                    <option value="">Ferme Directe</option>
+                                    <option value="">K2</option>
+                                    <option value="">MJC</option>
+                                    <option value="">Musique Music</option>
+                                    <option value="">Tribu</option>
+                                </select>
+                            </div>
                             <button class="button button--primary">Filtrer</button>
                         </form>
                     </div>
@@ -362,8 +372,8 @@
                         </tr>
                         <tr>
                             <td>2345</td>
-                            <td><a href="#">Megan Rapinoe</a></td>
-                            <td>meg@uswnt.com</td>
+                            <td><a href="#">Matthew Griffin</a></td>
+                            <td>mattg@uswnt.com</td>
                             <td>Utilisateur</td>
                             <td class="number">31/08/2020</td>
                             <td class="text-success">Actif</td>
@@ -433,6 +443,59 @@
                 </a>
             </li>
         </ul>
+
+        <div class="data-table">
+            <div class="content-header">
+                <div class="content-header__title">
+                    <h1>Tableau en chargement</h1>
+                    <span class="h3">NB : il est possible de n'avoir que certaines cellules en cours de chargement</span>
+                </div>
+            </div>
+            <div class="data-table__content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th class="large">Nom</th>
+                            <th class="large">E-mail</th>
+                            <th>Rôle</th>
+                            <th class="number">Premium jusqu'au</th>
+                            <th>Statut</th>
+                            <th class="action"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td class="number"><span class="loader loader--text"></span></td>
+                            <td class="text-success"><span class="loader loader--text"></span></td>
+                            <td class="action"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td class="number"><span class="loader loader--text"></span></td>
+                            <td class="text-success"><span class="loader loader--text"></span></td>
+                            <td class="action"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td><span class="loader loader--text"></span></td>
+                            <td class="number"><span class="loader loader--text"></span></td>
+                            <td class="text-success"><span class="loader loader--text"></span></td>
+                            <td class="action"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
         <h2>Icônes de base du thème admin</h2>
         <div class="data-table">
@@ -664,7 +727,27 @@
             </div>
         </div>
         <div class="form">
-            <select id="" name="" multiple="multiple">
+            <label for="select">Select disabled</label>
+            <div class="select select--disabled">
+                <select id="select" disabled>
+                    <option>France</option>
+                </select>
+            </div>
+        </div>
+        <div class="form">
+            <label for="select">Select loading</label>
+            <div class="select select--loading">
+                <div class="loader loader--ellipsis" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <label for="select">Select multiple</label>
+            <select id="" name="" multiple="multiple" class="select--multiple">
                 <option value="">Prévi</option>
                 <option value="">Ferme Directe</option>
                 <option value="">K2</option>
@@ -672,6 +755,17 @@
                 <option value="">Musique Music</option>
                 <option value="">Tribu</option>
             </select>
+        </div>
+        <div class="form">
+            <label for="select">Select multiple loading</label>
+            <div class="select select--multiple select--loading">
+                <div class="loader loader--ellipsis" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                    <i aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
         <div class="form">
             <label for="message">Message</label>
@@ -728,6 +822,35 @@
             </button>
             <button href="#" class="button button--primary">Primary</button>
         </div>
+        <div class="button-list">
+            <button href="#" class="button button--neutral" disabled>Neutral disabled</button>
+            <button href="#" class="button button--neutral" disabled>
+                <i class="icon icon--filter" aria-hidden="true"></i>
+                Neutral disabled
+            </button>
+            <button href="#" class="button button--danger" disabled>
+                <i class="icon icon--delete" aria-hidden="true"></i>
+                Danger disabled
+            </button>
+            <button href="#" class="button button--danger" disabled>Danger</button>
+            <button href="#" class="button button--primary" disabled>Primary disabled</button>
+            <button href="#" class="button button--primary" disabled>
+                <i class="icon icon--download" aria-hidden="true"></i>
+                Primary disabled
+            </button>
+        </div>
+        <div class="button-list">
+            <button href="#" class="button button--neutral" disabled>
+                <div class="loader loader--spin" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                </div>
+            </button>
+            <button href="#" class="button button--primary" disabled>
+                <div class="loader loader--spin loader--neutral" role="alert">
+                    <span class="sr-only">En cours de chargement</span>
+                </div>
+            </button>
+        </div>
 
         <h2>Tooltips</h2>
         <div class="button-list">
@@ -749,6 +872,35 @@
         <span class="tag">Tag</span>
         <span class="tag tag--success">Validé</span>
         <span class="tag tag--error">Rejeté</span>
+
+        <h2>Éléments en cours de chargement</h2>
+        <div class="data-cards">
+            <div class="card">
+                <span>
+                    <div class="loader loader--spin" role="alert">
+                        <span class="sr-only">En cours de chargement</span>
+                    </div>
+                </span>
+                Spinner
+            </div>
+            <div class="card">
+                <span>
+                    <div class="loader loader--ellipsis" role="alert">
+                        <span class="sr-only">En cours de chargement</span>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                    </div>
+                </span>
+                Ellipsis
+            </div>
+            <div class="card">
+                <span>
+                    <span class="loader loader--text"></span>
+                </span>
+                Loading text
+            </div>
+        </div>
     </div>
                 </div>
                     </main>
