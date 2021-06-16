@@ -7,7 +7,9 @@
   border: solid 1px var(--border);
   border-radius: 4px;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     border: solid 1px var(--border--dark);
   }
 
@@ -39,21 +41,6 @@
     content: '';
   }
 
-  [disabled],
-  &.disabled {
-    opacity: .6;
-    cursor: not-allowed;
-
-    &:hover {
-      border: solid 1px var(--border);
-    }
-
-    select {
-      cursor: default;
-      pointer-events: none;
-    }
-  }
-
   select {
     padding: 0 10px;
     font-size: 15px;
@@ -81,12 +68,38 @@
   }
 }
 
-select[multiple] {
+.select--disabled {
+  opacity: .6;
+  cursor: not-allowed;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: solid 1px var(--border);
+  }
+
+  select,
+  select[disabled] {
+    opacity: 1;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+select[multiple],
+.select--multiple {
+  height: 100px;
+  min-height: 100px;
   font-family: var(--font--primary);
   font-size: 15px;
   color: var(--text--dark);
   border: solid 1px var(--border);
   border-radius: 4px;
+
+  &:before,
+  &:after {
+    display: none;
+  }
 
   &:hover {
     border: solid 1px var(--border--dark);
@@ -105,5 +118,22 @@ select[multiple] {
       background: var(--background--dark) linear-gradient(0deg, var(--background--dark) 0%, var(--background--dark) 100%);
       outline: none;
     }
+  }
+}
+
+.select--loading {
+  background: transparent;
+  background: #fff;
+  border: solid 1px var(--border);
+  border-radius: 4px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border: solid 1px var(--border);
+  }
+
+  .loader {
+    margin: 17px 10px;
   }
 }
