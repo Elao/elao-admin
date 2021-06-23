@@ -17,6 +17,10 @@
   transition: color ease-in-out .15s;
   z-index: 0;
 
+  .icon {
+    margin-right: 0.5em;
+  }
+
   &:hover,
   &:focus {
     color: var(--primary);
