@@ -237,12 +237,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elao/ElaoAdminThemeBundle.git",
-                "reference": "edd621ec3bf68f5c638527f5e150d4347ccfbceb"
+                "reference": "d472e1016ddff954c0966108c90c699b3f4286e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elao/ElaoAdminThemeBundle/zipball/edd621ec3bf68f5c638527f5e150d4347ccfbceb",
-                "reference": "edd621ec3bf68f5c638527f5e150d4347ccfbceb",
+                "url": "https://api.github.com/repos/Elao/ElaoAdminThemeBundle/zipball/d472e1016ddff954c0966108c90c699b3f4286e6",
+                "reference": "d472e1016ddff954c0966108c90c699b3f4286e6",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
                 "issues": "https://github.com/Elao/ElaoAdminThemeBundle/issues",
                 "source": "https://github.com/Elao/ElaoAdminThemeBundle/tree/master"
             },
-            "time": "2021-05-14T08:04:07+00:00"
+            "time": "2021-06-23T09:04:53+00:00"
         },
         {
             "name": "erusev/parsedown",
