@@ -2,7 +2,9 @@
   padding: 0 30px;
   height: 48px;
   min-width: 150px;
-  display: inline-flex;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 12px;
   justify-content: center;
   align-items: center;
   vertical-align: top;
@@ -10,7 +12,6 @@
   transition: color ease-in-out .2s, border-color ease-in-out .2s;
 
   .icon {
-    margin-right: 12px;
     font-size: 21px;
     color: var(--text--lighter);
   }
