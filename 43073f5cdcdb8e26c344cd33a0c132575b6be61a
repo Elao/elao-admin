@@ -1,0 +1,36 @@
+---------------------------------------------------------------------------
+
+by ameliedefrance at 2021-06-28T14:30:21Z
+
+Si je ne me trompe pas on doit avoir une astuce avec `display : grid` qui nous permet de faire la même chose sans avoir à s'alourdir d'un `<span>` dans le bouton.
+
+```
+.button {
+  // on vire le inline-flex et on passe en grid
+  display: inline-grid;
+
+  // on dit au bouton de séparer chacune de ses colonne-enfant de 12px
+  // grid comprend le texte comme un enfant et la balise comme un autre enfant
+  // implicitement on n'a rien à espacer s'il n'y a qu'une colonne-enfant
+  grid-auto-flow: column;
+  grid-gap: 12px;
+}
+```
+
+Supporté par les versions de Edge sorties dès 2017
+
+<img width="536" alt="Capture d’écran 2021-06-28 à 16 37 32" src="https://user-images.githubusercontent.com/25897625/123655349-2e7df000-d82f-11eb-8eaa-6e66e6a72f64.png">
+<img width="157" alt="Capture d’écran 2021-06-28 à 16 39 08" src="https://user-images.githubusercontent.com/25897625/123655632-6d13aa80-d82f-11eb-8d55-b0e466f28732.png">
+<img width="158" alt="Capture d’écran 2021-06-28 à 16 39 14" src="https://user-images.githubusercontent.com/25897625/123655634-6e44d780-d82f-11eb-8638-814bbd75873a.png">
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-06-28T15:46:10Z
+
+C'est toi qui sait mieux ! Tu peux faire la correction direct sur la branche si tu veux :)
+
+---------------------------------------------------------------------------
+
+by Tom32i at 2021-06-29T09:55:37Z
+
+Trop cool !
