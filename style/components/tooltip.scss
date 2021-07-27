@@ -6,30 +6,8 @@
 
   &:before,
   &:after {
-    position: absolute;
-    pointer-events: none;
-    z-index: 1;
     opacity: 0;
     transition: opacity ease-in .15s;
-  }
-
-  &:before {
-    min-width: 100px;
-    padding: 7px 10px;
-    color: var(--primary);
-    font-size: 13px;
-    text-decoration: none;
-    text-align: center;
-    white-space: nowrap;
-    background: var(--background--dark);
-    border-radius: 4px;
-    content: attr(data-tooltip);
-  }
-
-  &:after {
-    width: 0;
-    height: 0;
-    content: '';
   }
 
   &:hover,
@@ -38,11 +16,30 @@
 
     &:before,
     &:after {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
       opacity: 1;
     }
 
     &:before {
+      min-width: 100px;
+      padding: 7px 10px;
       justify-content: center;
+      color: var(--primary);
+      font-size: 13px;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      background: var(--background--dark);
+      border-radius: 4px;
+      content: attr(data-tooltip);
+    }
+
+    &:after {
+      width: 0;
+      height: 0;
+      content: '';
     }
   }
 }
@@ -50,81 +47,158 @@
 .tooltip--top {
   &:before,
   &:after {
-    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  &:before { margin-bottom: 10px; }
+  &:before {
+    margin-bottom: 10px;
+    bottom: 100%;
+  }
 
   &:after {
     margin-bottom: 4px;
+    bottom: calc(100% + 1px);
     border: 6px solid transparent;
     border-top-color: var(--background--dark);
     border-bottom: none;
   }
+
+  &.tooltip--align-left { @extend %tooltip--align-left; }
+  &.tooltip--align-right { @extend %tooltip--align-right; }
 }
 
 .tooltip--bottom {
   &:before,
   &:after {
-    top: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  &:before { margin-top: 10px; }
+  &:before {
+    margin-top: 10px;
+    top: 100%;
+  }
 
   &:after {
     margin-top: 4px;
-    top: 100%;
+    top: calc(100% + 1px);
     border: 6px solid transparent;
     border-bottom-color: var(--background--dark);
     border-top: none;
   }
+
+  &.tooltip--align-left { @extend %tooltip--align-left; }
+  &.tooltip--align-right { @extend %tooltip--align-right; }
 }
 
 .tooltip--left {
   &:before,
   &:after {
-    right: 100%;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &:before { margin-right: 10px; }
+  &:before {
+    right: 100%;
+    margin-right: 10px;
+  }
 
   &:after {
     margin-right: 4px;
+    right: calc(100% + 1px);
     border: 6px solid transparent;
     border-left-color: var(--background--dark);
     border-right: none;
   }
+
+  &.tooltip--align-top { @extend %tooltip--align-top; }
+  &.tooltip--align-bottom { @extend %tooltip--align-bottom; }
 }
 
 .tooltip--right {
   &:before,
   &:after {
-    left: 100%;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  &:before { margin-left: 10px; }
+  &:before {
+    margin-left: 10px;
+    left: 100%;
+  }
 
   &:after {
     margin-left: 4px;
+    left: calc(100% + 1px);
     border: 6px solid transparent;
     border-right-color: var(--background--dark);
     border-left: none;
+  }
+
+  &.tooltip--align-top { @extend %tooltip--align-top; }
+  &.tooltip--align-bottom { @extend %tooltip--align-bottom; }
+}
+
+%tooltip--align-left {
+  &:before,
+  &:after {
+    right: unset;
+    left: 0;
+    transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    &:after { left: 3px; }
+  }
+}
+
+%tooltip--align-right {
+  &:before,
+  &:after {
+    right: 0;
+    left: unset;
+    transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    &:after { right: 3px; }
+  }
+}
+
+%tooltip--align-top {
+  &:before,
+  &:after {
+    top: 0;
+    bottom: unset;
+    transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    &:after { top: 3px; }
+  }
+}
+
+%tooltip--align-bottom {
+  &:before,
+  &:after {
+    top: unset;
+    bottom: 0;
+    transform: none;
+  }
+
+  &:hover,
+  &:focus {
+    &:after { bottom: 3px; }
   }
 }
 
 @media (max-width: $screen-md) {
   .tooltip {
     &:before,
-    &:after {
-      display: none;
-    }
+    &:after { display: none; }
   }
 }

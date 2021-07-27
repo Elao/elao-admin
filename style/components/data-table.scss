@@ -11,6 +11,7 @@
 .data-table__content {
   border: solid 1px var(--border);
   border-radius: 10px;
+  overflow-x: auto;
 
   .drop__button {
     border-radius: 3px;
@@ -20,10 +21,3 @@
     }
   }
 }
-
-@media (max-width: $screen-md) {
-  .data-table__content {
-    overflow-x: auto;
-  }
-}
-
