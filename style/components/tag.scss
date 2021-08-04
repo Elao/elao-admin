@@ -10,10 +10,7 @@
   border-radius: 5px;
 }
 
-.tag--success {
-  background: var(--success);
-}
-
-.tag--error {
-  background: var(--danger);
-}
+.tag--success { background: var(--success); }
+.tag--error, .tag--danger { background: var(--danger); }
+.tag--warning { background: var(--warning); }
+.tag--info { background: var(--info); }
