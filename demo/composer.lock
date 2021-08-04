@@ -237,16 +237,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elao/ElaoAdminThemeBundle.git",
-                "reference": "d472e1016ddff954c0966108c90c699b3f4286e6"
+                "reference": "520741c4502116a0d1a919ad62b4b78bfe3b04bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elao/ElaoAdminThemeBundle/zipball/d472e1016ddff954c0966108c90c699b3f4286e6",
-                "reference": "d472e1016ddff954c0966108c90c699b3f4286e6",
+                "url": "https://api.github.com/repos/Elao/ElaoAdminThemeBundle/zipball/520741c4502116a0d1a919ad62b4b78bfe3b04bd",
+                "reference": "520741c4502116a0d1a919ad62b4b78bfe3b04bd",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4",
+                "php": "^7.4|^8.0",
                 "symfony/config": "~4.0|~5.0",
                 "symfony/dependency-injection": "~4.0|~5.0",
                 "symfony/http-foundation": "~4.0|~5.0",
@@ -291,7 +291,7 @@
                 "issues": "https://github.com/Elao/ElaoAdminThemeBundle/issues",
                 "source": "https://github.com/Elao/ElaoAdminThemeBundle/tree/master"
             },
-            "time": "2021-06-23T09:04:53+00:00"
+            "time": "2021-08-04T11:47:07+00:00"
         },
         {
             "name": "erusev/parsedown",
