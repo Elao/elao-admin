@@ -11,7 +11,8 @@
         "npm": ">=7"
     },
     "dependencies": {
-        "@elao/admin": "file:../"
+        "@elao/admin": "file:../",
+        "tom-select": "^2.0.0-Beta.2"
     },
     "devDependencies": {
         "@symfony/webpack-encore": "^1.5.0",
