@@ -2,7 +2,21 @@
 
 ## Installation
 
-In your app.js:
+Require tom-select in your project:
+
+```shell
+npm i tom-select
+```
+
+Include tom-select template in your `app.scss`:
+
+```scss
+@import "~tom-select/src/scss/tom-select";  // Must be imported before "@elao-admin"
+@import '@elao/admin';
+
+```
+
+Àctivate choice plugin in your `app.js` by passing the TomSelect library:
 
 ```javascript
 import TomSelect from 'tom-select';
