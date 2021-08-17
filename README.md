@@ -111,7 +111,9 @@ cd demo
 
 It's a Symfony application used to dynamically generate a static site with [Stenope](https://github.com/StenopePHP/Stenope) with random but realistic data.
 
-**It requires PHP 7.4+ and a local [Symfony CLI install](https://symfony.com/download).**
+**It requires**:
+    - PHP 7.4+ and a local [Symfony CLI install](https://symfony.com/download).
+    - Node 16+ and NPM 7
 
 In order to boot the application for development purposes, 
 you need to build the library if not already done:
