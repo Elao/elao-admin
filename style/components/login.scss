@@ -1,0 +1,22 @@
+.login {
+  margin: auto;
+  background-color: #fff;
+  border: solid 1px var(--border);
+  padding: 1em 2em;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.login__title {
+  font-size: 32px;
+}
+
+.login__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .button {
+    margin-left: 1.5em;
+  }
+}
