@@ -12,7 +12,6 @@ export default class Choice {
         return Array.from(elements).map(element => {
             const config = {
                 create: false,
-                //hideSelected: true,
                 allowEmptyOption: !element.hasAttribute('required'),
                 plugins: []
             };

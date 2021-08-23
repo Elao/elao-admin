@@ -31,6 +31,10 @@ lint@integration:
 publish: build
 	npm publish . --access public
 
+# Publish package
+publish@beta: build
+	npm publish . --access public --tag beta
+
 ########
 # Demo #
 ########
