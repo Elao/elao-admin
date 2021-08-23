@@ -1,4 +1,4 @@
-.theme-demo {
+:root {
   --primary: #4053ec;
   --primary--dark: #353c79;
   --text: #73748F;
@@ -10,9 +10,10 @@
   --background: #fafaff;
   --background--dark: #e2e4f7;
   --disabled: #edeefa;
-  --success: #00cc99;
-  --warning: #ffca28;
+  --success: #00c291;
+  --warning: #e6ac00;
   --danger: #ef4055;
+  --info: #219ebc;
   --accessibility-highlight: #edeefa;
   // hide accessibility highlight : --accessibility-highlight: transparent
   --primary-font: 'Work Sans';

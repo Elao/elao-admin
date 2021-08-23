@@ -88,7 +88,7 @@
                         <td>{{ ('role.' ~ user.role)|trans }}</td>
                         <td class="number">{{ user.premiumUntil|date('d/m/Y') }}</td>
                         <td>
-                            <span class="tag  {{ user.enabled ? 'tag--success' : 'tag--error' }}">
+                            <span class="tag  {{ user.enabled ? 'tag--success' : 'tag--danger' }}">
                                 {{ (user.enabled ? 'user.enabled' : 'user.disabled')|trans }}
                             </span>
                         </td>
