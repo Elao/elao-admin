@@ -85,6 +85,10 @@ $screen-sm: 750px;
 $screen-md: 1000px;
 ```
 
+### Features
+
+- [Choices dropdown](doc/choices.md)
+
 ## Contributing
 
 ### To the library

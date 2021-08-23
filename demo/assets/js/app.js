@@ -1,7 +1,7 @@
-import '../styles/app.scss';
-
-import { Collapsible, Drop, Tree, MobileSidebar, NavigableTable } from '@elao/admin';
+import TomSelect from 'tom-select';
+import { Collapsible, Drop, Tree, MobileSidebar, NavigableTable, Choice } from '@elao/admin';
 import ColorPicker from './ColorPicker';
+import '../styles/app.scss';
 
 window.addEventListener('load', function onLoad() {
     // Behaviors
@@ -9,6 +9,7 @@ window.addEventListener('load', function onLoad() {
     Drop.init();
     Tree.init();
     NavigableTable.init();
+    Choice.init(TomSelect);
 
     // Mobile
     MobileSidebar.init();

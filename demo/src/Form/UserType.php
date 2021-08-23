@@ -25,6 +25,14 @@ class UserType extends AbstractType
                 'label' => 'user.premiumUntil',
             ])
             ->add('enabled', CheckboxType::class, ['label' => 'user.enabled'])
+            ->add('country', ChoiceType::class, [
+                'choices'  => [
+                    'France' => 'fr',
+                    'Other' => 'other',
+                ],
+                'label' => 'user.country',
+                'mapped' => false,
+            ])
             ->add('role', ChoiceType::class, [
                 'choices'  => [
                     'role.ROLE_USER' => 'ROLE_USER',
@@ -32,6 +40,22 @@ class UserType extends AbstractType
                     'role.ROLE_ADMIN' => 'ROLE_ADMIN',
                 ],
                 'label' => 'user.role',
+                'attr' => [
+                    'data-choice' => true
+                ],
+            ])
+            ->add('role2', ChoiceType::class, [
+                'choices'  => [
+                    'role.ROLE_USER' => 'ROLE_USER',
+                    'role.ROLE_STAFF' => 'ROLE_STAFF',
+                    'role.ROLE_ADMIN' => 'ROLE_ADMIN',
+                ],
+                'label' => 'user.role',
+                'multiple' => true,
+                'attr' => [
+                    'data-choice' => true
+                ],
+                'mapped' => false,
             ])
             ->add('save', SubmitType::class, ['label' => 'form.save'])
         ;

@@ -3,6 +3,7 @@ import Collapsible from './behavior/Collapsible';
 import Drop from './behavior/Drop';
 import Tree from './behavior/Tree';
 import NavigableTable from './behavior/NavigableTable';
+import Choice from './behavior/Choice';
 import MobileSidebar from './mobile/MobileSidebar';
 
 export {
@@ -11,4 +12,5 @@ export {
     Tree,
     MobileSidebar,
     NavigableTable,
+    Choice,
 };
