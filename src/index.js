@@ -4,6 +4,7 @@ import Drop from './behavior/Drop';
 import Tree from './behavior/Tree';
 import NavigableTable from './behavior/NavigableTable';
 import Choice from './behavior/Choice';
+import Modal from './behavior/Modal';
 import MobileSidebar from './mobile/MobileSidebar';
 
 export {
@@ -13,4 +14,5 @@ export {
     MobileSidebar,
     NavigableTable,
     Choice,
+    Modal,
 };
