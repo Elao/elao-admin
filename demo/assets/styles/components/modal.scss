@@ -1,0 +1,77 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, .3);
+}
+
+.modal {
+  margin: auto 20px;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  border: solid 1px var(--border);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, .08);
+}
+
+.modal__header,
+.modal__footer {
+  position: relative;
+  z-index: 1;
+}
+
+.modal__header {
+  height: 60px;
+  padding: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px var(--border);
+  box-shadow: 0 7px 7px rgb(0, 0, 0, .03);
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    margin: 0;
+  }
+
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    color: var(--text);
+    transform: translateY(-50%);
+  }
+}
+
+.modal__main {
+  padding: 15px;
+  max-height: calc(100vh - 400px);
+  overflow: auto;
+}
+
+.modal__actions {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: solid 1px var(--border);
+  box-shadow: 0 -7px 7px rgb(0, 0, 0, .03);
+}
+
+@media (max-width: $screen-sm) {
+  .modal__actions {
+    flex-direction: column;
+
+    .button + .button {
+      margin: 10px 0 0;
+    }
+  }
+}
