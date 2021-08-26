@@ -26,14 +26,36 @@ export default class Modal {
     }
 
     open() {
+        if (this.isOpen()) {
+            return;
+        }
+
         this.element.classList.add('modal--open');
+        this.emit('open');
     }
 
     close() {
+        if (!this.isOpen()) {
+            return;
+        }
+
         this.element.classList.remove('modal--open');
+        this.emit('close');
     }
 
     toggle() {
         this.isOpen() ? this.close() : this.open();
+    }
+
+    addEventListener(...args) {
+        return this.element.addEventListener(...args);
+    }
+
+    removeEventListener(...args) {
+        return this.element.removeEventListener(...args);
+    }
+
+    emit(name) {
+        this.element.dispatchEvent(new Event(name));
     }
 }
