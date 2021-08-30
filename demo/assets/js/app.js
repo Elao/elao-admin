@@ -1,6 +1,7 @@
 import TomSelect from 'tom-select';
 import { Collapsible, Drop, Tree, MobileSidebar, NavigableTable, Choice } from '@elao/admin';
 import ColorPicker from './ColorPicker';
+import ModalTrigger from './ModalTrigger';
 import '../styles/app.scss';
 
 window.addEventListener('load', function onLoad() {
@@ -16,4 +17,6 @@ window.addEventListener('load', function onLoad() {
 
     // Color Picker
     new ColorPicker(document.forms['color-picker']['primary-color']);
+
+    ModalTrigger.init()
 });
