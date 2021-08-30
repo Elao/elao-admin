@@ -7,11 +7,16 @@
   display: none;
   justify-content: center;
   background: rgba(0, 0, 0, .3);
+  z-index: 9999;
 
   .modal-content {
     margin: auto 20px;
+    min-height: 300px;
+    max-height: calc(100vh - 400px);
     max-width: 1000px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border: solid 1px var(--border);
     border-radius: 10px;
@@ -54,7 +59,7 @@
 
 .modal__main {
   padding: 15px;
-  max-height: calc(100vh - 400px);
+  flex: 1;
   overflow: auto;
 }
 
@@ -71,6 +76,14 @@
 }
 
 @media (max-width: $screen-sm) {
+  .modal {
+    .modal-content {
+      margin: 0;
+      max-height: unset;
+      border-radius: 0;
+    }
+  }
+
   .modal__actions {
     flex-direction: column;
 
