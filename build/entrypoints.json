@@ -3,11 +3,11 @@
     "app": {
       "js": [
         "/elao-admin/build/runtime.44b84a05.js",
-        "/elao-admin/build/860.fb7c9427.js",
+        "/elao-admin/build/860.b9c77b91.js",
         "/elao-admin/build/app.d9800ba7.js"
       ],
       "css": [
-        "/elao-admin/build/app.f638b12c.css"
+        "/elao-admin/build/app.3fa32233.css"
       ]
     }
   }
