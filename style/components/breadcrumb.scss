@@ -16,7 +16,7 @@
     top: 50%;
     left: 0;
     font-family: 'base-icons';
-    font-size: 10px;
+    font-size: toRem(10px);
     color: var(--primary);
     content: '\e905';
     transform: translateY(-50%);

@@ -1,5 +1,5 @@
 html {
-  font-size: 10px;
+  font-size: $base-font-size;
 }
 
 body {
@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font);
-  font-size: 1.6rem;
+  font-size: toRem(16px);
   color: var(--text);
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;

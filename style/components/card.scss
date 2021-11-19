@@ -1,6 +1,6 @@
 .card {
   padding: 25px 35px 30px;
-  font-size: 14px;
+  font-size: toRem(14px);
   text-transform: uppercase;
   text-align: center;
   background-color: #fff;
@@ -11,7 +11,7 @@
     margin: 0 0 10px;
     display: flex;
     justify-content: center;
-    font-size: 72px;
+    font-size: toRem(72px);
     color: var(--primary);
     text-transform: unset;
     line-height: 1;

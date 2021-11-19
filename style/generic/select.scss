@@ -43,7 +43,7 @@
 
   select {
     padding: 0 10px;
-    font-size: 15px;
+    font-size: toRem(15px);
     flex: 1;
     cursor: pointer;
     appearance: none;
@@ -91,7 +91,7 @@ select[multiple],
   height: 100px;
   min-height: 100px;
   font-family: var(--font--primary);
-  font-size: 15px;
+  font-size: toRem(15px);
   color: var(--text--dark);
   border: solid 1px var(--border);
   border-radius: 4px;
