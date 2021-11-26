@@ -64,6 +64,8 @@
   right: -1px;
   width: auto;
   margin: 0;
+  border: solid 1px var(--border--dark);
+  border-top: none;
   box-shadow: 0 2px 4px rgba(#000, 10%);
 
   .create:hover,
