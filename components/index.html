@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="/build/assets/images/favicon.svg" />
         <title>Hello DefaultController!</title>
-                    <link rel="stylesheet" href="/elao-admin/build/app.b1020b23.css">
+                    <link rel="stylesheet" href="/elao-admin/build/app.cc6dacb6.css">
                             <script src="/elao-admin/build/runtime.44b84a05.js" defer></script><script src="/elao-admin/build/619.fcfeabbc.js" defer></script><script src="/elao-admin/build/app.d2010fba.js" defer></script>
             </head>
     <body class="theme-demo">
@@ -713,29 +713,30 @@
         <h2>Formulaires</h2>
         <!-- Basic form groups -->
         <div class="form">
-            <label for="input">Prénom</label>
-            <input type="text" placeholder="Jane">
+            <label for="input">Input</label>
+            <input type="text" placeholder="Placeholder convallis efficitur" id="input">
         </div>
         <div class="form">
-            <label for="select">Pays</label>
+            <label for="select">Select</label>
             <div class="select">
                 <select id="select">
-                    <option>France</option>
-                    <option>Egypte</option>
-                    <option>Pérou</option>
+                    <option>Convallis</option>
+                    <option>Efficitur</option>
+                    <option>Vehicula</option>
+                    <option>Facilisis</option>
                 </select>
             </div>
         </div>
         <div class="form">
-            <label for="select">Select disabled</label>
+            <label for="select-disabled">Select disabled</label>
             <div class="select select--disabled">
-                <select id="select" disabled>
-                    <option>France</option>
+                <select id="select-disabled" disabled>
+                    <option>Convallis</option>
                 </select>
             </div>
         </div>
         <div class="form">
-            <label for="select">Select loading</label>
+            <label>Select loading</label>
             <div class="select select--loading">
                 <div class="loader loader--ellipsis" role="alert">
                     <span class="sr-only">En cours de chargement</span>
@@ -746,14 +747,21 @@
             </div>
         </div>
         <div class="form">
+            <label for="tom-select">Tom select</label>
+            <select id="tom-select" data-choice>
+                <option>Convallis</option>
+                <option>Efficitur</option>
+                <option>Vehicula</option>
+                <option>Facilisis</option>
+            </select>
+        </div>
+        <div class="form">
             <label for="select">Select multiple</label>
             <select id="" name="" multiple="multiple" class="select--multiple">
-                <option value="">Prévi</option>
-                <option value="">Ferme Directe</option>
-                <option value="">K2</option>
-                <option value="">MJC</option>
-                <option value="">Musique Music</option>
-                <option value="">Tribu</option>
+                <option>Convallis</option>
+                <option>Efficitur</option>
+                <option>Vehicula</option>
+                <option>Facilisis</option>
             </select>
         </div>
         <div class="form">
@@ -780,27 +788,27 @@
         <!-- Checkbox & disabled -->
         <div class="form checkbox">
             <input type="checkbox" id="cucumber">
-            <label for="cucumber">Concombre</label>
+            <label for="cucumber">Penatibus</label>
         </div>
         <div class="form checkbox disabled">
             <input type="checkbox" id="feta" disabled>
-            <label for="feta">Feta</label>
+            <label for="feta">Malesuada</label>
         </div>
         <!-- Radio & disabled -->
         <div class="form radio disabled">
             <input type="radio" id="oil" name="sauce" disabled>
-            <label for="oil">Huile</label>
+            <label for="oil">Penatibus</label>
         </div>
         <div class="form radio">
             <input type="radio" id="vinegar" name="sauce">
-            <label for="vinegar">Vinaigre</label>
+            <label for="vinegar">Malesuada</label>
         </div>
         <!-- Switch -->
         <div class="form switch">
             <input type="checkbox" id="switch">
             <label for="switch">
                 <span class="switch__slider"></span>
-                Sur place
+                On/Off switch
             </label>
         </div>
 
