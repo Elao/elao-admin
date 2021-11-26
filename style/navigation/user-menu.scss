@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   color: var(--text);
-  font-size: 14px;
+  font-size: toRem(14px);
   letter-spacing: .8px;
   transition: color ease-in-out .15s;
   z-index: 0;

@@ -18,6 +18,6 @@
   .error {
     margin: 5px 0 10px;
     color: var(--danger);
-    font-size: 13px;
+    font-size: toRem(13px);
   }
 }

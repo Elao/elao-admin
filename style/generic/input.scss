@@ -5,7 +5,7 @@ input {
   border-radius: 4px;
   transition: border-color ease-in .15s;
   padding: 0 15px;
-  font-size: 15px;
+  font-size: toRem(15px);
   color: var(--text--dark);
   font-family: var(--font--primary);
 

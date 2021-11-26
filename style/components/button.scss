@@ -12,7 +12,7 @@
   transition: color ease-in-out .2s, border-color ease-in-out .2s;
 
   .icon {
-    font-size: 21px;
+    font-size: toRem(21px);
     color: var(--text--lighter);
   }
 
