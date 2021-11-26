@@ -1,4 +1,4 @@
-name: Publish ackage to NPM
+name: Publish package to NPM
 
 on:
   workflow_dispatch: ~
