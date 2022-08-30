@@ -6,6 +6,7 @@ use App\Model\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -25,10 +26,10 @@ class UserType extends AbstractType
                 'label' => 'user.premiumUntil',
             ])
             ->add('enabled', CheckboxType::class, ['label' => 'user.enabled'])
-            ->add('country', ChoiceType::class, [
-                'choices'  => [
-                    'France' => 'fr',
-                    'Other' => 'other',
+            ->add('country', CountryType::class, [
+                'attr' => [
+                    'data-choice' => true,
+                    'data-choice-options' => json_encode(['maxOptions' => null]),
                 ],
                 'label' => 'user.country',
                 'mapped' => false,

@@ -47,3 +47,27 @@ Or in Symfony:
     ],
 ])
 ```
+
+### Options
+
+You can override the default options of TomSelect using the attribute `data-choice-options` fill with a json object
+
+In HTML:
+
+```html
+<select data-choice data-choice-options="{&quot;maxOptions&quot;:null}">
+    <!-- Options... -->
+</select>
+```
+
+Or in Symfony:
+
+```php
+->add('country', CountryType::class, [
+    'choices'  => $roles,
+    'attr' => [
+        'data-choice' => true,
+        'data-choice-options' => json_encode(['maxOptions' => null])
+    ],
+])
+```

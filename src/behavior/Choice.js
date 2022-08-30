@@ -10,10 +10,16 @@ export default class Choice {
         const elements = document.body.querySelectorAll('[data-choice]');
 
         return Array.from(elements).map(element => {
+            let choiceOptions = {};
+            if (element.hasAttribute('data-choice-options')) {
+                choiceOptions = JSON.parse(element.getAttribute('data-choice-options'));
+            }
+
             const config = {
                 create: false,
                 allowEmptyOption: !element.hasAttribute('required'),
-                plugins: []
+                plugins: [],
+                ...choiceOptions
             };
 
             if (element.hasAttribute('multiple')) {
