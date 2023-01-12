@@ -131,7 +131,7 @@ cd demo
 Then, you need to start a Symfony web server to expose the application, 
 as well as a Webpack dev-server to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled.
 
-```bash
+```serve
 make start
 ```
   
@@ -145,7 +145,7 @@ The Symfony server command outputs the URL (in the big green rectangle) at which
 
 ### Fontello
 
-- `make fontello-push` will open your fontello project on http://fontello.com/.
+- `make fontello.push` will open your fontello project on http://fontello.com/.
 - Modify your font on http://fontello.com/ then click on "Save session".
-- `make fontello-pull` will download your modifications and update project files.
+- `make fontello.pull` will download your modifications and update project files.
 - Commit the modifications.
