@@ -1,11 +1,6 @@
 {
     "license": "UNLICENSED",
     "private": true,
-    "scripts": {
-        "dev-server": "encore dev-server",
-        "watch": "encore dev --watch",
-        "build": "encore production --progress"
-    },
     "engines": {
         "node": ">=16",
         "npm": ">=7"

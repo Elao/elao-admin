@@ -2,13 +2,6 @@
   "name": "@elao/admin",
   "version": "0.1.10",
   "description": "Administration theme",
-  "scripts": {
-    "watch": "webpack --mode=development --watch",
-    "build": "webpack --mode=production",
-    "build@demo": "webpack --mode=development",
-    "lint": "eslint src --ext .js",
-    "fix": "eslint src --ext .js --fix"
-  },
   "files": [
     "src/*",
     "style/*",
