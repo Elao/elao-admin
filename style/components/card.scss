@@ -1,19 +1,21 @@
-.card {
-  padding: 25px 35px 30px;
-  font-size: toRem(14px);
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #fff;
-  border: solid 1px var(--border);
-  border-radius: 10px;
+@layer components {
+  .card {
+    @apply py-6 px-9;
+    @apply text-sm;
+    @apply uppercase;
+    @apply text-center;
+    @apply bg-white;
+    @apply border;
+    @apply rounded-lg;
 
-  span {
-    margin: 0 0 10px;
-    display: flex;
-    justify-content: center;
-    font-size: toRem(72px);
-    color: var(--primary);
-    text-transform: unset;
-    line-height: 1;
+    span {
+      margin: 0 0 theme('spacing[2.5]');
+      display: flex;
+      justify-content: center;
+      @apply text-7xl;
+      @apply text-primary;
+      text-transform: unset;
+      line-height: 1;
+    }
   }
 }

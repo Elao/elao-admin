@@ -1,127 +1,131 @@
-.pagination {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 900px;
-  display: flex;
-  list-style: none;
-}
-
-.pagination__item {
-  margin: 0 10px;
-
-  a {
-    height: 48px;
-    width: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--primary--dark);
-    font-size: toRem(14px);
-    background-color: #fff;
-    border: solid 1px var(--border);
-    border-radius: 4px;
-    transition: color ease-in-out .2s, border-color ease-in-out .2s;
-
-    &:hover,
-    &:focus {
-      border-color: var(--primary);
-    }
-
-    &:focus {
-      background-color: var(--accessibility-highlight);
-    }
-  }
-}
-
-.pagination__item--active {
-  a {
-    color: #fff;
-    background-color: var(--primary);
-    border-color: var(--primary);
-
-    &:hover,
-    &:focus {
-      color: #fff;
-      background-color: var(--primary--dark);
-      border-color: var(--primary--dark);
-    }
-  }
-}
-
-.pagination__item--previous,
-.pagination__item--next {
-  a {
-    padding: 0 38px;
-    width: unset;
-
-    i {
-      display: none;
-    }
-  }
-}
-
-.pagination__item--disabled {
-  a {
-    &,
-    &:hover,
-    &:focus {
-      color: var(--border--dark);
-      background-color: transparent;
-      border-color: var(--border--dark);
-      cursor: pointer;
-    }
-  }
-}
-
-.pagination__item--previous {
-  margin-right: auto;
-}
-
-.pagination__item--next {
-  margin-left: auto;
-}
-
-.pagination__ellipsis {
-  height: 48px;
-  width: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: toRem(10px);
-}
-
-@media (max-width: $screen-sm) {
+@layer components {
   .pagination {
-    width: 100%;
-    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+    display: flex;
+    list-style: none;
   }
 
   .pagination__item {
-    margin: 0 6px;
+    margin: 0 theme('spacing[2.5]');
 
     a {
-      height: 38px;
-      width: 38px;
+      height: theme('spacing.12');
+      width: theme('spacing.12');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @apply text-dark;
+      @apply text-sm;
+      @apply bg-white;
+      @apply border;
+      @apply rounded;
+      transition: color ease-in-out .2s, border-color ease-in-out .2s;
+
+      &:hover,
+      &:focus {
+        border-color: theme('colors.primary.DEFAULT');
+      }
+
+      &:focus {
+        background-color: theme('colors.accessibility-highlight');
+      }
     }
   }
 
-  .pagination__ellipsis {
-    height: 38px;
-    width: 38px;
+  .pagination__item--active {
+    a {
+      color: #fff;
+      background-color: theme('colors.primary.DEFAULT');
+      border-color: theme('colors.primary.DEFAULT');
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: theme('colors.primary.dark');
+        border-color: theme('colors.primary.dark');
+      }
+    }
   }
 
   .pagination__item--previous,
   .pagination__item--next {
     a {
-      padding: unset;
-      height: 38px;
-      width: 38px;
-
-      span { display: none; }
+      padding: 0 theme('spacing.10');
+      width: unset;
 
       i {
-        display: flex;
-        font-size: toRem(10px);
+        display: none;
+      }
+    }
+  }
+
+  .pagination__item--disabled {
+    a {
+      &,
+      &:hover,
+      &:focus {
+        @apply text-slate-300;
+        background-color: transparent;
+        @apply border-slate-300;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .pagination__item--previous {
+    margin-right: auto;
+  }
+
+  .pagination__item--next {
+    margin-left: auto;
+  }
+
+  .pagination__ellipsis {
+    height: theme('spacing.12');
+    width: theme('spacing.12');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: toRem(10px);
+  }
+
+  @media (max-width: theme('screens.md')) {
+    .pagination {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .pagination__item {
+      margin: 0 theme('spacing[1.5]');
+
+      a {
+        height: theme('spacing.10');
+        width: theme('spacing.10');
+      }
+    }
+
+    .pagination__ellipsis {
+      height: theme('spacing.10');
+      width: theme('spacing.10');
+    }
+
+    .pagination__item--previous,
+    .pagination__item--next {
+      a {
+        padding: unset;
+        height: theme('spacing.10');
+        width: theme('spacing.10');
+
+        span {
+          display: none;
+        }
+
+        i {
+          display: flex;
+          font-size: toRem(10px);
+        }
       }
     }
   }

@@ -1,38 +1,58 @@
-h1, .h1 {
-  margin: 0 0 30px;
-}
+@layer base {
+  h1/*, .h1*/,
+  h2/*, .h2*/,
+  h3/*, .h3*/,
+  h4/*, .h4*/,
+  h5/*, .h5*/,
+  h6/*, .h6*/,
+  {
+    /**
+      All heading elements are completely unstyled by default,
+      and have the same font-size and font-weight as normal text.
+      @see https://tailwindcss.com/docs/preflight#headings-are-unstyled
 
-h2, .h2 {
-  margin: 40px 0 30px;
-}
+      In our design-system, we choose to use an emphasized font-weight,
+      so fetch the bold font-weight from the theme:
+     */
+    font-weight: theme('fontWeight.bold');
+  }
 
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin: 30px 0 20px;
-}
+  h1, .h1 {
+    margin: 0 0 theme('spacing[7]');
+  }
 
-h1, .h1 {
-  font-size: toRem(32px);
-}
+  h2, .h2 {
+    margin: theme('spacing[10]') 0 theme('spacing[7]');
+  }
 
-h2, .h2 {
-  font-size: toRem(26px);
-}
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    margin: theme('spacing[7]') 0 theme('spacing[5]');
+  }
 
-h3, .h3 {
-  font-size: toRem(22px);
-}
+  h1, .h1 {
+    @apply text-h1;
+  }
 
-h4, .h4 {
-  font-size: toRem(20px);
-}
+  h2, .h2 {
+    @apply text-h2;
+  }
 
-h5, .h5 {
-  font-size: toRem(18px);
-}
+  h3, .h3 {
+    @apply text-h3;
+  }
 
-h6, .h6 {
-  font-size: toRem(16px);
+  h4, .h4 {
+    @apply text-h4;
+  }
+
+  h5, .h5 {
+    @apply text-h5;
+  }
+
+  h6, .h6 {
+    @apply text-h6;
+  }
 }

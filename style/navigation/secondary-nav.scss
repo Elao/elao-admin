@@ -1,68 +1,72 @@
-.secondary-nav {
-  min-width: 220px;
-  width: 220px;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-  }
-
-  & + .content {
-    max-width: calc(100% - 220px);
-  }
-}
-
-.secondary-nav__item {
-  margin-bottom: 20px;
-
-  a {
-    display: flex;
-    align-items: flex-start;
-    color: var(--text);
-    text-decoration: none;
-    line-height: 1.5;
-
-    // improve keyboard navigation
-    padding: 2px 5px;
-    position: relative;
-    left: -2px;
-
-    &:hover,
-    &:focus {
-      color: var(--primary);
-    }
-
-    i {
-      margin-right: 15px;
-      padding-bottom: 7px;
-      font-size: toRem(18px);
-      line-height: 1.5;
-    }
-
-    &:focus {
-      background: var(--accessibility-highlight);
-    }
-  }
-}
-
-.secondary-nav__item--active {
-  a {
-    color: var(--primary);
-    font-family: var(--primary-font);
-    font-weight: bold;
-
-    i {
-      border-bottom: solid 3px;
-    }
-  }
-}
-
-@media (max-width: $screen-md) {
+@layer components {
+  $secondary-nav-width: theme('spacing.56');
   .secondary-nav {
-    display: none;
+    min-width: $secondary-nav-width;
+    width: $secondary-nav-width;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+    }
+
+    & + .content {
+      max-width: calc(100% - $secondary-nav-width);
+    }
+  }
+
+  .secondary-nav__item {
+    margin-bottom: 20px;
+    @apply mb-5;
+
+    a {
+      display: flex;
+      align-items: flex-start;
+      @apply text-main;
+      text-decoration: none;
+      line-height: 1.5;
+
+      // improve keyboard navigation
+      padding: 2px 5px;
+      position: relative;
+      left: -2px;
+
+      &:hover,
+      &:focus {
+        @apply text-primary;
+      }
+
+      i {
+        @apply mr-3.5;
+        @apply pb-2;
+        font-size: toRem(18px);
+        line-height: 1.5;
+      }
+
+      &:focus {
+        background: theme('colors.accessibility-highlight');
+      }
+    }
+  }
+
+  .secondary-nav__item--active {
+    a {
+      @apply text-primary;
+      @apply font-primary;
+      @apply font-bold;
+
+      i {
+        border-bottom: solid 3px;
+      }
+    }
+  }
+
+  @media (max-width: theme('screens.lg')) {
+    .secondary-nav {
+      display: none;
+    }
   }
 }

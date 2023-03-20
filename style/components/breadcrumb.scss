@@ -1,72 +1,78 @@
-.breadcrumb {
-  margin: 0 0 35px;
-  padding: 0;
-  display: flex;
-  list-style: none;
-}
-
-.breadcrumb__item {
-  padding-left: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  &:before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    font-family: 'base-icons';
-    font-size: toRem(10px);
-    color: var(--primary);
-    content: '\e905';
-    transform: translateY(-50%);
-  }
-
-  &:first-of-type {
-    padding-left: 0;
-
-    &:before { display: none; }
-    a { margin-left: 0; }
-  }
-
-  &:last-of-type {
-    overflow: hidden;
-
-    a {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &:only-of-type {
-    padding-left: 10px;
-
-    &:before {
-      display: flex;
-      content: '\e904';
-    }
-
-    a { margin-left: 10px; }
-  }
-
-  a {
-    margin-right: 10px;
-    padding: 1px 2px;
-    white-space: nowrap;
-    text-decoration: none;
-
-    &:focus {
-      background: var(--accessibility-highlight);
-    }
-  }
-}
-
-@media (max-width: $screen-sm) {
+@layer components {
   .breadcrumb {
-    flex-wrap: wrap;
+    margin: 0 0 theme('spacing.9');
+    padding: 0;
+    display: flex;
+    list-style: none;
   }
 
   .breadcrumb__item {
-    margin-bottom: 5px;
+    @apply pl-5;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @apply font-icons;
+      font-size: toRem(10px);
+      @apply text-primary;
+      content: '\e905';
+      transform: translateY(-50%);
+    }
+
+    &:first-of-type {
+      @apply pl-0;
+
+      &:before { display: none; }
+      a {
+        @apply ml-0;
+      }
+    }
+
+    &:last-of-type {
+      overflow: hidden;
+
+      a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &:only-of-type {
+      @apply pl-2.5;
+
+      &:before {
+        display: flex;
+        content: '\e904';
+      }
+
+      a {
+        @apply ml-2.5;
+      }
+    }
+
+    a {
+      @apply mr-2.5;
+      @apply py-px px-0.5;
+      white-space: nowrap;
+      text-decoration: none;
+
+      &:focus {
+        @apply bg-accessibility-highlight;
+      }
+    }
+  }
+
+  @media (max-width: theme('screens.md')) {
+    .breadcrumb {
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb__item {
+      @apply mb-1;
+    }
   }
 }

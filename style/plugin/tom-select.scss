@@ -1,9 +1,9 @@
 .ts-dropdown,
 .ts-control,
 .ts-control input {
-  color: var(--text);
-  font-family: var(--primary-font);
-  font-size: toRem(15px);
+  @apply text-main;
+  @apply font-primary;
+  @apply text-sm;
 }
 
 .ts-wrapper {
@@ -18,7 +18,7 @@
   }
 
   &.input-active {
-    border-color: var(--border--dark);
+    border-color: theme('borderColor.dark');
   }
 
   select {
@@ -28,7 +28,7 @@
   &.dropdown-active {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-color: var(--border--dark);
+    border-color: theme('borderColor.dark');
     box-shadow: 0 2px 4px rgba(#000, 10%);
 
     &::before {
@@ -43,16 +43,16 @@
   &.multi .ts-control > div {
     margin: 0 3px 0 0;
     border-radius: 4px;
-    background-color: var(--background);
-    color: var(--text);
+    @apply bg-base;
+    @apply text-main;
 
     .remove {
       border-left: none;
     }
 
     &.active {
-      background-color: var(--background--dark);
-      color: var(--text--dark);
+      @apply bg-dark;
+      @apply text-dark;
     }
   }
 }
@@ -64,15 +64,15 @@
   right: -1px;
   width: auto;
   margin: 0;
-  border: solid 1px var(--border--dark);
+  @apply border-dark;
   border-top: none;
   box-shadow: 0 2px 4px rgba(#000, 10%);
 
   .create:hover,
   .option:hover,
   .active {
-    background-color: var(--background);
-    color: var(--text--dark);
+    @apply bg-base;
+    @apply text-dark;
   }
 
   [data-selectable] .highlight {

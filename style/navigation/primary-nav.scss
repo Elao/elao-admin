@@ -1,75 +1,76 @@
-.primary-nav {
-  height: 100%;
-  display: flex;
-  align-items: center;
-
-  ul {
-    margin: 0 0 0 25px;
-    padding: 0;
+@layer components {
+  .primary-nav {
     height: 100%;
     display: flex;
     align-items: center;
-    list-style: none;
-  }
-}
 
-.primary-nav__item {
-  margin: 0 25px;
-  height: 100%;
-  display: flex;
-
-  a {
-    display: flex;
-    position: relative;
-    align-items: center;
-    color: var(--text);
-    text-decoration: none;
-    z-index: 0;
-
-    &:hover,
-    &:focus {
-      color: var(--primary);
+    ul {
+      @apply m-0 mr-3.5;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      list-style: none;
     }
+  }
 
-    &:focus {
-      color: var(--primary);
-      background: var(--accessibility-highlight);
+  .primary-nav__item {
+    @apply my-0 mx-5;
+    height: 100%;
+    display: flex;
 
-      &:before    {
-        height: 100%;
-        width: calc(100% + 20px);
-        position: absolute;
-        top: 0;
-        left: -10px;
-        content: '';
-        background: var(--accessibility-highlight);
-        z-index: -1;
+    a {
+      display: flex;
+      position: relative;
+      align-items: center;
+      @apply text-main;
+      text-decoration: none;
+      z-index: 0;
+
+      &:hover,
+      &:focus {
+        @apply text-primary;
+      }
+
+      &:focus {
+        @apply text-primary;
+        @apply bg-accessibility-highlight;
+
+        &:before    {
+          height: 100%;
+          width: calc(100% + 20px);
+          position: absolute;
+          top: 0;
+          left: -10px;
+          content: '';
+          @apply bg-accessibility-highlight;
+          z-index: -1;
+        }
       }
     }
   }
-}
 
-.primary-nav__item--active {
-  a {
-    position: relative;
-    font-family: var(--primary-font);
-    font-weight: bold;
-    color: var(--primary);
+  .primary-nav__item--active {
+    a {
+      position: relative;
+      @apply text-primary;
+      @apply font-bold;
 
-    &:after {
-      content: '';
-      height: 3px;
-      width: 40px;
-      background-color: var(--primary);
-      position: absolute;
-      bottom: 0;
-      left: 0;
+      &:after {
+        content: '';
+        height: 3px;
+        width: 40px;
+        @apply bg-primary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
     }
   }
-}
 
-@media (max-width: $screen-md) {
-  .primary-nav {
-    display: none;
+  @media (max-width: theme('screens.lg')) {
+    .primary-nav {
+      display: none;
+    }
   }
 }

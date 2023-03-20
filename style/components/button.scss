@@ -1,82 +1,84 @@
-.button {
-  padding: 0 30px;
-  height: 48px;
-  min-width: 150px;
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-gap: 12px;
-  justify-content: center;
-  align-items: center;
-  vertical-align: top;
-  border-radius: 4px;
-  transition: color ease-in-out .2s, border-color ease-in-out .2s;
-
-  .icon {
-    font-size: toRem(21px);
-    color: var(--text--lighter);
-  }
-
-  &[disabled] {
-    opacity: .4;
-    pointer-events: none;
-  }
-}
-
-.button--neutral {
-  color: var(--primary--dark);
-  background-color: #fff;
-  border: solid 1px #dfdfe7;
-
-  .icon {
-    color: var(--primary);
-  }
-
-  &:hover,
-  &:focus {
-    border-color: var(--primary);
-  }
-}
-
-.button--primary {
-  color: #fff;
-  background-color: var(--primary);
-  border-color: var(--primary);
-
-  .icon {
-    color: #fff;
-  }
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    background-color: var(--primary--dark);
-    border-color: var(--primary--dark);
-  }
-}
-
-.button--danger {
-  color: var(--primary--dark);
-  background-color: #fff;
-  border: solid 1px #dfdfe7;
-
-  .icon {
-    color: var(--danger);
-  }
-
-  &:hover,
-  &:focus {
-    border-color: var(--danger);
-  }
-}
-
-.button + .button {
-  margin-left: 20px;
-}
-
-@media (max-width: $screen-sm) {
+@layer components {
   .button {
-    padding: 0 20px;
-    height: 45px;
-    min-width: 135px;
+    @apply py-0 px-7;
+    @apply h-12;
+    min-width: 150px;
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: 12px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+    @apply rounded;
+    transition: color ease-in-out .2s, border-color ease-in-out .2s;
+
+    .icon {
+      @apply text-xl;
+      @apply text-lighter;
+    }
+
+    &[disabled] {
+      opacity: .4;
+      pointer-events: none;
+    }
+  }
+
+  .button--neutral {
+    @apply text-primary-dark;
+    background-color: #fff;
+    @apply border;
+
+    .icon {
+      @apply text-primary;
+    }
+
+    &:hover,
+    &:focus {
+      @apply border-primary;
+    }
+  }
+
+  .button--primary {
+    color: #fff;
+    @apply bg-primary;
+    @apply border-primary;
+
+    .icon {
+      color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      @apply bg-primary-dark;
+      @apply border-primary-dark;
+    }
+  }
+
+  .button--danger {
+    @apply text-primary-dark;
+    background-color: #fff;
+    border: solid 1px #dfdfe7;
+
+    .icon {
+      @apply text-danger;
+    }
+
+    &:hover,
+    &:focus {
+      @apply border-danger;
+    }
+  }
+
+  .button + .button {
+    @apply ml-5;
+  }
+
+  @media (max-width: theme('screens.sm')) {
+    .button {
+      @apply py-0 px-5;
+      @apply h-11;
+      min-width: 135px;
+    }
   }
 }

@@ -7,6 +7,14 @@
 install:
 	npm install
 
+## Serve - Watch for design system changes and serve the demo.
+serve:
+	npx concurrently "make watch" "cd demo && make serve" --names="Lib,Demo" --prefix=name --kill-others --kill-others-on-fail
+
+## Serve - Watch for design system changes and serve the demo (assets only).
+serve.assets:
+	npx concurrently "make watch" "cd demo && make serve.assets" --names="Lib,Demo" --prefix=name --kill-others --kill-others-on-fail
+
 #########
 # Build #
 #########

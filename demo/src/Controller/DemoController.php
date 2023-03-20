@@ -32,4 +32,10 @@ class DemoController extends AbstractController
     {
         return $this->render('demo/components.html.twig');
     }
+
+    #[Route('/colors', name: 'colors')]
+    public function colors(): Response
+    {
+        return $this->render('demo/colors.html.twig');
+    }
 }

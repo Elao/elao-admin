@@ -1,0 +1,11 @@
+.collapsible {}
+
+.collapsible__menu {
+  display: none;
+}
+
+.collapsible--show {
+  .collapsible__menu {
+    display: block;
+  }
+}

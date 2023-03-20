@@ -1,29 +1,30 @@
-.data-table {
-  margin: 0 0 50px;
-}
-
-.data-table__filters {
-  > .filters {
-    margin: 0 0 50px;
+@layer components {
+  .data-table {
+    margin: 0 0 theme('spacing.12');
   }
-}
 
-.data-table__content {
-  border: solid 1px var(--border);
-  border-radius: 10px;
+  .data-table__filters {
+    > .filters {
+      margin: 0 0 theme('spacing.12');
+    }
+  }
 
-  .drop__button {
-    border-radius: 3px;
+  .data-table__content {
+    @apply border;
+    @apply rounded-xl;
 
-    &:focus {
-      background-color: var(--accessibility-highlight);
+    .drop__button {
+      @apply rounded;
+
+      &:focus {
+        @apply bg-accessibility-highlight;
+      }
+    }
+  }
+
+  @media (max-width: theme('screens.lg')) {
+    .data-table__content {
+      overflow-x: auto;
     }
   }
 }
-
-@media (max-width: $screen-md) {
-  .data-table__content {
-    overflow-x: auto;
-  }
-}
-

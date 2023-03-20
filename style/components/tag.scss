@@ -1,16 +1,18 @@
-.tag {
-  padding: 5px 10px;
-  height: 30px;
-  font-size: toRem(11px);
-  color: #fff;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  background: var(--primary);
-  border-radius: 5px;
-}
+@layer components {
+  .tag {
+    padding: 5px 10px;
+    height: 30px;
+    font-size: theme('fontSize.xs');
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    background: theme('colors.primary.DEFAULT');
+    border-radius: theme('borderRadius.DEFAULT');
+  }
 
-.tag--success { background: var(--success); }
-.tag--danger { background: var(--danger); }
-.tag--warning { background: var(--warning); }
-.tag--info { background: var(--info); }
+  .tag--success { background: theme('colors.success.DEFAULT'); }
+  .tag--danger { background: theme('colors.danger.DEFAULT'); }
+  .tag--warning { background: theme('colors.warning.DEFAULT'); }
+  .tag--info { background: theme('colors.info.DEFAULT'); }
+}

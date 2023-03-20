@@ -1,21 +1,23 @@
-.footer {
-  margin-top: 40px;
-  padding: 15px 25px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  background: #fff;
-  border-top: solid 1px var(--border);
-}
-
-@media (max-width: $screen-sm) {
+@layer components {
   .footer {
-    height: unset;
-    text-align: center;
+    @apply mt-10;
+    @apply py-3.5 px-6;
+    @apply h-16;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    @apply border-t;
+  }
 
-    > * {
-      margin: 0 auto 5px;
+  @media (max-width: theme('screens.md')) {
+    .footer {
+      height: unset;
+      text-align: center;
+
+      > * {
+        margin: 0 auto theme('spacing.1');
+      }
     }
   }
 }

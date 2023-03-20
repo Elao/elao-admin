@@ -1,76 +1,78 @@
-.user-menu {
-  margin-left: auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.user-menu__button {
-  padding: 0;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: var(--text);
-  font-size: toRem(14px);
-  letter-spacing: .8px;
-  transition: color ease-in-out .15s;
-  z-index: 0;
-
-  .icon {
-    margin-right: 0.5em;
+@layer components {
+  .user-menu {
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
-  &:hover,
-  &:focus {
-    color: var(--primary);
+  .user-menu__button {
+    padding: 0;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    @apply text-main;
+    @apply text-sm;
+    letter-spacing: .8px;
+    transition: color ease-in-out .15s;
+    z-index: 0;
 
     .icon {
-      color: var(--primary);
+      margin-right: 0.5em;
+    }
+
+    &:hover,
+    &:focus {
+      @apply text-primary;
+
+      .icon {
+        @apply text-primary;
+      }
+    }
+
+    &:focus {
+      @apply bg-accessibility-highlight;
+
+      &:before {
+        height: 100%;
+        width: calc(100% + 20px);
+        position: absolute;
+        top: 0;
+        left: -10px;
+        content: '';
+        @apply bg-accessibility-highlight;
+        z-index: -1;
+      }
     }
   }
 
-  &:focus {
-    background: var(--accessibility-highlight);
+  .user-menu__button--notification {
+    .icon {
+      margin-right: 5px;
+      position: relative;
 
-    &:before {
-      height: 100%;
-      width: calc(100% + 20px);
-      position: absolute;
-      top: 0;
-      left: -10px;
-      content: '';
-      background: var(--accessibility-highlight);
-      z-index: -1;
+      &:after {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        @apply bg-danger;
+        @apply rounded-full;
+      }
     }
   }
-}
 
-.user-menu__button--notification {
-  .icon {
-    margin-right: 5px;
-    position: relative;
-
-    &:after {
-      width: 8px;
-      height: 8px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: '';
-      background: var(--danger);
-      border-radius: 50%;
-    }
+  .user-menu__content {
+    margin-right: -10px;
+    margin-top: 5px !important;
   }
-}
 
-.user-menu__content {
-  margin-right: -10px;
-  margin-top: 5px !important;
-}
-
-@media (max-width: $screen-md) {
-  .user-menu {
-    display: none;
+  @media (max-width: theme('screens.lg')) {
+    .user-menu {
+      display: none;
+    }
   }
 }

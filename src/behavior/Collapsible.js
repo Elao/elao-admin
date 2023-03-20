@@ -2,10 +2,10 @@
  * Collapsible
  */
 export default class Collapsible {
-    static get containerClass() { return 'collapse'; }
-    static get containerActiveClass() { return 'collapse--show'; }
-    static get targetClass() { return 'collapse__menu'; }
-    static get triggerClass() { return 'collapse__trigger'; }
+    static get containerClass() { return 'collapsible'; }
+    static get containerActiveClass() { return 'collapsible--show'; }
+    static get targetClass() { return 'collapsible__menu'; }
+    static get triggerClass() { return 'collapsible__trigger'; }
 
     static init() {
         const { containerClass, triggerClass, targetClass } = this;

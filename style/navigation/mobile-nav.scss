@@ -1,124 +1,123 @@
-.mobile-nav { display: none }
+@layer components {
+  .mobile-nav { display: none }
 
-@media(max-width: $screen-md) {
-  .mobile-nav {
-    padding: 30px 25px;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: var(--primary--dark);
-    transition: right linear .2s;
-    overflow-y: auto;
-    z-index: 100;
-
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-  }
-
-  .mobile-nav--show { right: 0; }
-
-  .mobile-nav__item {
-    a {
-      color: #fff;
+  @media(max-width: theme('screens.lg')) {
+    .mobile-nav {
+      @apply py-7 px-6;
+      @apply w-full h-full;
+      position: fixed;
+      @apply top-16 -right-full;
       display: flex;
-      text-decoration: none;
-      margin: 0 0;
-      padding: 0 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      @apply bg-primary-dark;
+      transition: right linear .2s;
+      overflow-y: auto;
+      z-index: 100;
 
-      &:hover {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+
+    .mobile-nav--show { right: 0; }
+
+    .mobile-nav__item {
+      a {
         color: #fff;
-      }
-
-      &:focus {
-        background: transparent;
-      }
-
-      i {
-        margin-right: 15px;
-        padding-bottom: 7px;
-        font-size: toRem(18px);
-        opacity: .3;
-      }
-    }
-  }
-
-  .mobile-nav__item--primary {
-    &:last-of-type {
-      > a {
-        border-bottom: none;
-      }
-    }
-
-    &.tree-item--active {
-      > a {
-        position: relative;
         display: flex;
-        font-family: var(--primary-font);
-        font-weight: bold;
+        text-decoration: none;
+        margin: 0 0;
+        padding: 0 0;
 
-        &:after {
-          content: '';
-          height: 3px;
-          width: 40px;
-          background-color: #fff;
-          position: absolute;
-          bottom: 0;
-          left: 0;
+        &:hover {
+          color: #fff;
         }
-      }
-    }
 
-    > a {
-      padding: 15px 0px;
-      border-bottom: solid 1px rgba(255, 255, 255, .1);
-    }
-  }
-
-  .mobile-nav__item--secondary {
-    &:first-of-type {
-      > a {
-        margin-top: 15px;
-      }
-    }
-
-    &.tree-item--active {
-      > a {
-        font-family: var(--primary-font);
-        font-weight: bold;
+        &:focus {
+          background: transparent;
+        }
 
         i {
-          opacity: 1;
-          border-bottom: solid 3px;
+          @apply mr-3.5;
+          @apply pb-2;
+          font-size: toRem(18px);
+          opacity: .3;
         }
       }
     }
 
-    > a {
-      padding: 10px 0;
-    }
+    .mobile-nav__item--primary {
+      &:last-of-type {
+        > a {
+          border-bottom: none;
+        }
+      }
 
-    > ul {
-      margin-left: 40px !important;
-    }
-  }
+      &.tree-item--active {
+        > a {
+          position: relative;
+          display: flex;
+          @apply font-primary;
+          @apply font-bold;
 
-  .mobile-nav__item--tertiary {
-    &:last-of-type {
+          &:after {
+            content: '';
+            height: 3px;
+            @apply w-10;
+            @apply bg-white;
+            position: absolute;
+            @apply bottom-0 left-0;
+          }
+        }
+      }
+
       > a {
-        margin-bottom: 15px;
+        @apply py-3 px-0;
+        @apply border-b border-white/10;
       }
     }
 
-    > a {
-      padding: 10px 0;
+    .mobile-nav__item--secondary {
+      &:first-of-type {
+        > a {
+          @apply mt-3.5;
+        }
+      }
+
+      &.tree-item--active {
+        > a {
+          @apply font-primary;
+          @apply font-bold;
+
+          i {
+            opacity: 1;
+            border-bottom: solid 3px;
+          }
+        }
+      }
+
+      > a {
+        @apply py-2.5 px-0;
+      }
+
+      > ul {
+        @apply ml-6 #{!important};
+      }
+    }
+
+    .mobile-nav__item--tertiary {
+      &:last-of-type {
+        > a {
+          @apply mb-3.5;
+        }
+      }
+
+      > a {
+        @apply py-2.5 px-0;
+      }
     }
   }
 }
