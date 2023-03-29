@@ -2,12 +2,12 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/elao-admin/pr/61/build/runtime.025a3dda.js",
-        "/elao-admin/pr/61/build/183.472949f9.js",
-        "/elao-admin/pr/61/build/app.c611f48e.js"
+        "/elao-admin/pr/61/build/runtime.b7c3c403.js",
+        "/elao-admin/pr/61/build/183.5016fffb.js",
+        "/elao-admin/pr/61/build/app.c1b1ba0a.js"
       ],
       "css": [
-        "/elao-admin/pr/61/build/app.f3bdbf2f.css"
+        "/elao-admin/pr/61/build/app.8ca2b86c.css"
       ]
     }
   }
