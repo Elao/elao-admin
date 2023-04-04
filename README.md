@@ -116,7 +116,8 @@ cd demo
 It's a Symfony application used to dynamically generate a static site with [Stenope](https://github.com/StenopePHP/Stenope) with random but realistic data.
 
 **It requires**:
-    - PHP 7.4+ and a local [Symfony CLI install](https://symfony.com/download).
+
+    - PHP 8.0+ and a local [Symfony CLI install](https://symfony.com/download).
     - Node 16+ and NPM 7
 
 In order to boot the application for development purposes, 
@@ -131,12 +132,13 @@ cd demo
 Then, you need to start a Symfony web server to expose the application, 
 as well as a Webpack dev-server to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled.
 
+➡️ Run the following command in order to start both servers:
+
 ```serve
-make start
+make serve
 ```
-  
-Will start both.  
-The Symfony server command outputs the URL (in the big green rectangle) at which will be available the application (usually http://127.0.0.1:8000)
+
+ℹ️ The Symfony server command will display the URL to access the app (usually http://127.0.0.1:8000)
 
 ### Publish a new version
 
