@@ -11,7 +11,6 @@
         "elao/admin-theme-bundle": "1.x-dev",
         "fakerphp/faker": "^1.14",
         "phpdocumentor/reflection-docblock": "^5.2",
-        "sensio/framework-extra-bundle": "^5.1",
         "stenope/stenope": "0.x-dev",
         "symfony/asset": "5.4.*",
         "symfony/console": "5.4.*",
@@ -28,6 +27,7 @@
         "symfony/property-access": "5.4.*",
         "symfony/property-info": "5.4.*",
         "symfony/proxy-manager-bridge": "5.4.*",
+        "symfony/runtime": "5.4.*",
         "symfony/serializer": "5.4.*",
         "symfony/string": "5.4.*",
         "symfony/translation": "5.4.*",
@@ -55,7 +55,8 @@
         },
         "sort-packages": true,
         "allow-plugins": {
-            "symfony/flex": true
+            "symfony/flex": true,
+            "symfony/runtime": true
         }
     },
     "autoload": {
