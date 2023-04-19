@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5297c6ca750e98fbb52fccb83484e32b",
+    "content-hash": "a9f655a65701269d7de32f82ff3b1e41",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1249,54 +1249,58 @@
         },
         {
             "name": "stenope/stenope",
-            "version": "v0.5.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "f340be4f4439d732a15b232063104dfac002cc59"
+                "reference": "7d56ae53594e997b2ccedd529f95d6a0bae5021c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/f340be4f4439d732a15b232063104dfac002cc59",
-                "reference": "f340be4f4439d732a15b232063104dfac002cc59",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/7d56ae53594e997b2ccedd529f95d6a0bae5021c",
+                "reference": "7d56ae53594e997b2ccedd529f95d6a0bae5021c",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.7.4",
                 "ext-dom": "*",
                 "php": ">=7.4",
-                "symfony/asset": "^5.1",
-                "symfony/config": "^5.1",
-                "symfony/console": "^5.1",
-                "symfony/css-selector": "^5.1",
-                "symfony/dependency-injection": "^5.1",
-                "symfony/dom-crawler": "^5.1",
-                "symfony/event-dispatcher": "^5.1",
-                "symfony/filesystem": "^5.1",
-                "symfony/finder": "^5.1",
-                "symfony/http-foundation": "^5.1",
-                "symfony/http-kernel": "^5.1",
-                "symfony/mime": "^5.1",
-                "symfony/process": "^5.1",
-                "symfony/property-access": "^5.1",
-                "symfony/routing": "^5.1",
-                "symfony/serializer": "^5.1",
-                "symfony/string": "^5.1",
-                "symfony/yaml": "^5.1",
+                "symfony/asset": "^5.1|^6.0",
+                "symfony/config": "^5.1|^6.0",
+                "symfony/console": "^5.1|^6.0",
+                "symfony/css-selector": "^5.1|^6.0",
+                "symfony/dependency-injection": "^5.1|^6.0",
+                "symfony/dom-crawler": "^5.1|^6.0",
+                "symfony/event-dispatcher": "^5.1|^6.0",
+                "symfony/filesystem": "^5.1|^6.0",
+                "symfony/finder": "^5.1|^6.0",
+                "symfony/http-foundation": "^5.1|^6.0",
+                "symfony/http-kernel": "^5.1|^6.0",
+                "symfony/mime": "^5.1|^6.0",
+                "symfony/process": "^5.1|^6.0",
+                "symfony/property-access": "^5.1|^6.0",
+                "symfony/routing": "^5.1|^6.0",
+                "symfony/serializer": "^5.1|^6.0",
+                "symfony/stopwatch": "^5.1|^6.0",
+                "symfony/string": "^5.1|^6.0",
+                "symfony/yaml": "^5.1|^6.0",
                 "twig/twig": "^2.12|^3.0"
             },
             "require-dev": {
-                "ekino/phpstan-banned-code": "^0.3.1",
-                "friendsofphp/php-cs-fixer": "^2.16",
+                "doctrine/annotations": "^1.9",
+                "ekino/phpstan-banned-code": "^1.0",
                 "phpspec/prophecy-phpunit": "^2.0",
-                "phpstan/phpstan": "^0.12.32",
-                "symfony/browser-kit": "^5.1",
-                "symfony/expression-language": "^5.1",
-                "symfony/framework-bundle": "^5.1",
-                "symfony/phpunit-bridge": "^5.1",
-                "symfony/twig-bridge": "^5.1",
-                "symfony/twig-bundle": "^5.1"
+                "phpstan/phpstan": "^1.6",
+                "psr/log": "^1",
+                "symfony/browser-kit": "^5.1|^6.0",
+                "symfony/expression-language": "^5.1|^6.0",
+                "symfony/framework-bundle": "^5.1|^6.0",
+                "symfony/monolog-bundle": "^3.7",
+                "symfony/phpunit-bridge": "^5.3|^6.0",
+                "symfony/twig-bridge": "^5.1|^6.0",
+                "symfony/twig-bundle": "^5.1|^6.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1336,9 +1340,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/v0.5.0"
+                "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-06-17T12:26:29+00:00"
+            "time": "2023-04-17T09:08:50+00:00"
         },
         {
             "name": "symfony/asset",
@@ -4883,6 +4887,68 @@
             "time": "2022-05-30T19:17:29+00:00"
         },
         {
+            "name": "symfony/stopwatch",
+            "version": "v5.4.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f83692cd869a6f2391691d40a01e8acb89e76fee",
+                "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/service-contracts": "^1|^2|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a way to profile code",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/stopwatch/tree/v5.4.21"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-02-14T08:03:56+00:00"
+        },
+        {
             "name": "symfony/string",
             "version": "v5.4.22",
             "source": {
@@ -6441,68 +6507,6 @@
             "time": "2023-02-16T09:33:00+00:00"
         },
         {
-            "name": "symfony/stopwatch",
-            "version": "v5.4.21",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f83692cd869a6f2391691d40a01e8acb89e76fee",
-                "reference": "f83692cd869a6f2391691d40a01e8acb89e76fee",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/service-contracts": "^1|^2|^3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Stopwatch\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides a way to profile code",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v5.4.21"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2023-02-14T08:03:56+00:00"
-        },
-        {
             "name": "symfony/web-profiler-bundle",
             "version": "v5.4.21",
             "source": {
@@ -6586,7 +6590,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "elao/admin-theme-bundle": 20
+        "elao/admin-theme-bundle": 20,
+        "stenope/stenope": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
