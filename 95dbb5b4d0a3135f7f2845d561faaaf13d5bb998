@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------
+
+by benji07 at 2023-04-05T12:18:16Z
+
+@xavier-rdo le fichier php-version sert dans le cas où tu utilise le binaire symfony pour avoir plusieurs version de php sur ta machine
+
+---------------------------------------------------------------------------
+
+by xavier-rdo at 2023-04-06T07:22:28Z
+
+Benji me signale que le projet `elao-admin` embarque une démo en PHP :arrow_right: c'est elle qu'il faut mettre à jour ;) :arrow_right:  Je revois ma copie ...
+
+Note : Benji suggère aussi de mettre à jour la version de Symfony ...
