@@ -16,9 +16,7 @@ class DemoController extends AbstractController
         $this->userRepository = $userRepository;
     }
 
-    /**
-     * @Route("/", name="dashboard", defaults={"_menu_root"="home"})
-     */
+    #[Route('/', name: 'dashboard', defaults: ['_menu_root' => 'home'])]
     public function dashboard(): Response
     {
         $users = $this->userRepository->findAll();
@@ -29,9 +27,7 @@ class DemoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/components", name="components")
-     */
+    #[Route('/components', name: 'components')]
     public function components(): Response
     {
         return $this->render('demo/components.html.twig');
