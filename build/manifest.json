@@ -1,10 +1,10 @@
 {
-  "build/app.css": "/elao-admin/build/app.8b12069f.css",
-  "build/app.js": "/elao-admin/build/app.c697f423.js",
+  "build/app.css": "/elao-admin/build/app.90fc10de.css",
+  "build/app.js": "/elao-admin/build/app.c1b1ba0a.js",
   "build/runtime.js": "/elao-admin/build/runtime.b7c3c403.js",
   "build/183.5016fffb.js": "/elao-admin/build/183.5016fffb.js",
-  "build/images/svg": "/elao-admin/build/images/c5a8b1e798b7900cfca2490790ca5cd5.c5a8b1e7.svg",
-  "build/fonts/eot": "/elao-admin/build/fonts/f6fda403febed2fb060b7a1f2aaab8c7.f6fda403.eot",
-  "build/fonts/woff": "/elao-admin/build/fonts/20ad3ac778ff74677c1a2360e491b14c.20ad3ac7.woff",
-  "build/fonts/ttf": "/elao-admin/build/fonts/21818e2c2e18daceb8af18ea532e0ffa.21818e2c.ttf"
+  "build/images/base-icons.svg": "/elao-admin/build/images/base-icons.c5a8b1e7.svg",
+  "build/fonts/base-icons.eot": "/elao-admin/build/fonts/base-icons.f6fda403.eot",
+  "build/fonts/base-icons.woff": "/elao-admin/build/fonts/base-icons.20ad3ac7.woff",
+  "build/fonts/base-icons.ttf": "/elao-admin/build/fonts/base-icons.21818e2c.ttf"
 }
