@@ -1,6 +1,6 @@
 {
   "name": "@elao/admin",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Administration theme",
   "files": [
     "src/*",
