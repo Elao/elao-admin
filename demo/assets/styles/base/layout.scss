@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: theme('screens.md')) {
   .button-list {
     display: flex;
     flex-direction: column;

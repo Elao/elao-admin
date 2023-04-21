@@ -1,14 +1,16 @@
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: color ease-in-out .1s;
+@layer base {
+  a {
+    @apply text-primary;
+    text-decoration: none;
+    transition: color ease-in-out .1s;
 
-  &:hover {
-    color: var(--primary--dark);
-  }
+    &:hover {
+      @apply text-primary-dark;
+    }
 
-  &:focus {
-    outline: none;
-    background-color: var(--accessibility-highlight);
+    &:focus {
+      outline: none;
+      @apply bg-accessibility-highlight;
+    }
   }
 }

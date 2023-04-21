@@ -48,6 +48,10 @@ Tree.init();
 MobileSidebar.init();
 ```
 
+#### Pre-built theme
+
+If you just want to give a try and use the regular theme and component, you can use the pre-built CSS:
+
 ```scss
 /* assets/style/app.scss */
 
@@ -61,28 +65,105 @@ MobileSidebar.init();
 @import './variables';
 ```
 
+#### Custom theme
+
+If you want to customize the theme, and have a more complete experience to build your own components,
+based on the design system token and Tailwind helpers, you can install
+the [Tailwind dependencies](https://tailwindcss.com/docs/installation/using-postcss):
+
+```shell
+npm install -D tailwindcss postcss autoprefixer
+````
+
+and create a `tailwind.config.js` file at the root of your project:
+
+```javascript
+const { customize } = require('@elao/admin/elao-design-system');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = customize({
+  content: [
+    './templates/**/*.html.twig',
+    './assets/**/*.js',
+    // https://tailwindcss.com/docs/content-configuration#working-with-third-party-libraries
+    './node_modules/@elao/admin/src/**/*.js',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // primary: {
+        //   DEFAULT: 'blue',
+        // },
+      },
+      spacing: {
+        // '7': '2rem',
+      },
+    },
+  },
+});
+```
+
+Create a `postcss.config.js` file at the root of your project:
+
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+```
+
+Then, require the Tailwind CSS file in your main SCSS file:
+
+```scss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import Work Sans font
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
+
+@import '@elao/admin/style/style.scss';
+```
+
+#### CSS Variables
+
+These CSS variables can be used with both pre-build or custom build for simple customization of the theme colors.
+But you can also fine-tune the theme with the Tailwind configuration instead for more flexibility.
+
 ```scss
 /* assets/style/variables.scss */
 :root {
-  --primary: #e63218;
-  --primary--dark: #b11803;
+  // Primary color is expressed as HSL arguments,
+  // so the color palette shades can be automatically computed:
+  --color-primary: 8, 81%, 50%;
+  --color-primary-hue: 8;
+  // A value is auto-generated from primary color shades, 
+  // but can still be overridden:
+  --color-primary-dark: #353c79;
+  
+  // The following colors are expressed as RGB arguments,
+  // so it can be used with Tailwind opacity modifier syntax:: 
+  --color-success: 0, 204, 153;
+  --color-warning: 255, 202, 40;
+  --color-info: 33, 158, 188;
+  --color-danger: 239, 64, 85;
+  --color-accessibility-highlight: 237, 238, 250;
+
   --text: #51607a;
   --text--dark: #384257;
   --text--light: #9e9a9a;
   --text--lighter: #bcb7b7;
+  
   --border: #faeded;
   --border--dark: #f2d2d2;
+  
   --background: #fafaff;
   --background--dark: #e2e4f7;
-  --disabled: #edeefa;
-  --success: #00cc99;
-  --warning: #ffca28;
-  --danger: #ef4055;
+  
   --primary-font: 'Work Sans';
 }
-
-$screen-sm: 750px;
-$screen-md: 1000px;
 ```
 
 ### Features
@@ -95,46 +176,55 @@ $screen-md: 1000px;
 
 Install dependencies:
 
-```bash
+```shell
 make install
 ```
 
 Build with:
 
-```bash
+```shell
 make build
+```
+
+Watch with:
+
+```shell
+make watch
 ```
 
 ### To the demo
 
+> **Note**: For the best experience, you can simply run `make serve` in the root of the project,
+> to serve both the library and the demo application and watching for changes.
+
 The demo application lives inside the `demo` folder: 
 
-```bash
+```shell
 cd demo
 ```
 
-It's a Symfony application used to dynamically generate a static site with [Stenope](https://github.com/StenopePHP/Stenope) with random but realistic data.
+It's a Symfony application used to dynamically generate a static site
+with [Stenope](https://github.com/StenopePHP/Stenope) with random but realistic data.
 
 **It requires**:
 
-    - PHP 8.0+ and a local [Symfony CLI install](https://symfony.com/download).
-    - Node 16+ and NPM 7
+- PHP 8.0+ and a local [Symfony CLI install](https://symfony.com/download).
+- Node 16+ and NPM 7
 
 In order to boot the application for development purposes, 
 you need to build the library if not already done:
 
-```bash
-cd ../
-make build
-cd demo
+```shell
+cd ../ && make build && cd demo
 ```
 
-Then, you need to start a Symfony web server to expose the application, 
-as well as a Webpack dev-server to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/) enabled.
+Then, you need to start a Symfony web server to expose the application,
+as well as a Webpack dev-server to build assets with [HMR](https://webpack.js.org/concepts/hot-module-replacement/)
+enabled.
 
 ➡️ Run the following command in order to start both servers:
 
-```serve
+```shell
 make serve
 ```
 

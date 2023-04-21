@@ -1,102 +1,107 @@
-.drop {
-  position: relative;
-}
-
-.drop__button {
-  padding: 0;
-  width: 100%;
-  display: inline-block;
-  font-size: toRem(16px);
-  color: var(--text);
-
-  .icon {
-    color: var(--text--lighter);
-    font-size: toRem(18px);
-    transition: color ease-in-out .2s;
+@layer components {
+  .drop {
+    position: relative;
   }
 
-  &:hover {
+  .drop__button {
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    @apply text-base;
+    @apply text-main;
+
     .icon {
-      color: var(--text--dark);
-    }
-  }
-}
-
-.drop__menu {
-  margin: 0;
-  padding: 0;
-  min-width: 190px;
-  position: absolute;
-  display: none;
-  list-style: none;
-  text-align: left;
-  border: solid 1px var(--border);
-  border-radius: 6px;
-  background: #fff;
-  z-index: 20;
-
-  li {
-    display: flex;
-    line-height: 1.4;
-
-    &:first-of-type {
-      a { padding-top: 12px; }
+      @apply text-lighter;
+      font-size: toRem(18px);
+      transition: color ease-in-out .2s;
     }
 
-    &:last-of-type {
-      a { padding-bottom: 15px; }
-    }
-
-
-    a {
-      padding: 7px 25px;
-      width: 100%;
-      font-family: var(--font--primary);
-      color: var(--text);
-      font-size: toRem(14px);
-      font-weight: normal;
-      text-decoration: none;
-      white-space: nowrap;
-
-      &:hover {
-        color: var(--primary);
+    &:hover {
+      .icon {
+        @apply text-dark;
       }
     }
   }
-}
 
-.drop--down {
   .drop__menu {
-    margin-top: 7px;
-    top: 100%;
-    right: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 190px;
+    position: absolute;
+    display: none;
+    list-style: none;
+    text-align: left;
+    @apply border;
+    @apply rounded-md;
+    background: #fff;
+    z-index: 20;
+
+    li {
+      display: flex;
+      line-height: 1.4;
+
+      &:first-of-type {
+        a {
+          @apply pt-3;
+        }
+      }
+
+      &:last-of-type {
+        a {
+          @apply pb-3.5;
+        }
+      }
+
+      a {
+        @apply py-2 px-6;
+        width: 100%;
+        @apply font-primary;
+        @apply text-main;
+        @apply text-sm;
+        font-weight: normal;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          @apply text-primary;
+        }
+      }
+    }
   }
-}
 
-.drop--up {
-  .drop__menu {
-    margin-bottom: 7px;
-    bottom: 100%;
-    right: 0;
+  .drop--down {
+    .drop__menu {
+      margin-top: 7px;
+      top: 100%;
+      right: 0;
+    }
   }
-}
 
-.drop--left {
-  .drop__menu {
-    top: 0;
-    right: 100%;
+  .drop--up {
+    .drop__menu {
+      margin-bottom: 7px;
+      bottom: 100%;
+      right: 0;
+    }
   }
-}
 
-.drop--right {
-  .drop__menu {
-    top: 0;
-    left: 100%;
+  .drop--left {
+    .drop__menu {
+      top: 0;
+      right: 100%;
+    }
   }
-}
 
-.drop--show {
-  .drop__menu {
-    display: block;
+  .drop--right {
+    .drop__menu {
+      top: 0;
+      left: 100%;
+    }
+  }
+
+  .drop--show {
+    .drop__menu {
+      display: block;
+    }
   }
 }

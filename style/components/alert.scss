@@ -1,12 +1,14 @@
-.alert {
-  margin: 10px 0 30px;
-  padding: 10px 30px;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  border-radius: 4px;
-}
+@layer components {
+  .alert {
+    @apply mt-2.5 mb-7;
+    @apply py-2.5 px-7;
+    min-height: theme('spacing[12]');
+    display: flex;
+    align-items: center;
+    color: #fff;
+    @apply rounded;
+  }
 
-.alert--success { background: var(--success); }
-.alert--danger { background: var(--danger); }
+  .alert--success { background: theme('colors.success.DEFAULT'); }
+  .alert--danger { background: theme('colors.danger.DEFAULT'); }
+}

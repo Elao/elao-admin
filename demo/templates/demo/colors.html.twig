@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Palette de couleurs{% endblock %}
+
+{% block nav_secondary %}
+    {% include '@ElaoAdminTheme/layout/nav_secondary.html.twig' with { menu: [
+        { url: '#', label: 'Palette de couleurs', active: true },
+    ] } %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Palette de couleurs</h2>
+
+        <div class="xl:w-2/3">
+            {% for colorName in ['primary', 'primary-dark', 'success', 'info', 'warning', 'danger'] %}
+                <div class="flex flex-col sm:flex-row text-xs space-x-4">
+                    <div class="w-16 shrink-0">
+                        <div class="h-10 flex flex-col justify-center">
+                            <div class="text-sm font-bold text-{{ colorName }}">{{ colorName|capitalize }}</div>
+                        </div>
+                    </div>
+
+                    <ul class="min-w-0 flex-1 grid gap-1 grid-cols-6 lg:grid-cols-12 mb-4">
+                        <li class="relative flex">
+                            <div class="cursor-pointer w-full">
+                                <div class="bg-{{ colorName }} w-full h-12 rounded ring-1 ring-inset ring-slate"></div>
+                            </div>
+                        </li>
+
+                        {% if colorName != 'primary-dark' %}
+                            {% for variation in [0.5]|merge(1..9) %}
+                                <li class="relative flex">
+                                    <div class="cursor-pointer w-full">
+                                        <div class="bg-{{ colorName }}-{{ variation * 100 }} w-full h-12 rounded ring-1 ring-inset ring-slate-200"></div>
+                                        <div class="px-0.5 md:flex md:justify-between">
+                                            <div class="w-6 2xl:w-full text-center">{{ variation * 100 }}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endfor %}
+
+            <p>
+                Voir également la
+                <a href="https://tailwindcss.com/docs/customizing-colors#default-color-palette" target="_blank">
+                    palette de base de Tailwind.
+                </a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

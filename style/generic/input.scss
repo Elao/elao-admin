@@ -1,32 +1,34 @@
-input {
-  height: 40px;
-  border: solid 1px var(--border);
-  background: #fff;
-  border-radius: 4px;
-  transition: border-color ease-in .15s;
-  padding: 0 15px;
-  font-size: toRem(15px);
-  color: var(--text--dark);
-  font-family: var(--font--primary);
+@layer base {
+  input {
+    height: 40px;
+    @apply border;
+    background: #fff;
+    @apply rounded;
+    transition: border-color ease-in .15s;
+    @apply py-0 px-3.5;
+    @apply text-sm;
+    @apply text-dark;
+    @apply font-primary;
 
-  &:hover {
-    border-color: var(--border--dark);
-  }
+    &:hover {
+      @apply border-dark;
+    }
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-    border-color: var(--border--dark);
-  }
-
-  &[disabled],
-  &.disabled {
-    opacity: .6;
-    cursor: not-allowed;
-
-    &:hover,
     &:focus {
-      border-color: var(--border);
+      outline: none;
+      box-shadow: none;
+      @apply border-dark;
+    }
+
+    &[disabled],
+    &.disabled {
+      opacity: .6;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus {
+        @apply border;
+      }
     }
   }
 }

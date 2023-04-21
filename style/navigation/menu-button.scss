@@ -1,26 +1,28 @@
-.menu-button {
-  display: none;
-}
-
-@media (max-width: $screen-md) {
+@layer components {
   .menu-button {
-    height: 100%;
-    width: 70px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:before {
-      content: '\e900';
-      font-family: 'base-icons';
-      color: #000;
-    }
+    display: none;
   }
 
-  .menu-button--close {
-    &:before {
-      content: '\e901';
+  @media (max-width: theme('screens.lg')) {
+    .menu-button {
+      height: 100%;
+      @apply w-16;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        content: '\e900';
+        @apply font-icons;
+        color: #000;
+      }
+    }
+
+    .menu-button--close {
+      &:before {
+        content: '\e901';
+      }
     }
   }
 }

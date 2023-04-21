@@ -31,6 +31,11 @@ serve.php:
 serve.assets:
 	npx encore dev-server --mode=development
 
+## Serve - Static build
+serve.static:
+	open http://localhost:8001
+	php -S localhost:8001 -t build
+
 ## Watch assets
 watch:
 	npx encore dev --watch
@@ -40,8 +45,12 @@ watch:
 #########
 
 ## Build static site with assets
-build: build.assets build.content
+build: build.static
 
+## Build static site with assets
+build.static: build.assets build.content
+
+## Build assets
 build.assets:
 	npx encore production --progress
 

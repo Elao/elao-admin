@@ -1,23 +1,25 @@
-.form {
-  margin: 0 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form--danger {
-  input,
-  .select,
-  textarea {
-    border-color: var(--danger);
-
-    &:hover {
-      border-color: var(--danger);
-    }
+@layer components {
+  .form {
+    margin: 0 0 theme('spacing.5');
+    display: flex;
+    flex-direction: column;
   }
 
-  .error {
-    margin: 5px 0 10px;
-    color: var(--danger);
-    font-size: toRem(13px);
+  .form--danger {
+    input,
+    .select,
+    textarea {
+      @apply border-danger;
+
+      &:hover {
+        @apply border-danger;
+      }
+    }
+
+    .error {
+      margin: theme('spacing.1') 0 theme('spacing[2.5]');
+      @apply text-danger;
+      @apply text-sm;
+    }
   }
 }

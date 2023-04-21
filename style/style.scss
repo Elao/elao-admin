@@ -1,9 +1,11 @@
-@import './base/reset';
-@import './base/variables';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './base/functions';
+@import './base/variables';
 @import './base/layout';
 @import './base/base-icons';
-@import './base/utilities';
 
 @import './navigation/primary-nav';
 @import './navigation/secondary-nav';
@@ -35,7 +37,6 @@
 @import './components/navigable-table';
 
 @import './generic/a';
-@import './generic/button';
 @import './generic/dl';
 @import './generic/input';
 @import './generic/headings';
@@ -44,7 +45,7 @@
 @import './generic/table';
 @import './generic/textarea';
 
-@import './animations/collapse';
+@import './animations/collapsible';
 @import './animations/tree';
 @import './animations/animated-icons';
 

@@ -1,25 +1,27 @@
-dl {
-  display: grid;
-  grid: auto-flow / 200px 1fr;
-}
-
-dt,
-dd {
-  margin: 0 0 10px;
-}
-
-dt {
-  font-weight: 900;
-}
-
-dd {}
-
-@media (max-width: 750px) {
+@layer base {
   dl {
-    grid: auto-flow / 1fr;
+    display: grid;
+    grid: auto-flow / 200px 1fr;
   }
 
+  dt,
   dd {
-    margin: 0 0 23px;
+    margin: 0 0 theme('spacing[2.5]');
+  }
+
+  dt {
+    font-weight: 900;
+  }
+
+  dd {}
+
+  @media (max-width: theme('screens.md')) {
+    dl {
+      grid: auto-flow / 1fr;
+    }
+
+    dd {
+      margin: 0 0 theme('spacing.6');
+    }
   }
 }

@@ -1,130 +1,139 @@
-.tooltip {
-  cursor: pointer;
-  position: relative;
-  justify-content: center;
-  text-decoration: none;
-
-  &:before,
-  &:after {
-    position: absolute;
-    pointer-events: none;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity ease-in .15s;
-  }
-
-  &:before {
-    min-width: 100px;
-    padding: 7px 10px;
-    color: var(--primary);
-    font-size: 13px;
+@layer components {
+  .tooltip {
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
     text-decoration: none;
-    text-align: center;
-    white-space: nowrap;
-    background: var(--background--dark);
-    border-radius: 4px;
-    content: attr(data-tooltip);
-  }
-
-  &:after {
-    width: 0;
-    height: 0;
-    content: '';
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--primary);
 
     &:before,
     &:after {
-      opacity: 1;
+      position: absolute;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity ease-in .15s;
     }
 
     &:before {
-      justify-content: center;
+      min-width: 100px;
+      @apply py-1.5 px-2.5 ;
+      @apply text-primary;
+      @apply text-sm;
+      text-decoration: none;
+      text-align: center;
+      white-space: nowrap;
+      @apply bg-dark;
+      @apply rounded;
+      content: attr(data-tooltip);
+    }
+
+    &:after {
+      width: 0;
+      height: 0;
+      content: '';
+    }
+
+    &:hover,
+    &:focus {
+      @apply text-primary;
+
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+
+      &:before {
+        justify-content: center;
+      }
     }
   }
-}
 
-.tooltip--top {
-  &:before,
-  &:after {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &:before { margin-bottom: 10px; }
-
-  &:after {
-    margin-bottom: 4px;
-    border: 6px solid transparent;
-    border-top-color: var(--background--dark);
-    border-bottom: none;
-  }
-}
-
-.tooltip--bottom {
-  &:before,
-  &:after {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &:before { margin-top: 10px; }
-
-  &:after {
-    margin-top: 4px;
-    top: 100%;
-    border: 6px solid transparent;
-    border-bottom-color: var(--background--dark);
-    border-top: none;
-  }
-}
-
-.tooltip--left {
-  &:before,
-  &:after {
-    right: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &:before { margin-right: 10px; }
-
-  &:after {
-    margin-right: 4px;
-    border: 6px solid transparent;
-    border-left-color: var(--background--dark);
-    border-right: none;
-  }
-}
-
-.tooltip--right {
-  &:before,
-  &:after {
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &:before { margin-left: 10px; }
-
-  &:after {
-    margin-left: 4px;
-    border: 6px solid transparent;
-    border-right-color: var(--background--dark);
-    border-left: none;
-  }
-}
-
-@media (max-width: $screen-md) {
-  .tooltip {
+  .tooltip--top {
     &:before,
     &:after {
-      display: none;
+      @apply left-1/2 bottom-full;
+      @apply transform -translate-x-1/2;
+    }
+
+    &:before {
+      @apply mb-2.5;
+    }
+
+    &:after {
+      margin-bottom: 4px;
+      border: 6px solid transparent;
+      border-top-color: theme('backgroundColor.dark');
+      border-bottom: none;
+    }
+  }
+
+  .tooltip--bottom {
+    &:before,
+    &:after {
+      @apply top-full left-1/2;
+      @apply transform -translate-x-1/2;
+    }
+
+    &:before {
+      @apply mt-2.5;
+    }
+
+    &:after {
+      margin-top: 4px;
+      @apply top-full;
+      border: 6px solid transparent;
+      border-bottom-color: theme('backgroundColor.dark');
+      border-top: none;
+    }
+  }
+
+  .tooltip--left {
+    &:before,
+    &:after {
+      @apply right-full top-1/2;
+      @apply transform -translate-y-1/2;
+    }
+
+    &:before {
+      @apply mr-2.5;
+    }
+
+    &:after {
+      margin-right: 4px;
+      border: 6px solid transparent;
+      border-left-color: theme('backgroundColor.dark');
+      border-right: none;
+    }
+  }
+
+  .tooltip--right {
+    &:before,
+    &:after {
+      @apply left-full top-1/2;
+      @apply transform -translate-y-1/2;
+    }
+
+    &:before {
+      @apply ml-2.5;
+    }
+
+    &:after {
+      margin-left: 4px;
+      border: 6px solid transparent;
+      border-right-color: theme('backgroundColor.dark');
+      border-left: none;
+    }
+  }
+
+  /**
+   * Disable tooltips on touch devices
+   */
+  @media (hover: none) {
+    .tooltip {
+      &:before,
+      &:after {
+        display: none;
+      }
     }
   }
 }

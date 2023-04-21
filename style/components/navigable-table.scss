@@ -1,6 +1,8 @@
-tr[data-default-action]{
+@layer base {
+  tr[data-default-action]{
     cursor: pointer;
     &:hover {
-        background-color: var(--border);
+      background-color: theme('borderColor.DEFAULT');
     }
+  }
 }

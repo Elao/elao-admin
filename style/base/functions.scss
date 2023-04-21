@@ -1,4 +1,15 @@
 @use "sass:math";
+@use "sass:color";
+
+// rgb to color channels
+@function colorHsl($color) {
+  @return stripUnit(hue($color)), saturation($color), lightness($color);
+}
+
+// rgb to color channels
+@function colorChannels($color) {
+  @return red($color) green($color) blue($color);
+}
 
 // Px to rem
 
@@ -6,6 +17,7 @@
   @return math.div($number, ($number * 0 + 1));
  }
 
+// TODO: not needed, use theme instead?
 @function toRem($pxValue) {
-  @return math.div(stripUnit($pxValue), stripUnit($base-font-size)) + rem;
+  @return math.div(stripUnit($pxValue), 16) + rem;
 }

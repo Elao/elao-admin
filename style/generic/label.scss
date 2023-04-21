@@ -1,4 +1,6 @@
-label {
-  margin: 0 0 7px;
-  font-size: toRem(14px);
+@layer base {
+  label {
+    @apply m-0 mb-1.5;
+    @apply text-sm;
+  }
 }

@@ -45,14 +45,24 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
-    .configureBabel((config) => {
-        config.plugins.push('@babel/plugin-proposal-class-properties');
-    })
+    // .configureBabel((options) => {
+    // })
 
     // enables @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
         config.corejs = 3;
+    })
+    .configureDevServerOptions(options => {
+        // Watch Twig files to force reload the browser on changes:
+        options.liveReload = true;
+        options.watchFiles = [
+            'templates/**/*.twig',
+        ];
+
+        // Disable watching the static `public` folder since it would force a live reload on any change,
+        // as the manifest.json file is always re-computed (but not required by the dev server):
+        options.static.watch = false;
     })
 
     // enables Sass/SCSS support

@@ -1,25 +1,48 @@
-:root {
-  --primary: #4053ec;
-  --primary--dark: #353c79;
-  --text: #73748F;
-  --text--dark: #676881;
-  --text--light: #9a9a9e;
-  --text--lighter: #b7b7bc;
-  --border: #edeefa;
-  --border--dark: #d2d4f2;
-  --background: #fafaff;
-  --background--dark: #e2e4f7;
-  --disabled: #edeefa;
-  --success: #00c291;
-  --warning: #e6ac00;
-  --danger: #ef4055;
-  --info: #219ebc;
-  --accessibility-highlight: #edeefa;
-  // hide accessibility highlight : --accessibility-highlight: transparent
-  --primary-font: 'Work Sans';
+@layer base {
+  $color-primary: #4053ec;
+  $color-success: #00c291;
+  $color-warning: #e6ac00;
+  $color-danger: #ef4055;
+  $color-info: #219ebc;
+
+  :root {
+    // These CSS variables SHOULD NOT be used directly in the design-system source styles,
+    // but are exposed for easy override of the pre-build theme.
+
+    // The primary color is expressed as HSL to be declined in different shades:
+    --color-primary: #{colorHsl($color-primary)};
+    --color-primary-hue: #{hue($color-primary)};
+    // A value is auto-generated from primary color shades,
+    // but can still be overridden:
+    --color-primary-dark: #353c79;
+
+    // Must be expressed as RGB color channels to be compatible with CSS variables & Tailwind opacity modifier syntax:
+    // https://tailwindcss.com/docs/customizing-colors#using-css-variables
+    // See https://sass-lang.com/documentation/breaking-changes/css-vars about the #{…} syntax
+    // for SASS operations in CSS variables
+    --color-success: #{colorChannels($color-success)};
+    --color-warning: #{colorChannels($color-warning)};
+    --color-danger: #{colorChannels($color-danger)};
+    --color-info: #{colorChannels($color-info)};
+
+    --color-accessibility-highlight: #{colorChannels(#edeefa)};
+    // hide accessibility highlight : --color-accessibility-highlight: transparent
+
+    //--primary-font: 'Arial';
+
+    --border: #e3e3ea;
+    --border--dark: #c4c6e1;
+
+    // Text colors are fixed, hence do not need to be expressed as RGB color channels or HSL:
+    --text: #73748F;
+    --text--dark: #676881;
+    --text--light: #9a9a9e;
+    --text--lighter: #b7b7bc;
+
+    // Background colors as well:
+    --background: #fafaff;
+    --background--dark: #e2e4f7;
+
+    --primary-font: 'Work Sans';
+  }
 }
-
-$base-font-size: 16px;
-
-$screen-sm: 750px;
-$screen-md: 1000px;

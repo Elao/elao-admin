@@ -20,6 +20,7 @@
                 {% include '@ElaoAdminTheme/layout/nav_primary.html.twig' with { menu: [
                     { route: 'dashboard', label: 'Accueil', root: 'home' },
                     { route: 'components', label: 'Composants' },
+                    { route: 'colors', label: 'Palette' },
                 ] } %}
                 {% include '@ElaoAdminTheme/layout/nav_user.html.twig' with { user: 'Amélie D.', menu: [
                     { url: '#profile', label: 'Profil' },
@@ -30,8 +31,11 @@
         {% include '@ElaoAdminTheme/layout/nav_mobile.html.twig' with { menu: [
             { route: 'dashboard', label: 'Accueil' },
             { route: 'components', label: 'Composants' },
-            { url: '#profile', label: 'Profil' },
-            { url: '#logout', label: 'Déconnexion' },
+            { route: 'colors', label: 'Palette' },
+            { label: 'Mon compte', children: [
+                { url: '#profile', label: 'Profil', icon: 'user' },
+                { url: '#logout', label: 'Déconnexion' },
+            ] },
         ] } %}
         {% endblock %}
         <main>

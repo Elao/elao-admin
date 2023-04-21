@@ -1,10 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "~tom-select/src/scss/tom-select";
-@import '@elao/admin';
+
+//@import '@elao/admin'; // Base, built-in Design System styles
+@import '@elao/admin/style/style.scss'; // Customized Design System styles
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
 
 // Demo styles only
-@import 'base/variables';
 @import 'base/layout';
 
 @import 'components/color-picker';

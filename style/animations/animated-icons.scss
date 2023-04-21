@@ -8,7 +8,7 @@
   height: 2px;
   width: 100%;
   position: relative;
-  background: var(--primary);
+  background: theme('colors.primary.DEFAULT');
   border-radius: 1px;
 
   &:before {
@@ -17,7 +17,7 @@
     width: 4px;
     height: 5px;
     content: '';
-    background: var(--primary);
+    background: theme('colors.primary.DEFAULT');
     transform: translateY(-50%);
     border-radius: 1px;
     transition: left ease-in .25s;
