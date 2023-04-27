@@ -3,12 +3,11 @@
   "version": "0.2.0",
   "description": "Administration theme",
   "files": [
+    "assets/*",
+    "dist/*",
     "src/*",
-    "src/tailwind.config.js",
-    "src/elao-design-system.js",
-    "src/postcss.config.js",
     "style/*",
-    "dist/*"
+    "elao-design-system.js"
   ],
   "main": "dist/elao-admin.js",
   "style": "dist/elao-admin.css",

@@ -75,10 +75,12 @@ the [Tailwind dependencies](https://tailwindcss.com/docs/installation/using-post
 npm install -D tailwindcss postcss autoprefixer
 ````
 
+> **Note**: If you're using Webpack, you might need to add & configure the `postcss-loader` as well.
+
 and create a `tailwind.config.js` file at the root of your project:
 
 ```javascript
-const { customize } = require('@elao/admin/elao-design-system');
+import { customize } from '@elao/admin/elao-design-system';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = customize({
@@ -114,13 +116,9 @@ module.exports = {
 }
 ```
 
-Then, require the Tailwind CSS file in your main SCSS file:
+Then, in your main SCSS file:
 
 ```scss
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Import Work Sans font
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
 
