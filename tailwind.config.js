@@ -64,7 +64,6 @@ module.exports = {
     component('data-table'),
     component('form', { variants: true }),
     component('footer', { variants: false, elements: false }),
-    component('icon'),
     component('loader', { elements: false }),
     component('menu-button'),
     component('mobile-nav'),
